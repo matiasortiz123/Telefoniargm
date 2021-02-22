@@ -1,0 +1,339 @@
+﻿@model IEnumerable<TelefoniaCargas.Models.Marca>
+@{
+    ViewData["Title"] = "Index";
+}
+
+@section Styles {
+
+    <link href="~/lib/datatables.net-bs4/dataTables.bootstrap4.min.css" rel="stylesheet" />
+}
+
+<div class="content-wrapper">
+    <div class="container-fluid p-4">
+        <div class="row mt-3">
+            <div class="col-sm-10">
+                <h3>Lista de Marcas</h3>
+            </div>
+            <div class="col-sm-2">
+                <a class="btn btn-success float-right text-white" data-toggle="modal" data-target="#myModalInicial" onclick="CrearMarca()"> <i class="fas fa-plus"></i> Agregar </a>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+            <div class="col-md-12">
+                @if (Model.Count() > 0)
+                {
+                    <table class="table table-bordered" id="tablaUsuarios" width="100%" cellspacing="0">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">@Html.DisplayNameFor(m => m.Descripcion)</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Descripcion</td>
+                                    <td>
+                                        <a href="#" title="Editar" onclick="EditarMarca(@item.Id)" type="button" class="btn btn-info btn-sm bi bi-brush-fill" data-toggle="modal" data-target="#myModal">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brush-fill" viewBox="0 0 16 16">
+                                                <path d="M15.825.12a.5.5 0 0 1 .132.584c-1.53 3.43-4.743 8.17-7.095 10.64a6.067 6.067 0 0 1-2.373 1.534c-.018.227-.06.538-.16.868-.201.659-.667 1.479-1.708 1.74a8.117 8.117 0 0 1-3.078.132 3.658 3.658 0 0 1-.563-.135 1.382 1.382 0 0 1-.465-.247.714.714 0 0 1-.204-.288.622.622 0 0 1 .004-.443c.095-.245.316-.38.461-.452.393-.197.625-.453.867-.826.094-.144.184-.297.287-.472l.117-.198c.151-.255.326-.54.546-.848.528-.739 1.2-.925 1.746-.896.126.007.243.025.348.048.062-.172.142-.38.238-.608.261-.619.658-1.419 1.187-2.069 2.175-2.67 6.18-6.206 9.117-8.104a.5.5 0 0 1 .596.04z" />
+                                            </svg>
+                                        </a>
+
+                                        <a href="#" title="Detalle" onclick="DetalleMarca(@item.Id)" type="button" class="btn btn-success btn-sm bi bi-eye-fill" data-toggle="modal" data-target="#myModal2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                                <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                                            </svg>
+                                        </a>
+
+                                        <a href="#" title="Delete" onclick="EliminarMarca(@item.Id)" type="button" class="btn btn-danger btn-sm bi bi-trash" data-toggle="modal" data-target="#myModal3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                            </svg>
+                                        </a>
+
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <p class="text-center text-danger ml-3">No hay registros guardados</p>
+                }
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Modal 1 crear-->
+<div class="modal fade" id="myModalInicial" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Crear nuevo equipo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="cuerpoModalInicial"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 1-->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modificar equipo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="cuerpoModal"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 2-->
+<div class="modal fade" id="myModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Detalle del equipo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="cuerpoModal2"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 3-->
+<div class="modal fade" id="myModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Eliminar equipo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="cuerpoModal3"></div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Script modal 1-->
+
+
+@section Scripts{
+
+    <script>
+        function CrearMarca() {
+            $.ajax({
+                method: "GET",
+                url: "Marca/_Create",
+            }).done(function (data) {
+                $("#cuerpoModalInicial").html(data);
+                $("#myModalInicial").show();
+            });
+        }
+
+        function EditarMarca(numero) {
+            $.ajax({
+                method: "GET",
+                url: "Marca/_Edit",
+                data: { id: numero }
+            }).done(function (data) {
+                $("#cuerpoModal").html(data);
+                $("#myModal").show();
+            });
+        }
+
+        function DetalleMarca(numero) {
+            $.ajax({
+                method: "GET",
+                url: "Marca/_Detalle",
+                data: { id: numero }
+            }).done(function (data) {
+                $("#cuerpoModal2").html(data);
+                $("#myModal2").show();
+            });
+        }
+
+        function EliminarMarca(numero) {
+            $.ajax({
+                method: "GET",
+                url: "Marca/_Delete",
+                data: { id: numero }
+            }).done(function (data) {
+                $("#cuerpoModal3").html(data);
+                $("#myModal3").show();
+            });
+        }
+    </script>
+
+
+    <script src="~/lib/datatables.net/jquery.dataTables.min.js"></script>
+    <script src="~/lib/datatables.net-bs4/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#tablaUsuarios').DataTable(
+                {
+                    language: {
+                        "processing": "Procesando...",
+                        "lengthMenu": "Mostrar _MENU_ registros",
+                        "zeroRecords": "No se encontraron resultados",
+                        "emptyTable": "Ningún dato disponible en esta tabla",
+                        "info": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                        "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+                        "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+                        "search": "Buscar:",
+                        "infoThousands": ",",
+                        "loadingRecords": "Cargando...",
+                        "paginate": {
+                            "first": "Primero",
+                            "last": "Último",
+                            "next": "Siguiente",
+                            "previous": "Anterior"
+                        },
+                        "aria": {
+                            "sortAscending": ": Activar para ordenar la columna de manera ascendente",
+                            "sortDescending": ": Activar para ordenar la columna de manera descendente"
+                        },
+                        "buttons": {
+                            "copy": "Copiar",
+                            "colvis": "Visibilidad",
+                            "collection": "Colección",
+                            "colvisRestore": "Restaurar visibilidad",
+                            "copyKeys": "Presione ctrl o u2318 + C para copiar los datos de la tabla al portapapeles del sistema. <br \/> <br \/> Para cancelar, haga clic en este mensaje o presione escape.",
+                            "copySuccess": {
+                                "1": "Copiada 1 fila al portapapeles",
+                                "_": "Copiadas %d fila al portapapeles"
+                            },
+                            "copyTitle": "Copiar al portapapeles",
+                            "csv": "CSV",
+                            "excel": "Excel",
+                            "pageLength": {
+                                "-1": "Mostrar todas las filas",
+                                "1": "Mostrar 1 fila",
+                                "_": "Mostrar %d filas"
+                            },
+                            "pdf": "PDF",
+                            "print": "Imprimir"
+                        },
+                        "autoFill": {
+                            "cancel": "Cancelar",
+                            "fill": "Rellene todas las celdas con <i>%d<\/i>",
+                            "fillHorizontal": "Rellenar celdas horizontalmente",
+                            "fillVertical": "Rellenar celdas verticalmentemente"
+                        },
+                        "decimal": ",",
+                        "searchBuilder": {
+                            "add": "Añadir condición",
+                            "button": {
+                                "0": "Constructor de búsqueda",
+                                "_": "Constructor de búsqueda (%d)"
+                            },
+                            "clearAll": "Borrar todo",
+                            "condition": "Condición",
+                            "conditions": {
+                                "date": {
+                                    "after": "Despues",
+                                    "before": "Antes",
+                                    "between": "Entre",
+                                    "empty": "Vacío",
+                                    "equals": "Igual a",
+                                    "not": "No",
+                                    "notBetween": "No entre",
+                                    "notEmpty": "No Vacio"
+                                },
+                                "moment": {
+                                    "after": "Despues",
+                                    "before": "Antes",
+                                    "between": "Entre",
+                                    "empty": "Vacío",
+                                    "equals": "Igual a",
+                                    "not": "No",
+                                    "notBetween": "No entre",
+                                    "notEmpty": "No vacio"
+                                },
+                                "number": {
+                                    "between": "Entre",
+                                    "empty": "Vacio",
+                                    "equals": "Igual a",
+                                    "gt": "Mayor a",
+                                    "gte": "Mayor o igual a",
+                                    "lt": "Menor que",
+                                    "lte": "Menor o igual que",
+                                    "not": "No",
+                                    "notBetween": "No entre",
+                                    "notEmpty": "No vacío"
+                                },
+                                "string": {
+                                    "contains": "Contiene",
+                                    "empty": "Vacío",
+                                    "endsWith": "Termina en",
+                                    "equals": "Igual a",
+                                    "not": "No",
+                                    "notEmpty": "No Vacio",
+                                    "startsWith": "Empieza con"
+                                }
+                            },
+                            "data": "Data",
+                            "deleteTitle": "Eliminar regla de filtrado",
+                            "leftTitle": "Criterios anulados",
+                            "logicAnd": "Y",
+                            "logicOr": "O",
+                            "rightTitle": "Criterios de sangría",
+                            "title": {
+                                "0": "Constructor de búsqueda",
+                                "_": "Constructor de búsqueda (%d)"
+                            },
+                            "value": "Valor"
+                        },
+                        "searchPanes": {
+                            "clearMessage": "Borrar todo",
+                            "collapse": {
+                                "0": "Paneles de búsqueda",
+                                "_": "Paneles de búsqueda (%d)"
+                            },
+                            "count": "{total}",
+                            "countFiltered": "{shown} ({total})",
+                            "emptyPanes": "Sin paneles de búsqueda",
+                            "loadMessage": "Cargando paneles de búsqueda",
+                            "title": "Filtros Activos - %d"
+                        },
+                        "select": {
+                            "1": "%d fila seleccionada",
+                            "_": "%d filas seleccionadas",
+                            "cells": {
+                                "1": "1 celda seleccionada",
+                                "_": "$d celdas seleccionadas"
+                            },
+                            "columns": {
+                                "1": "1 columna seleccionada",
+                                "_": "%d columnas seleccionadas"
+                            }
+                        },
+                        "thousands": "."
+                    }
+                }
+            );
+        });
+    </script>
+}

@@ -1,0 +1,48 @@
+﻿@model TelefoniaCargas.Models.Equipo
+
+
+<div class="row">
+    <div class="col-sm-12 p-3">
+        <form method="post" asp-action="_Edit">
+            <input type="hidden" asp-for="Id"/>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Imei" class="control-label"></label>
+                <input asp-for="Imei" class="form-control" />
+                <span asp-validation-for="Imei" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Accesorios" class="control-label"></label>
+                <input asp-for="Accesorios" class="form-control" />
+                <span asp-validation-for="Accesorios" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gama" class="control-label"></label>
+                <input asp-for="Gama" class="form-control" />
+                <span asp-validation-for="Gama" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Condicion" class="control-label"></label>
+                <input asp-for="Condicion" class="form-control" />
+                <span asp-validation-for="Condicion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Empresa" class="control-label"></label>
+                <select asp-for="EmpresaId" class="form-control" asp-items="@ViewBag.Empresa"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Marca" class="control-label"></label>
+                <select asp-for="MarcaId" class="form-control" asp-items="@ViewBag.Marca"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Modelo" class="control-label"></label>
+                <select asp-for="ModeloId" class="form-control" asp-items="@ViewBag.Modelo"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Modificar equipo" class="btn btn-success ml-1" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
