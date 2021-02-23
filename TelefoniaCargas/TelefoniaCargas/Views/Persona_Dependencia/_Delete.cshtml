@@ -1,0 +1,22 @@
+﻿@model TelefoniaCargas.Models.Persona_Dependencia
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <br />
+            <p>¿Esta seguro que desea eliminar la persona con la dependencia?</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <hr />
+            <form method="post" asp-controller="Persona_Dependencia" asp-action="_DeleteEquipos">
+                <input type="hidden" asp-for="Id" />
+                <button type="submit" class="btn btn-danger ml-1">Eliminar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </form>
+        </div>
+    </div>
+    <br />
+</div>
+

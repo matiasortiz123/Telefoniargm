@@ -8,6 +8,12 @@
   <ItemGroup>
     <Compile Remove="Data\Migrations\20210219134635_UnidadIdparaDepend2.cs" />
     <Compile Remove="Data\Migrations\20210219134635_UnidadIdparaDepend2.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210223113133_EstadodeEquipos.cs" />
+    <Compile Remove="Data\Migrations\20210223113133_EstadodeEquipos.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210223113340_EstadoEquipos.cs" />
+    <Compile Remove="Data\Migrations\20210223113340_EstadoEquipos.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210223122623_EstadoEquipos.cs" />
+    <Compile Remove="Data\Migrations\20210223122623_EstadoEquipos.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

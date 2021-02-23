@@ -376,4 +376,9 @@ C:\Users\CPS-DLLO#11\Desktop\DUFI-main\TelefoniaCargas\TelefoniaCargas\obj\Debug
 C:\Users\CPS-DLLO#11\Desktop\DUFI-main\TelefoniaCargas\TelefoniaCargas\obj\Debug\netcoreapp3.1\Razor\Views\Persona\_Delete.cshtml.g.cs
 C:\Users\CPS-DLLO#11\Desktop\DUFI-main\TelefoniaCargas\TelefoniaCargas\obj\Debug\netcoreapp3.1\Razor\Views\Persona_Dependencia\Index.cshtml.g.cs
 C:\Users\CPS-DLLO#11\Desktop\DUFI-main\TelefoniaCargas\TelefoniaCargas\obj\Debug\netcoreapp3.1\Razor\Views\Persona_Dependencia\_Create.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\DUFI-main\TelefoniaCargas\TelefoniaCargas\obj\Debug\netcoreapp3.1\Razor\Views\AsignarEquipo\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\DUFI-main\TelefoniaCargas\TelefoniaCargas\obj\Debug\netcoreapp3.1\Razor\Views\Persona_Dependencia\_Detalle.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\DUFI-main\TelefoniaCargas\TelefoniaCargas\obj\Debug\netcoreapp3.1\Razor\Views\Persona_Dependencia\_Delete.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\DUFI-main\TelefoniaCargas\TelefoniaCargas\obj\Debug\netcoreapp3.1\Razor\Views\Persona_Dependencia\_Edit.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\DUFI-main\TelefoniaCargas\TelefoniaCargas\obj\Debug\netcoreapp3.1\Razor\Views\AsignarEquipo\AgregarUsuarios.cshtml.g.cs
 C:\Users\CPS-DLLO#11\Desktop\DUFI-main\TelefoniaCargas\TelefoniaCargas\obj\Debug\netcoreapp3.1\TelefoniaCargas.csprojAssemblyReference.cache

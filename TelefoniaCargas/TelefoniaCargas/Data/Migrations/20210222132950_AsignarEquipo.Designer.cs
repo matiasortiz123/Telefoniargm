@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TelefoniaCargas.Data;
 
 namespace TelefoniaCargas.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210222132950_AsignarEquipo")]
+    partial class AsignarEquipo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -307,9 +309,6 @@ namespace TelefoniaCargas.Data.Migrations
                     b.Property<int>("EmpresaId")
                         .HasColumnType("int");
 
-                    b.Property<int>("EstadoEquipoId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Gama")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -327,34 +326,11 @@ namespace TelefoniaCargas.Data.Migrations
 
                     b.HasIndex("EmpresaId");
 
-                    b.HasIndex("EstadoEquipoId");
-
                     b.HasIndex("MarcaId");
 
                     b.HasIndex("ModeloId");
 
                     b.ToTable("Equipo");
-                });
-
-            modelBuilder.Entity("TelefoniaCargas.Models.EstadoEquipo", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Disponible")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EnMantenimiento")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NoDisponible")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("EstadoEquipo");
                 });
 
             modelBuilder.Entity("TelefoniaCargas.Models.Marca", b =>
@@ -528,12 +504,6 @@ namespace TelefoniaCargas.Data.Migrations
                     b.HasOne("TelefoniaCargas.Models.Empresa", "Empresa")
                         .WithMany()
                         .HasForeignKey("EmpresaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TelefoniaCargas.Models.EstadoEquipo", "EstadoEquipo")
-                        .WithMany()
-                        .HasForeignKey("EstadoEquipoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

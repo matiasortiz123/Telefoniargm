@@ -33,5 +33,9 @@ namespace TelefoniaCargas.Models
         public virtual Empresa Empresa { get; set; }
         public virtual Marca Marca { get; set; }
         public virtual Modelo Modelo { get; set; }
+
+        public int EstadoEquipoId { get; set; }
+
+        public EstadoEquipo EstadoEquipo { get; set; }
     }
 }

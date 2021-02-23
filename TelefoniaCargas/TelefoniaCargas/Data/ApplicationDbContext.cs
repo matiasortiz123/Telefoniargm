@@ -27,6 +27,8 @@ namespace TelefoniaCargas.Data
 
         public DbSet<AsignarEquipo> AsignarEquipo { get; set; }
 
+        public DbSet<EstadoEquipo> EstadoEquipo { get; set; }
+
     }
 
 }
