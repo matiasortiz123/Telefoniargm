@@ -1,0 +1,17 @@
+﻿
+@if (TempData["mensaje"] != null)
+{
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    @TempData["mensaje"]
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>}
+@if (TempData["mensaje1"] != null)
+{
+<div class="alert alert-success alert-danger fade show" role="alert">
+    @TempData["mensaje1"]
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>}

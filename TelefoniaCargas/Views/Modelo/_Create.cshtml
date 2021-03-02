@@ -1,0 +1,20 @@
+﻿@model TelefoniaCargas.Models.Modelo
+
+
+<div class="row">
+    <div class="col-md-12 p-3">
+        <form  method="post" asp-action="_Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Descripcion" class="control-label"></label>
+                <input asp-for="Descripcion" class="form-control" />
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Crear modelo" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+

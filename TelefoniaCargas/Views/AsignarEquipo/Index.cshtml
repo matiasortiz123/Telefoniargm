@@ -1,0 +1,299 @@
+﻿@model IEnumerable<TelefoniaCargas.Models.Persona_Dependencia>
+@{ ViewData["Title"] = "Index";
+ }
+@section Styles{
+
+    <link href="~/lib/datatables.net-bs4/dataTables.bootstrap4.min.css" rel="stylesheet" />
+}
+<div class="content-wrapper">
+    <div class="container-fluid p-4">
+        <div class="row">
+            <div class="col-sm-10">
+                <h3>Lista de personas para agragar los equipos</h3>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>¡Veamos si ya está en el sistema!</label>
+                    <select-ajax> title="Ingrese el DNI del paciente."
+                                 class="form-control"
+                                 id="dni"
+                                 name="dni"
+                                 url="@Url.Action("PersonasJson", $"Persona")"
+                                 color="Default"
+                                 width="100%"
+                                 class-btn="btn-flat"
+                                 text-no-results=<h4 class='text-center'>La persona no está en el sistema.<br>
+                        <a href='#' id='create' class='s_result'>Haz click aquí para agregarla.</a></h4>
+                    </select-ajax>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-12">
+                @if (Model.Count() > 0)
+                {
+    <table class="table table-bordered" id="tablaUsuarios" width="100%" cellspacing="0">
+        <thead class="thead-dark">
+            <tr>
+                @*<th scope="col">@Html.DisplayNameFor(m => m.Persona.Nombre)</th>
+                <th scope="col">@Html.DisplayNameFor(m => m.Persona.Apellido)</th>
+                <th scope="col">@Html.DisplayNameFor(m => m.Dependencia.Nombre)</th>
+                <th scope="col">@Html.DisplayNameFor(m => m.Dependencia.Unidad.Nombre)</th>
+                <th scope="col">Acciones</th>*@
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+<tr>
+    @*<td>@item.Persona.Nombre</td>
+    <td>@item.Persona.Apellido</td>
+    <td>@item.Dependencia.Nombre</td>
+    <td>@item.Dependencia.Unidad.Nombre</td>*@
+    <td>
+        @*<a asp-controller="AsignarEquipo" asp-action="AgregarUsuarios" title="Asignar equipo" type="button" class="btn btn-info btn-sm bi bi-brush-fill">
+            Asignar
+        </a>*@
+
+    </td>
+</tr>}
+        </tbody>
+    </table> }
+                else
+                {
+    <p class="text-center text-danger ml-3">No hay registros guardados</p>}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal 1 crear-->
+<div class="modal fade" id="myModalInicial" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Crear nuevo equipo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="cuerpoModalInicial"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 1-->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modificar equipo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="cuerpoModal"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 2-->
+<div class="modal fade" id="myModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Detalle del equipo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="cuerpoModal2"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 3-->
+<div class="modal fade" id="myModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Eliminar equipo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="cuerpoModal3"></div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Script modal 1-->
+
+@section Scripts{
+
+    <script>
+        function AsignarEquipo() {
+            $.ajax({
+                method: "GET",
+                url: "AsignarEquipos/_Create",
+            }).done(function (data) {
+                $("#cuerpoModalInicial").html(data);
+                $("#myModalInicial").show();   
+            });
+        }                               
+
+    </script>
+
+    <script src="~/lib/datatables.net/jquery.dataTables.min.js"></script>
+}
+    @*<script>*@
+
+        @*$(document).ready(function () {
+            $('#tablaUsuarios').DataTable(
+                {
+                    language: {
+                        "processing": "Procesando...",
+                        "lengthMenu": "Mostrar MENU registros",
+                        "zeroRecords": "No se encontraron resultados",
+                        "emptyTable": "Ningún dato disponible en esta tabla",
+                        "info": "Mostrando registros del START al END de un total de TOTAL registros",
+                        "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+                        "infoFiltered": "(filtrado de un total de MAX registros)",
+                        "search": "Buscar:",
+                        "infoThousands": ",",
+                        "loadingRecords": "Cargando...",
+                        "paginate": {
+                            "first": "Primero",
+                            "last": "Último",
+                            "next": "Siguiente",
+                            "previous": "Anterior"
+                        },
+                        "aria": {
+                            "sortAscending": ": Activar para ordenar la columna de manera ascendente",
+                            "sortDescending": ": Activar para ordenar la columna de manera descendente"
+                        },
+                        "buttons": {
+                            "copy": "Copiar",
+                            "colvis": "Visibilidad",
+                            "collection": "Colección",
+                            "colvisRestore": "Restaurar visibilidad",
+                            "copyKeys": "Presione ctrl o u2318 + C para copiar los datos de la tabla al portapapeles del sistema. <br \/> <br \/> Para cancelar, haga clic en este mensaje o presione escape.",
+                            "copySuccess": {
+                                "1": "Copiada 1 fila al portapapeles",
+                                "_": "Copiadas %d fila al portapapeles"
+                            },
+                            "copyTitle": "Copiar al portapapeles",
+                            "csv": "CSV",
+                            "excel": "Excel",
+                            "pageLength": {
+                                "-1": "Mostrar todas las filas",
+                                "1": "Mostrar 1 fila",
+                                "_": "Mostrar %d filas"
+                            },
+                            "pdf": "PDF",
+                            "print": "Imprimir"
+                        },
+                        "autoFill": {
+                            "cancel": "Cancelar",
+                            "fill": "Rellene todas las celdas con <i>%d<\/i>",
+                            "fillHorizontal": "Rellenar celdas horizontalmente",
+                            "fillVertical": "Rellenar celdas verticalmentemente"
+                        },
+                        "decimal": ",",
+                        "searchBuilder": {
+                            "add": "Añadir condición",
+                            "button": {
+                                "0": "Constructor de búsqueda",
+                                "_": "Constructor de búsqueda (%d)"
+                            },
+                            "clearAll": "Borrar todo",
+                            "condition": "Condición",
+                            "conditions": {
+                                "date": {
+                                    "after": "Despues",
+                                    "before": "Antes",
+                                    "between": "Entre",
+                                    "empty": "Vacío",
+                                    "equals": "Igual a",
+                                    "not": "No",
+                                    "notBetween": "No entre",
+                                    "notEmpty": "No Vacio"
+                                },
+                                "moment": {
+                                    "after": "Despues",
+                                    "before": "Antes",
+                                    "between": "Entre",
+                                    "empty": "Vacío",
+                                    "equals": "Igual a",
+                                    "not": "No",
+                                    "notBetween": "No entre",
+                                    "notEmpty": "No vacio"
+                                },
+                                "number": {
+                                    "between": "Entre",
+                                    "empty": "Vacio",
+                                    "equals": "Igual a",
+                                    "gt": "Mayor a",
+                                    "gte": "Mayor o igual a",
+                                    "lt": "Menor que",
+                                    "lte": "Menor o igual que",
+                                    "not": "No",
+                                    "notBetween": "No entre",
+                                    "notEmpty": "No vacío"
+                                },
+                                "string": {
+                                    "contains": "Contiene",
+                                    "empty": "Vacío",
+                                    "endsWith": "Termina en",
+                                    "equals": "Igual a",
+                                    "not": "No",
+                                    "notEmpty": "No Vacio",
+                                    "startsWith": "Empieza con"
+                                }
+                            },
+                            "data": "Data",
+                            "deleteTitle": "Eliminar regla de filtrado",
+                            "leftTitle": "Criterios anulados",
+                            "logicAnd": "Y",
+                            "logicOr": "O",
+                            "rightTitle": "Criterios de sangría",
+                            "title": {
+                                "0": "Constructor de búsqueda",
+                                "_": "Constructor de búsqueda (%d)"
+                            },
+                            "value": "Valor"
+                        },
+                        "searchPanes": {
+                            "clearMessage": "Borrar todo",
+                            "collapse": {
+                                "0": "Paneles de búsqueda",
+                                "_": "Paneles de búsqueda (%d)"
+                            },
+                            "count": "{total}",
+                            "countFiltered": "{shown} ({total})",
+                            "emptyPanes": "Sin paneles de búsqueda",
+                            "loadMessage": "Cargando paneles de búsqueda",
+                            "title": "Filtros Activos - %d"
+                        },
+                        "select": {
+                            "1": "%d fila seleccionada",
+                            "_": "%d filas seleccionadas",
+                            "cells": {
+                                "1": "1 celda seleccionada",
+                                "_": "$d celdas seleccionadas"
+                            },
+                            "columns": {
+                                "1": "1 columna seleccionada",
+                                "_": "%d columnas seleccionadas"
+                            }
+                        },
+                        "thousands": "."
+                    }
+                }
+            );
+        });
+    </script>
+}*@
