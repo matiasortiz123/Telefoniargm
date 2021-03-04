@@ -41,11 +41,11 @@ namespace TelefoniaCargas.Controllers
                 _context.Unidad.Add(unidad);
                 await _context.SaveChangesAsync();
 
-                TempData["mensaje"] = "La dependecia se creo correctamente";
+                TempData["mensaje"] = "La unidad se creo correctamente";
                 return RedirectToAction(nameof(Index));
             }
 
-            TempData["mensaje"] = "La dependencia no se creo correctamente, intente nuevamente .";
+            TempData["mensaje"] = "La unidad no se creo correctamente, intente nuevamente .";
             return RedirectToAction(nameof(Index));
         }
         //Detalles
@@ -140,7 +140,7 @@ namespace TelefoniaCargas.Controllers
             _context.Unidad.Remove(unidad);
             await _context.SaveChangesAsync();
 
-            TempData["mensaje"] = "La unidad se elimino correctamente";
+            TempData["mensaje1"] = "La unidad se elimino correctamente";
 
             return RedirectToAction(nameof(Index));
         }

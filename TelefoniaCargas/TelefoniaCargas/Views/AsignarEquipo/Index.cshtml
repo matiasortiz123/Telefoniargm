@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<TelefoniaCargas.Models.Persona_Dependencia>
 @{ ViewData["Title"] = "Index";
-                Layout = "~/Views/Shared/_Layout.cshtml"; }
+ }
 @section Styles{
 
     <link href="~/lib/datatables.net-bs4/dataTables.bootstrap4.min.css" rel="stylesheet" />
@@ -11,8 +11,21 @@
             <div class="col-sm-10">
                 <h3>Lista de personas para agragar los equipos</h3>
             </div>
-            <div class="col-sm-2">
-                <a class="btn btn-success float-right text-white" data-toggle="modal" data-target="#myModalInicial" onclick="CrearEquipo()"> <i class="fas fa-plus"></i> Agregar equipo</a>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>¡Veamos si ya está en el sistema!</label>
+                    <select-ajax> title="Ingrese el DNI del paciente."
+                                 class="form-control"
+                                 id="dni"
+                                 name="dni"
+                                 url="@Url.Action("PersonasJson", $"Persona")"
+                                 color="Default"
+                                 width="100%"
+                                 class-btn="btn-flat"
+                                 text-no-results=<h4 class='text-center'>La persona no está en el sistema.<br>
+                        <a href='#' id='create' class='s_result'>Haz click aquí para agregarla.</a></h4>
+                    </select-ajax>
+                </div>
             </div>
         </div>
         <br />
@@ -23,25 +36,25 @@
     <table class="table table-bordered" id="tablaUsuarios" width="100%" cellspacing="0">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">@Html.DisplayNameFor(m => m.Persona.Nombre)</th>
+                @*<th scope="col">@Html.DisplayNameFor(m => m.Persona.Nombre)</th>
                 <th scope="col">@Html.DisplayNameFor(m => m.Persona.Apellido)</th>
                 <th scope="col">@Html.DisplayNameFor(m => m.Dependencia.Nombre)</th>
                 <th scope="col">@Html.DisplayNameFor(m => m.Dependencia.Unidad.Nombre)</th>
-                <th scope="col">Acciones</th>
+                <th scope="col">Acciones</th>*@
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model)
             {
 <tr>
-    <td>@item.Persona.Nombre</td>
+    @*<td>@item.Persona.Nombre</td>
     <td>@item.Persona.Apellido</td>
     <td>@item.Dependencia.Nombre</td>
-    <td>@item.Dependencia.Unidad.Nombre</td>
+    <td>@item.Dependencia.Unidad.Nombre</td>*@
     <td>
-        <a asp-controller="AsignarEquipo" asp-action="AgregarUsuarios" title="Asignar equipo" type="button" class="btn btn-info btn-sm bi bi-brush-fill">
+        @*<a asp-controller="AsignarEquipo" asp-action="AgregarUsuarios" title="Asignar equipo" type="button" class="btn btn-info btn-sm bi bi-brush-fill">
             Asignar
-        </a>
+        </a>*@
 
     </td>
 </tr>}
@@ -128,17 +141,17 @@
                 url: "AsignarEquipos/_Create",
             }).done(function (data) {
                 $("#cuerpoModalInicial").html(data);
-                $("#myModalInicial").show();
+                $("#myModalInicial").show();   
             });
-        }
+        }                               
 
     </script>
 
     <script src="~/lib/datatables.net/jquery.dataTables.min.js"></script>
-    <script src="~/lib/datatables.net-bs4/dataTables.bootstrap4.min.js"></script>
-    <script>
+}
+    @*<script>*@
 
-        $(document).ready(function () {
+        @*$(document).ready(function () {
             $('#tablaUsuarios').DataTable(
                 {
                     language: {
@@ -283,4 +296,4 @@
             );
         });
     </script>
-}
+}*@

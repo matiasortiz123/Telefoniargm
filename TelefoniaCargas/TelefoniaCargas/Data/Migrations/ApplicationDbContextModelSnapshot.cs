@@ -317,10 +317,19 @@ namespace TelefoniaCargas.Data.Migrations
                     b.Property<int>("Imei")
                         .HasColumnType("int");
 
+                    b.Property<int>("LineaId")
+                        .HasColumnType("int");
+
                     b.Property<int>("MarcaId")
                         .HasColumnType("int");
 
                     b.Property<int>("ModeloId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Persona_DependenciaId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PlanesId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -329,9 +338,15 @@ namespace TelefoniaCargas.Data.Migrations
 
                     b.HasIndex("EstadoEquipoId");
 
+                    b.HasIndex("LineaId");
+
                     b.HasIndex("MarcaId");
 
                     b.HasIndex("ModeloId");
+
+                    b.HasIndex("Persona_DependenciaId");
+
+                    b.HasIndex("PlanesId");
 
                     b.ToTable("Equipo");
                 });
@@ -343,18 +358,27 @@ namespace TelefoniaCargas.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Disponible")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EnMantenimiento")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NoDisponible")
+                    b.Property<string>("Estado")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.ToTable("EstadoEquipo");
+                });
+
+            modelBuilder.Entity("TelefoniaCargas.Models.Linea", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Numero")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Linea");
                 });
 
             modelBuilder.Entity("TelefoniaCargas.Models.Marca", b =>
@@ -405,6 +429,9 @@ namespace TelefoniaCargas.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Rol")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Persona");
@@ -430,6 +457,24 @@ namespace TelefoniaCargas.Data.Migrations
                     b.HasIndex("PersonaId");
 
                     b.ToTable("Persona_Dependencia");
+                });
+
+            modelBuilder.Entity("TelefoniaCargas.Models.Planes", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descripcion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nombre_Plan")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Planes");
                 });
 
             modelBuilder.Entity("TelefoniaCargas.Models.Unidad", b =>
@@ -537,6 +582,12 @@ namespace TelefoniaCargas.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("TelefoniaCargas.Models.Linea", "Linea")
+                        .WithMany()
+                        .HasForeignKey("LineaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("TelefoniaCargas.Models.Marca", "Marca")
                         .WithMany()
                         .HasForeignKey("MarcaId")
@@ -546,6 +597,16 @@ namespace TelefoniaCargas.Data.Migrations
                     b.HasOne("TelefoniaCargas.Models.Modelo", "Modelo")
                         .WithMany()
                         .HasForeignKey("ModeloId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TelefoniaCargas.Models.Persona_Dependencia", "Persona_Dependencia")
+                        .WithMany()
+                        .HasForeignKey("Persona_DependenciaId");
+
+                    b.HasOne("TelefoniaCargas.Models.Planes", "Planes")
+                        .WithMany()
+                        .HasForeignKey("PlanesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

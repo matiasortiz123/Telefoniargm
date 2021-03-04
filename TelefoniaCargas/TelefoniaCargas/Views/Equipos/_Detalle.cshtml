@@ -7,27 +7,27 @@
             <input type="hidden" asp-for="Id" />
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Imei" class="control-label" ></label>
-                <input asp-for="Imei" class="form-control" disabled/>
+                <label asp-for="Imei" class="control-label"></label>
+                <input asp-for="Imei" class="form-control" disabled />
                 <span asp-validation-for="Imei" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Accesorios" class="control-label" ></label>
-                <input asp-for="Accesorios" class="form-control" disabled/>
+                <label asp-for="Accesorios" class="control-label"></label>
+                <input asp-for="Accesorios" class="form-control" disabled />
                 <span asp-validation-for="Accesorios" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Gama" class="control-label" ></label>
-                <input asp-for="Gama" class="form-control" disabled/>
+                <label asp-for="Gama" class="control-label"></label>
+                <input asp-for="Gama" class="form-control" disabled />
                 <span asp-validation-for="Gama" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Condicion" class="control-label" ></label>
-                <input asp-for="Condicion" class="form-control" disabled/>
+                <label asp-for="Condicion" class="control-label"></label>
+                <input asp-for="Condicion" class="form-control" disabled />
                 <span asp-validation-for="Condicion" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Empresa" class="control-label" ></label>
+                <label asp-for="Empresa" class="control-label"></label>
                 <select asp-for="EmpresaId" class="form-control" asp-items="@ViewBag.Empresa" disabled></select>
             </div>
             <div class="form-group">
@@ -38,6 +38,11 @@
                 <label asp-for="Modelo" class="control-label" disabled></label>
                 <select asp-for="ModeloId" class="form-control" asp-items="@ViewBag.Modelo" disabled></select>
             </div>
+            <div class="form-group">
+                <label asp-for="EstadoEquipo" class="control-label" disabled>Estado del Equipo</label>
+                <select asp-for="EstadoEquipoId" class="form-control" asp-items="@ViewBag.Estado" disabled></select>
+            </div>
+
             <div class="form-group">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
             </div>

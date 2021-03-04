@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -27,29 +28,24 @@ namespace TelefoniaCargas.Controllers
         }
         //Http Get _Create
         [HttpGet]
-        public IActionResult AgregarUsuarios()
+        public JsonResult PersonasJson(string q)
         {
-            var equipos = _context.Equipo.Include(x => x.Marca).Include(x => x.Modelo).Include(x => x.Empresa).ToList();
-            return View(equipos);
+         
+            var items = _context.Persona
+                .Where(x => x.Nombre.Contains(q)
+                        || x.Apellido.Contains(q)
+                        || x.DNI.ToString().Contains(q)
+                        )
+                .Select(x => new
+                {
+                    Text = $"{x.Apellido}, {x.Nombre}",
+                    Value = x.Id,
+                    Subtext = $"{x.DNI}",
+                    Icon = "fa fa-user"
+                }).Take(10).ToArray();
+
+            return Json(items);
         }
 
-        //Http Post _Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult _Create(AsignarEquipo asignarequipo)
-        {
-            if (ModelState.IsValid)
-            {
-                asignarequipo.Id = 0;
-                _context.AsignarEquipo.Add(asignarequipo);
-                _context.SaveChanges();
-
-                TempData["mensaje"] = "El equipo se asigno correctamente";
-                return RedirectToAction(nameof(Index));
-            }
-
-            TempData["mensaje"] = "El equipo no se asigno correctamente, intente nuevamente .";
-            return RedirectToAction(nameof(Index));
-        }
     }
 }

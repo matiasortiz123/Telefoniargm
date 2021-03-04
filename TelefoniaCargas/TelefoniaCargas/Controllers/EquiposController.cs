@@ -21,7 +21,7 @@ namespace TelefoniaCargas.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var equipo = await _context.Equipo.Include(u => u.Marca).Include(u => u.Empresa).Include(m => m.Modelo).ToListAsync();
+            var equipo = await _context.Equipo.Include(u => u.Marca).Include(u => u.Empresa).Include(m => m.Modelo).Include(u => u.EstadoEquipo).Include(u=> u.Persona_Dependencia).Include(u=> u.Linea).Include(u=> u.Planes).ToListAsync();
             return View(equipo);
         }
 
@@ -32,6 +32,10 @@ namespace TelefoniaCargas.Controllers
             ViewBag.Marca = _context.Marca.Select(i => new SelectListItem() { Text = i.Descripcion, Value = i.Id.ToString() });
             ViewBag.Modelo = _context.Modelo.Select(i => new SelectListItem() { Text = i.Descripcion, Value = i.Id.ToString()});
             ViewBag.Empresa = _context.Empresa.Select(i => new SelectListItem() { Text = i.Nombre, Value = i.Id.ToString() });
+            ViewBag.Estado = _context.EstadoEquipo.Select(i => new SelectListItem() { Text = i.Estado, Value = i.Id.ToString() });
+            ViewBag.Linea = _context.Linea.Select(i => new SelectListItem() { Text = i.Numero, Value = i.Id.ToString() });
+            ViewBag.Planes = _context.Planes.Select(i => new SelectListItem() { Text = i.Nombre_Plan + " " + i.Descripcion , Value = i.Id.ToString() });
+            
 
             return PartialView();
         }
@@ -71,6 +75,7 @@ namespace TelefoniaCargas.Controllers
             ViewBag.Marca = _context.Marca.Select(i => new SelectListItem() { Text = i.Descripcion, Value = i.Id.ToString() });
             ViewBag.Modelo = _context.Modelo.Select(i => new SelectListItem() { Text = i.Descripcion, Value = i.Id.ToString() });
             ViewBag.Empresa = _context.Empresa.Select(i => new SelectListItem() { Text = i.Nombre, Value = i.Id.ToString() });
+            ViewBag.Estado = _context.EstadoEquipo.Select(i => new SelectListItem() { Text = i.Estado, Value = i.Id.ToString() });
             return PartialView(equipo);
         }
 
@@ -93,6 +98,7 @@ namespace TelefoniaCargas.Controllers
             ViewBag.Marca = _context.Marca.Select(i => new SelectListItem() { Text = i.Descripcion, Value = i.Id.ToString() });
             ViewBag.Modelo = _context.Modelo.Select(i => new SelectListItem() { Text = i.Descripcion, Value = i.Id.ToString() });
             ViewBag.Empresa = _context.Empresa.Select(i => new SelectListItem() { Text = i.Nombre, Value = i.Id.ToString() });
+            ViewBag.Estado = _context.EstadoEquipo.Select(i => new SelectListItem() { Text = i.Estado, Value = i.Id.ToString() });
 
             return PartialView(modelo);
         }
@@ -134,7 +140,8 @@ namespace TelefoniaCargas.Controllers
             ViewBag.Marca = _context.Marca.Select(i => new SelectListItem() { Text = i.Descripcion, Value = i.Id.ToString() });
             ViewBag.Modelo = _context.Modelo.Select(i => new SelectListItem() { Text = i.Descripcion, Value = i.Id.ToString() });
             ViewBag.Empresa = _context.Empresa.Select(i => new SelectListItem() { Text = i.Nombre, Value = i.Id.ToString() });
-            
+            ViewBag.Estado = _context.EstadoEquipo.Select(i => new SelectListItem() { Text = i.Estado, Value = i.Id.ToString() });
+
             return PartialView(equipo);
         }
 
@@ -153,10 +160,40 @@ namespace TelefoniaCargas.Controllers
             _context.Equipo.Remove(equipo);
             await _context.SaveChangesAsync();
 
-            TempData["mensaje"] = "El equipo se elimino correctamente";
+            TempData["mensaje1"] = "El equipo se elimino correctamente";
 
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public IActionResult _Asignar()
+        {
+            ViewBag.Unidad = _context.Unidad.Select(i => new SelectListItem() { Text = i.Nombre, Value = i.Id.ToString() });
+            ViewBag.Dependencia = _context.Dependencia.Select(i => new SelectListItem() { Text = i.Nombre, Value = i.Id.ToString() });
+            //ViewBag.Roles = _context.Roles.Select(i => new SelectListItem() { Text = i.Nombre, Value = i.Id.ToString() });
+            ViewBag.DNI = _context.Persona.Select(i => new SelectListItem() { Text = i.DNI.ToString(), Value = i.Id.ToString() });
+            ViewBag.IMEI = _context.Equipo.Select(i => new SelectListItem() { Text = i.Imei.ToString(), Value = i.Id.ToString() });
+
+            return PartialView();
+        }
+
+        //Http Post _Create
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public IActionResult _Create(Equipo equipo)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        equipo.Id = 0;
+        //        _context.Equipo.Add(equipo);
+        //        _context.SaveChanges();
+
+        //        TempData["mensaje"] = "El equipo se creo correctamente";
+        //        return RedirectToAction(nameof(Index));
+        //    }
+
+        //    TempData["mensaje"] = "El equipo no se creo correctamente, intente nuevamente .";
+        //    return RedirectToAction(nameof(Index));
+        //}
 
     }
 }

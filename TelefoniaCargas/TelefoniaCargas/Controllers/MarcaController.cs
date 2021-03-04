@@ -20,7 +20,7 @@ namespace TelefoniaCargas.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var marca = await _context.Marca.ToArrayAsync();
+            var marca = await _context.Marca.ToListAsync();
             return View(marca);
         }
 
@@ -138,7 +138,7 @@ namespace TelefoniaCargas.Controllers
             _context.Marca.Remove(marca);
             await _context.SaveChangesAsync();
 
-            TempData["mensaje"] = "El equipo se elimino correctamente";
+            TempData["mensaje1"] = "La marca se elimino correctamente";
 
             return RedirectToAction("Index");
         }

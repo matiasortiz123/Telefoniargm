@@ -138,7 +138,7 @@ namespace TelefoniaCargas.Controllers
             _context.Persona.Remove(persona);
             await _context.SaveChangesAsync();
 
-            TempData["mensaje"] = "La unidad se elimino correctamente";
+            TempData["mensaje1"] = "La unidad se elimino correctamente";
 
             return RedirectToAction(nameof(Index));
         }

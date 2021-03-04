@@ -6,8 +6,18 @@ using System.Threading.Tasks;
 
 namespace TelefoniaCargas.Models
 {
+  
+
     public class Persona
     {
+        public enum Tipos
+        {
+            [Display(Name = "Persona")]
+            Persona,
+            [Display(Name = "Rol")]
+            Rol
+
+        }
         [Key]
         public int Id { get; set; }
         [Required(ErrorMessage = "El nombre es requerido .")]
@@ -18,5 +28,11 @@ namespace TelefoniaCargas.Models
         public string Apellido { get; set; }
         [Required(ErrorMessage = " El DNI es requerido .")]
         public int DNI { get; set; }
+
+        public string Rol { get; set; }
+        
+
+        //Vinculaciones
+
     }
 }

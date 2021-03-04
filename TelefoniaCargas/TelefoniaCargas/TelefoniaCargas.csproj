@@ -6,6 +6,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\NewFolder1\**" />
+    <Compile Remove="Views\NewFolder\**" />
+    <Content Remove="Views\NewFolder1\**" />
+    <Content Remove="Views\NewFolder\**" />
+    <EmbeddedResource Remove="Views\NewFolder1\**" />
+    <EmbeddedResource Remove="Views\NewFolder\**" />
+    <None Remove="Views\NewFolder1\**" />
+    <None Remove="Views\NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="Data\Migrations\20210219134635_UnidadIdparaDepend2.cs" />
     <Compile Remove="Data\Migrations\20210219134635_UnidadIdparaDepend2.Designer.cs" />
     <Compile Remove="Data\Migrations\20210223113133_EstadodeEquipos.cs" />
@@ -14,6 +25,18 @@
     <Compile Remove="Data\Migrations\20210223113340_EstadoEquipos.Designer.cs" />
     <Compile Remove="Data\Migrations\20210223122623_EstadoEquipos.cs" />
     <Compile Remove="Data\Migrations\20210223122623_EstadoEquipos.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210223145420_VincPersona.cs" />
+    <Compile Remove="Data\Migrations\20210223145420_VincPersona.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210224141913_VINC.cs" />
+    <Compile Remove="Data\Migrations\20210224141913_VINC.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210224142242_Vinc.cs" />
+    <Compile Remove="Data\Migrations\20210224142242_Vinc.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210303143004_PlanesYLinea.cs" />
+    <Compile Remove="Data\Migrations\20210303143004_PlanesYLinea.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210303144619_PlanesYLinea.cs" />
+    <Compile Remove="Data\Migrations\20210303144619_PlanesYLinea.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210303145043_PlanesYLinea.cs" />
+    <Compile Remove="Data\Migrations\20210303145043_PlanesYLinea.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,5 +51,7 @@
   <ItemGroup>
     <Folder Include="wwwroot\adminlte\" />
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>

@@ -9,10 +9,8 @@ namespace TelefoniaCargas.Models
     {
         public int Id { get; set; }
 
-        public string Disponible { get; set; }
+        public string Estado { get; set; }
 
-        public string NoDisponible { get; set; }
 
-        public string EnMantenimiento { get; set; }
     }
 }

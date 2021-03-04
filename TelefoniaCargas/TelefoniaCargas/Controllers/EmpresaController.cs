@@ -136,7 +136,7 @@ namespace TelefoniaCargas.Controllers
             _context.Empresa.Remove(empresa);
             await _context.SaveChangesAsync();
 
-            TempData["mensaje"] = "El equipo se elimino correctamente";
+            TempData["mensaje1"] = "La empresa se elimino correctamente";
 
             return RedirectToAction(nameof(Index));
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Q5dI2isEPU5OvYrsq+uZg9AMDuKKYwZeYRkbMLfoi0tWBbltBCesp27DXZYv8vGTxriLARVW6vqUoOpL9VWFow==",
+  "dgSpecHash": "7h7TxFvBIwkzxQ+WYOI8P6v7PoDujGiaAjHWsIpeHHePXZbCFYVTg8UuOECp7y+cIaZT6EAGS4mbz+RA6yn5bQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\CPS-DLLO#11\\Desktop\\DUFI-main\\TelefoniaCargas\\TelefoniaCargas\\TelefoniaCargas.csproj",
+  "projectFilePath": "C:\\Users\\CPS-DLLO#11\\Desktop\\git\\Telefoniargm\\TelefoniaCargas\\TelefoniaCargas\\TelefoniaCargas.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\CPS-DLLO#11\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.3\\microsoft.aspnetcore.cryptography.internal.3.1.3.nupkg.sha512",
     "C:\\Users\\CPS-DLLO#11\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.3\\microsoft.aspnetcore.cryptography.keyderivation.3.1.3.nupkg.sha512",

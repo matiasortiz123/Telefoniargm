@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\CPS-DLLO#11\\Desktop\\DUFI-main\\TelefoniaCargas\\TelefoniaCargas\\TelefoniaCargas.csproj": {}
+    "C:\\Users\\CPS-DLLO#11\\Desktop\\git\\Telefoniargm\\TelefoniaCargas\\TelefoniaCargas\\TelefoniaCargas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\CPS-DLLO#11\\Desktop\\DUFI-main\\TelefoniaCargas\\TelefoniaCargas\\TelefoniaCargas.csproj": {
+    "C:\\Users\\CPS-DLLO#11\\Desktop\\git\\Telefoniargm\\TelefoniaCargas\\TelefoniaCargas\\TelefoniaCargas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CPS-DLLO#11\\Desktop\\DUFI-main\\TelefoniaCargas\\TelefoniaCargas\\TelefoniaCargas.csproj",
+        "projectUniqueName": "C:\\Users\\CPS-DLLO#11\\Desktop\\git\\Telefoniargm\\TelefoniaCargas\\TelefoniaCargas\\TelefoniaCargas.csproj",
         "projectName": "TelefoniaCargas",
-        "projectPath": "C:\\Users\\CPS-DLLO#11\\Desktop\\DUFI-main\\TelefoniaCargas\\TelefoniaCargas\\TelefoniaCargas.csproj",
+        "projectPath": "C:\\Users\\CPS-DLLO#11\\Desktop\\git\\Telefoniargm\\TelefoniaCargas\\TelefoniaCargas\\TelefoniaCargas.csproj",
         "packagesPath": "C:\\Users\\CPS-DLLO#11\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CPS-DLLO#11\\Desktop\\DUFI-main\\TelefoniaCargas\\TelefoniaCargas\\obj\\",
+        "outputPath": "C:\\Users\\CPS-DLLO#11\\Desktop\\git\\Telefoniargm\\TelefoniaCargas\\TelefoniaCargas\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\CPS-DLLO#11\\AppData\\Roaming\\NuGet\\NuGet.Config",

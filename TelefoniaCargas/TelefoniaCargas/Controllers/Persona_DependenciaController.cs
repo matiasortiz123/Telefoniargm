@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using TelefoniaCargas.Data;
@@ -18,9 +19,11 @@ namespace TelefoniaCargas.Controllers
         {
             _context = context;
         }
+       
         public async Task<IActionResult> Index ()
         {
             var persona_dependencia = await _context.Persona_Dependencia.Include(x => x.Persona).Include(x => x.Dependencia).Include(x => x.Dependencia.Unidad).ToListAsync();
+         
 
             return View(persona_dependencia);
         }
@@ -32,6 +35,8 @@ namespace TelefoniaCargas.Controllers
             //ViewBag.Apellido = _context.Persona.Select(i => new SelectListItem() { Text = i.Apellido, Value = i.Id.ToString() });
             //ViewBag.DNI = _context.Persona.Select(i => new SelectListItem() { Text = i.DNI.ToString(), Value = i.Id.ToString() });
             ViewBag.Dependencia = _context.Dependencia.Select(i => new SelectListItem() { Text = i.Nombre, Value = i.Id.ToString() });
+            
+            
 
             return PartialView();
         }
@@ -47,11 +52,11 @@ namespace TelefoniaCargas.Controllers
                 _context.Persona_Dependencia.Add(persona_dependencia);
                 _context.SaveChanges();
 
-                TempData["mensaje"] = "El equipo se creo correctamente";
+                TempData["mensaje"] = "La persona y dependencia se creo correctamente";
                 return RedirectToAction(nameof(Index));
             }
 
-            TempData["mensaje"] = "El equipo no se creo correctamente, intente nuevamente .";
+            TempData["mensaje"] = "La persona y dependencia no se creo correctamente, intente nuevamente .";
             return RedirectToAction(nameof(Index));
         }
         [HttpGet]
@@ -66,7 +71,7 @@ namespace TelefoniaCargas.Controllers
             {
                 return NotFound();
             }
-
+            
             ViewBag.Nombre = _context.Persona.Select(i => new SelectListItem() { Text = i.Nombre + " " + i.Apellido, Value = i.Id.ToString() });
             //ViewBag.Apellido = _context.Persona.Select(i => new SelectListItem() { Text = i.Apellido, Value = i.Id.ToString() });
             //ViewBag.DNI = _context.Persona.Select(i => new SelectListItem() { Text = i.DNI.ToString(), Value = i.Id.ToString() });
@@ -108,11 +113,11 @@ namespace TelefoniaCargas.Controllers
                 _context.Persona_Dependencia.Update(persona_dEPEN);
                 _context.SaveChanges();
 
-                TempData["mensaje"] = "El Modelo se guardo correctamente";
+                TempData["mensaje"] = "La persona y dependencia se guardo correctamente";
                 return RedirectToAction(nameof(Index));
             }
 
-            TempData["mensaje"] = "El Modelo no se guardo correctamente intente de nuevo";
+            TempData["mensaje"] = "La persona y dependencia no se guardo correctamente intente de nuevo";
             return RedirectToAction(nameof(Index));
         }
 
@@ -153,7 +158,7 @@ namespace TelefoniaCargas.Controllers
             _context.Persona_Dependencia.Remove(equipo);
             await _context.SaveChangesAsync();
 
-            TempData["mensaje"] = "El equipo se elimino correctamente";
+            TempData["mensaje1"] = "La persona y dependencia se eliminó correctamente";
 
             return RedirectToAction("Index");
         }

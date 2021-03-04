@@ -1,0 +1,23 @@
+﻿@model TelefoniaCargas.Models.Planes
+
+<div class="row">
+    <div class="col-sm-12 p-3">
+        <form asp-action="_Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nombre_Plan" class="control-label">Nombre del Plan</label>
+                <input asp-for="Nombre_Plan" class="form-control" placeholder="Ej: Economico" />
+                <span asp-validation-for="Nombre_Plan" class="text-danger"></span>
+            </div><div class="form-group">
+                <label asp-for="Descripcion" class="control-label"></label>
+                <input asp-for="Descripcion" class="form-control" placeholder="Ej: 4GB" />
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Crear Plan" class="btn btn-success" />
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Cerrar</button>
+            </div>
+        </form>
+    </div>
+</div>
+

@@ -43,7 +43,7 @@ namespace TelefoniaCargas.Controllers
                 _context.Dependencia.Add(dependencia);
                 await _context.SaveChangesAsync();
 
-                TempData["mensaje"] = "La dependecia se creo correctamente";
+                TempData["mensaje"] = "La dependencia se creo correctamente";
                 return RedirectToAction(nameof(Index));
             }
 
@@ -98,11 +98,11 @@ namespace TelefoniaCargas.Controllers
                 _context.Dependencia.Update(dependencia);
                 await _context.SaveChangesAsync();
 
-                TempData["mensaje"] = "El Modelo se guardo correctamente";
+                TempData["mensaje"] = "La dependencia se guardo correctamente";
                 return RedirectToAction(nameof(Index));
             }
 
-            TempData["mensaje"] = "El Modelo no se guardo correctamente intente de nuevo";
+            TempData["mensaje"] = "La dependencia no se guardo correctamente intente de nuevo";
             return RedirectToAction(nameof(Index));
         }
         //Http Get Delete
@@ -142,7 +142,7 @@ namespace TelefoniaCargas.Controllers
             _context.Dependencia.Remove(dependencia);
             await _context.SaveChangesAsync();
 
-            TempData["mensaje"] = "La dependencia se elimino correctamente";
+            TempData["mensaje1"] = "La dependencia se elimino correctamente";
 
             return RedirectToAction(nameof(Index));
         }
