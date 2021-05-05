@@ -1,0 +1,22 @@
+﻿@model modulo_documentacion.Areas.Admin.Models.Basicas.Linea
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <br />
+            <p>¿Esta seguro que desea eliminar la marca?</p>
+        </div>
+    </div>
+    <div class="row">
+        <hr />
+        <div class="col-md-12">
+            <form method="post" asp-controller="Linea" asp-action="_DeleteLineas">
+                <input type="hidden" asp-for="Id" />
+                <button type="submit" class="btn btn-danger ml-1">Eliminar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </form>
+        </div>
+    </div>
+    <br />
+</div>
+

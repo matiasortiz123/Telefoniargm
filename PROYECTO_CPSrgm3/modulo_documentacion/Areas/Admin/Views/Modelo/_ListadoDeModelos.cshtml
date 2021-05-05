@@ -1,0 +1,69 @@
+﻿@using Commons.Models
+@model Page<modulo_documentacion.Areas.Admin.Models.Basicas.Modelo>
+
+<box-header title="Listado de Modelos">
+
+    <div class="input-group input-group-sm pull-right" style="max-width: 300px;">
+        <a onclick="nuevoModelo()" class="btn btn-info btn-sm">
+            <i class="fa fa-plus"><span class="hidden-xs"> Nuevo</span></i>
+        </a>
+    </div>
+
+</box-header>
+<box-body table="true" style="padding-inline-start">
+    <table id="listadoDeModelos" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Modelo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                @if (item.Descripcion == "Sin asignar")
+                {
+                    <tr>
+                        <td scope="col">@Html.DisplayFor(modelItem => item.Descripcion)</td>
+                        <td>
+                        </td>
+                    </tr>
+                }
+                else
+                {
+                    <tr>
+                        <td scope="col">@Html.DisplayFor(modelItem => item.Descripcion)</td>
+                        <td>
+                            <a onclick="editarModelo('@item.Id')" title="Editar equipo" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i></a>
+                            <a onclick="DetalleModelo('@item.Id')" title="Detalle equipo" class="btn btn-success btn-xs"><i class="fa fa-eye"></i></a>
+                            <a onclick="EliminarModelo('@item.Id')"
+                               confirm="Este registro ya no podra visualizarse"
+                               confirm-icon="Danger"
+                               title="Eliminar modelo" class="btn btn-danger btn-xs">
+                                <i class="fa fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</box-body>
+<modal title="Nuevo modelo" callback-modal="true" function="nuevoModelo" load-url="/Admin/Modelo/_Create/" size="Medium"></modal>
+<modal title="Editar modelo" callback-modal="true" function="editarModelo" load-url="/Admin/Modelo/_Edit/" size="Medium"></modal>
+<modal title="Detalle modelo" callback-modal="true" function="DetalleModelo" load-url="/Admin/Modelo/_Detalle/" size="Medium"></modal>
+<modal title="Eliminar modelo" callback-modal="true" function="EliminarModelo" load-url="/Admin/Modelo/_Delete/" size="Medium"></modal>
+<script>
+    $(document).ready(function () {
+        $('#listadoDeModelos').DataTable({
+            "columnDefs": [{
+                "searchable": false,
+                "orderable": false,
+                //"targets": 3
+            }],
+            "language": {
+                'url': '@Url.Content("~/lib/arg.json")'
+            }
+        });
+    });
+</script>

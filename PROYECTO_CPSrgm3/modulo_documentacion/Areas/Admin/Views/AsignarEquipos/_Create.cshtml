@@ -1,0 +1,24 @@
+﻿@model modulo_documentacion.Areas.Admin.Models.Basicas.RolesPersonas
+
+@{ 
+    ViewData["Title"] = "Crear"; 
+}
+
+<div class="row">
+    <div class="col-sm-12 p-3">    
+        <form method="post"asp-controller="AsignarEquipos" asp-action="_CreateSeleccion">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>          
+            <div class="form-group">
+                <label class="control-label">Seleccione lo que desea cargar</label>
+                <select asp-for="Id" class="form-control" asp-items="@ViewBag.RolesPersonas"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="seleccionar"  class="btn btn-info ml-1"  asp-route-id="Id" onclick="_CreateSeleccion()"/>
+            </div> 
+        </form>     
+    </div>
+</div>
+
+
+
+@*@*onclick="_CreateSeleccion()"**@

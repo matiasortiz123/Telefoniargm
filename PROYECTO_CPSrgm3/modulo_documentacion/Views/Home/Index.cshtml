@@ -1,0 +1,144 @@
+﻿@model modulo_documentacion.ViewModels.InicioPersonal;
+@{
+    ViewData["Title"] = "Gestion Personal de Documentos";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">Documentos activos</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Fecha</th>
+                            <th>Ultimas Observaciones</th>
+                            <th>Progreso</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if(Model.Documentos.Count == 0)
+                        {
+                            <tr><td colspan="6" style="text-align:center;font-family:Tahoma,Verdana">No se encontraron documentos activos</td></tr>
+                        }
+                        @foreach (var d in Model.Documentos)
+                        {
+                            <tr>
+
+                                <td>@d.TipoDocumento.ToString().ToUpper()</td>
+                                <td>@d?.Fecha.ToShortDateString()</td>
+                                <td>@d.Observaciones</td>
+                                <td>
+                                    <div class="progress progress-xs">
+                                        <div class="progress-bar @d.EstiloBarra" style="width: @d.Progreso%"></div>
+                                    </div>
+                                </td>
+                                <td><span class="@d.EstiloEstado" style="font-weight:600">@d.Estado</span></td>
+                                <td class="align-content-md-center">
+                                    @switch ((int)d.TipoDocumento)
+                                    {
+                                        case 1:
+                                            @if (d.PermiteEdicion)
+                                            {
+                                                <a title="Editar" asp-area="DDJJ" asp-controller="DeclaracionJurada" asp-action="DomicilioVivienda" asp-route-id="@d.DocumentoID" class="btn btn-primary btn-xs"><i class=" fa fa-edit"></i></a>
+                                            }
+                                            @if (d.PermiteSolicitud)
+                                            {
+                                                <a title="Solicitar Modificacion" onclick="solicitarModificacion(@d.DocumentoID)" class="btn btn-warning btn-xs"><i class=" fa fa-edit"></i></a>
+                                            }
+                                            @if (d.PermiteReporte)
+                                            {
+                                                <a onclick="reporteDDJJ(@d.DocumentoID)" title="Visualizar" class="btn btn-success btn-xs"><i class="fa fa-file-text-o"></i></a>
+                                            }
+                                            <a title="Ver Historial" onclick="verHistorial(@d.DocumentoID)" class="btn btn-info btn-xs"><i class=" fa fa-book"></i></a>
+                                            break;
+                                        case 2:
+                                            <a title="Editar" asp-area="DUFI" asp-controller="CargoActual" asp-route-id="@d.DocumentoID"><i class=" fa fa-edit"></i></a>
+                                            break;
+                                        case 3:
+                                            <a title="Editar" asp-area="Albacea" asp-controller="PersonaAviso" asp-route-id="@d.DocumentoID"><i class=" fa fa-edit"></i></a>
+                                            break;
+                                        default:
+                                            break;
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.box-body -->
+        </div>
+    </div>
+    <!-- /.box -->
+</div>
+<modal title="Solicitud de Modificacion" function="solicitarModificacion" load-url="/DDJJ/DeclaracionJurada/_SolicitarModificacion/" size="Large"></modal>
+<modal title="Historial" function="verHistorial" load-url="/DDJJ/DeclaracionJurada/_VerHistorial/" size="Medium"></modal>
+<modal title="Declaracion Jurada" function="reporteDDJJ" load-url="/DDJJ/DDJJReportes/_ReporteIndividual/" size="Large"></modal>
+
+<div class="row">
+    <div class="col-lg-4 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-aqua">
+            <div class="inner">
+                <h3>@ViewBag.Equipos</h3>
+                <p>Equipos cargados</p>
+            </div>
+            <div class="icon">
+                <i class="fa fa-refresh"></i>
+            </div>
+            <a href="#" class="small-box-footer">Mas Información<i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <!-- ./col -->
+    <div class="col-lg-4 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-yellow">
+            <div class="inner">
+                <h3>@ViewBag.Asignados<sup style="font-size: 20px"></sup></h3>
+                <p>Equipos disponibles para asignar</p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+            </div>
+            <a href="#" class="small-box-footer">Mas Información <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <!-- ./col -->
+    <div class="col-lg-4 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-blue">
+            <div class="inner">
+                <h3>@ViewBag.Libres</h3>
+                <p>Equipos asignados</p>
+            </div>
+            <div class="icon">
+                <i class="fa fa-check"></i>
+            </div>
+            <a href="#" class="small-box-footer">Mas Información <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <!-- ./col -->
+    <!--<div class="col-lg-3 col-xs-6">-->
+        <!-- small box -->
+        <!--<div class="small-box bg-red">
+            <div class="inner">
+                <h3>ViewBag.Inasistencias</h3>
+                <h3>1</h3>
+                <p>Documentos observados</p>
+            </div>
+            <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+            </div>
+            <a href="#" class="small-box-footer">Más Información <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+    </div>-->
+    <!-- ./col -->
+</div>
+

@@ -1,0 +1,55 @@
+﻿@model modulo_documentacion.Areas.Admin.Models.Basicas.Unidad
+
+<form class="form-horizontal" method="post" asp-action="_Create" asp-controller="Unidad">
+    <div class="box-body">
+      
+           
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="CodigoUnidad" class="control-label"></label>
+                    <input asp-for="CodigoUnidad" class="form-control" />
+                    <span asp-validation-for="CodigoUnidad" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="UnidadSuperiorId" class="control-label"></label>
+                    <select asp-for="UnidadSuperiorId" class="form-control" asp-items="ViewBag.UnidadSuperiorId"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Abreviatura" class="control-label"></label>
+                    <input asp-for="Abreviatura" class="form-control" />
+                    <span asp-validation-for="Abreviatura" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Descripcion" class="control-label"></label>
+                    <input asp-for="Descripcion" class="form-control" />
+                    <span asp-validation-for="Descripcion" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Estado" class="control-label"></label>
+                    <input asp-for="Estado" class="form-control" />
+                    <span asp-validation-for="Estado" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="GuarnicionId" class="control-label"></label>
+                    <select asp-for="GuarnicionId" class="form-control" asp-items="ViewBag.GuarnicionId"></select>
+                </div> 
+    </div>
+    <!-- /.box-body -->
+    <div class="box-footer">
+        <a asp-action="Index" class="btn btn-default">Cancelar</a>
+        <button type="submit" class="btn btn-info pull-right">Agregar</button>
+    </div>
+    <!-- /.box-footer -->
+</form>
+
+
+
+
+
+
+
+@*<div>
+    <a asp-action="Index">Back to List</a>
+</div>*@
+
+

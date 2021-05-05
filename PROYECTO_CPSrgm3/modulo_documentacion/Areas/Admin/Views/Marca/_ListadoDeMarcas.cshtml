@@ -1,0 +1,77 @@
+﻿@using Commons.Models
+@model Page<modulo_documentacion.Areas.Admin.Models.Basicas.Marca>
+
+<box-header title="Listado de Marcas">
+
+    <div class="input-group input-group-sm pull-right" style="max-width: 300px;">
+        <a onclick="nuevoMarca()" class="btn btn-info btn-sm">
+            <i class="fa fa-plus"><span class="hidden-xs"> Nuevo</span></i>
+        </a>
+    </div>
+
+</box-header>
+<box-body table="true" style="padding-inline-start">
+    <table id="listadoDeMarcas" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Marca</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                    @if (item.Descripcion == "Sin asignar")
+                    {
+                        <tr>
+                            <td scope="col">@Html.DisplayFor(modelItem => item.Descripcion)</td>
+                            <td>
+                                @*<a onclick="editarMarca('@item.Id')" title="Editar equipo" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i></a>*@
+                                @*<a onclick="DetalleMarca('@item.Id')" title="Detalle equipo" class="btn btn-success btn-xs"><i class="fa fa-eye"></i></a>*@
+                                @*<a onclick="EliminarMarca('@item.Id')"
+                                confirm="Este registro ya no podra visualizarse"
+                                confirm-icon="Danger"
+                                title="Eliminar marca" class="btn btn-danger btn-xs">
+                                <i class="fa fa-trash"></i>
+                                </a>*@
+                            </td>
+                        </tr> 
+                    }
+                    else
+                    {
+                        <tr>
+                            <td scope="col">@Html.DisplayFor(modelItem => item.Descripcion)</td>
+                            <td>
+                                <a onclick="editarMarca('@item.Id')" title="Editar equipo" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i></a>
+                                <a onclick="DetalleMarca('@item.Id')" title="Detalle equipo" class="btn btn-success btn-xs"><i class="fa fa-eye"></i></a>
+                                <a onclick="EliminarMarca('@item.Id')"
+                                    confirm="Este registro ya no podra visualizarse"
+                                    confirm-icon="Danger"
+                                    title="Eliminar marca" class="btn btn-danger btn-xs">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }            
+            }
+        </tbody>
+    </table>
+</box-body>
+<modal title="Nuevo equipo" callback-modal="true" function="nuevoMarca" load-url="/Admin/Marca/_Create/" size="Medium"></modal>
+<modal title="Editar equipo" callback-modal="true" function="editarMarca" load-url="/Admin/Marca/_Edit/" size="Medium"></modal>
+<modal title="Detalle equipo" callback-modal="true" function="DetalleMarca" load-url="/Admin/Marca/_Detalle/" size="Medium"></modal>
+<modal title="Eliminar equipo" callback-modal="true" function="EliminarMarca" load-url="/Admin/Marca/_Delete/" size="Medium"></modal>
+<script>
+    $(document).ready(function () {
+        $('#listadoDeMarcas').DataTable({
+            "columnDefs": [{
+                "searchable": false,
+                "orderable": false,
+                //"targets": 3
+            }],
+            "language": {
+                'url': '@Url.Content("~/lib/arg.json")'
+            }
+        });
+    });
+</script>

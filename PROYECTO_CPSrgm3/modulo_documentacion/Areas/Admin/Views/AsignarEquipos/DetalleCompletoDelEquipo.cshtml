@@ -1,0 +1,118 @@
+﻿@model modulo_documentacion.Areas.Admin.Models.Basicas.PersonaEquipos
+@{
+    ViewData["Title"] = "DetalleCompletoDelEquipo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="box box-info">
+    <div class="box-body">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-8"><strong><i class="fa fa-book margin-r-5"></i>Datos de la persona</strong></div>
+                <div class="col-md-4">
+                </div>
+                <br>
+                <div class="col-md-12">
+                    <p class="text-muted">
+                    </p>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span>Unidad<a class="pull-right">@Model.Unidad</a></span><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span>Grado<a class="pull-right">@Model.Grado</a></span><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span>Nombre<a class="pull-right">@Model.Nombre</a></span><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span>Apellido<a class="pull-right">@Model.Apellido</a></span><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span>DNI<a class="pull-right">@Model.Dni</a></span><br>
+                        </div>
+                    </div>
+                    <p></p>
+                </div>
+            </div>
+
+            <hr class="separador-detalle bg-dark">
+
+            <div class="row">
+                <div class="col-md-8"><strong><i class="fa fa-book margin-r-5"></i>Estado</strong></div>
+                <div class="col-md-4">
+                </div>
+                <br>
+                <div class="col-md-12">
+                    <p class="text-muted">
+                    </p>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span>IMEI<a class="pull-right">@Model.Equipo.Imei</a></span><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span>ACCESORIO<a class="pull-right">@Model.Equipo.Accesorios</a></span><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span>GAMA<a class="pull-right">@Model.Equipo.Gama</a></span><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span>CONDICIÓN<a class="pull-right">@Model.Equipo.Condicion</a></span><br>
+                        </div>
+                    </div>
+                    <p></p>
+                </div>
+            </div>
+
+            <hr />
+
+            <div class="row">
+                <div class="col-md-10"><strong><i class="fa fa-map-marker margin-r-5"></i>Datos del equipo </strong></div>
+                <div class="col-md-2">
+                </div>
+                <br>
+                <div class="col-md-12">
+                    <p class="text-muted">
+                    </p>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span>Marca<a class="pull-right">@Model.Equipo.Marca.Descripcion</a></span><br>
+                        </div>
+                        <div class="col-md-12">
+                            <span>Modelo <a class="pull-right">@Model.Equipo.Modelo.Descripcion</a></span>
+                        </div>
+                        <div class="col-md-12">
+                            <span>Empresa <a class="pull-right">@Model.Equipo.Empresa.Nombre</a></span>
+                        </div>
+
+                        <div class="col-md-12">
+                            <span>Linea <a class="pull-right">@Model.Equipo.Linea.Numero</a></span>
+                        </div>
+                        <div class="col-md-12">
+                            <span>Plan <a class="pull-right">@Model.Equipo.Planes.Descripcion</a></span>
+                        </div>
+                    </div>
+                    <p></p>
+                </div>
+            </div>
+
+            <hr class="separador-detalle">
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+﻿@model bool?
+
+
+@if (Model.GetValueOrDefault(false))
+{
+    <span >Sí</span> //class="label bg-green"
+}
+else
+{
+    <span>No</span> //class="label bg-red"
+}

@@ -1,0 +1,18 @@
+﻿.box-header.abm-familiar{
+    padding:5px;
+}
+
+.txt-boton-grilla{
+    font-family:Tahoma;
+}
+
+.error {
+    color: red;
+}
+ul.ui-autocomplete{
+   
+}
+.pac-container.pac-logo {
+    z-index: 1100;
+}
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin);

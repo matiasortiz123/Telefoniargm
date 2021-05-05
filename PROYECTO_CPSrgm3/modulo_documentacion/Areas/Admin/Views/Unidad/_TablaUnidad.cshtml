@@ -1,0 +1,60 @@
+﻿@using Commons.Models;
+@model Commons.Models.Page<CommonsCps.Entities.Unidad>
+<box-header title="Lista de Datos">
+    <box-search update-div="TablaUnidad">
+        <div class="input-group input-group-sm pull-right" style="max-width: 300px;">
+            <a onclick="NuevaUnidad()" class="btn btn-info btn-sm">
+                <i class="fa fa-plus"><span class="hidden-xs"> Nuevo</span></i>
+            </a>
+        </div>
+    </box-search>
+</box-header>
+<box-body table="true">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Codigo Unidad
+                </th>
+                <th>
+                    Abreviatura
+                </th>
+                <th>
+                    Descripcion
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CodUnidad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Abreviatura)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descripcion)
+                </td>
+                <!--<td>
+                    <a onclick="editaUnidad(@item.Id)" title="Editar" class="btn btn-primary btn-xs"><i class="fa fa-file-text-o"></i></a>
+                    <a asp-action="Delete"
+                       asp-route-id="@item.Id"
+                       title="Eliminar"
+                       confirm="Este registro ya no podra visualizarse"
+                       confirm-icon="Danger"
+                       class="btn btn-danger btn-xs">
+                        <i class="fa fa-trash"></i>
+                    </a>
+                </td>-->
+            </tr>
+            }
+        </tbody>
+    </table>
+
+</box-body>
+<box-footer page-update-div="TablaUnidad"></box-footer>
+<modal title="Edicion de Unidades" function="editaUnidad" load-url="/Admin/Unidad/_Edit/" size="Medium"></modal>
+<modal title="Nueva Unidad" function="NuevaUnidad" load-url="/Admin/Unidad/_Create/" size="Medium"></modal>
+<!--<modal title="Eliminar esta Unidad" function="Eliminar" load-url="/Admin/Unidad/_Delete/" size="Medium"></modal>-->

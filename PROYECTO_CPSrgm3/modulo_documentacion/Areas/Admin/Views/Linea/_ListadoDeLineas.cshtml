@@ -1,0 +1,73 @@
+﻿@using Commons.Models
+@model Page<modulo_documentacion.Areas.Admin.Models.Basicas.Linea>
+
+<box-header title="Listado de Lineas">
+
+    <div class="input-group input-group-sm pull-right" style="max-width: 300px;">
+        <a onclick="nuevoLinea()" class="btn btn-info btn-sm">
+            <i class="fa fa-plus"><span class="hidden-xs"> Nuevo</span></i>
+        </a>
+    </div>
+
+</box-header>
+<box-body table="true" style="padding-inline-start">
+    <table id="listadoDeMarcas" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Numero</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                @if (item.Numero == "Sin asignar")
+                {
+                    <tr>
+                        <td scope="col">@Html.DisplayFor(modelItem => item.Numero)</td>
+                        <td>
+                            @*<a onclick="editarLinea('@item.Id')" title="Editar equipo" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i></a>*@
+                            @*<a onclick="DetalleLinea('@item.Id')" title="Detalle equipo" class="btn btn-success btn-xs"><i class="fa fa-eye"></i></a>*@
+                            @*<a onclick="EliminarLinea('@item.Id')" class="btn btn-danger btn-xs">
+                                <i class="fa fa-trash"></i>
+                            </a>*@
+                        </td>
+                    </tr> 
+                }
+                else
+                {
+                    <tr>
+                        <td scope="col">@Html.DisplayFor(modelItem => item.Numero)</td>
+                        <td>
+                            <a onclick="editarLinea('@item.Id')" title="Editar equipo" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i></a>
+                            <a onclick="DetalleLinea('@item.Id')" title="Detalle equipo" class="btn btn-success btn-xs"><i class="fa fa-eye"></i></a>
+                            <a onclick="EliminarLinea('@item.Id')" class="btn btn-danger btn-xs">
+                                <i class="fa fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+
+                }
+            }
+        </tbody>
+    </table>
+</box-body>
+<modal title="Nueva Linea" callback-modal="true" function="nuevoLinea" load-url="/Admin/Linea/_Create/" size="Medium"></modal>
+<modal title="Editar Linea" callback-modal="true" function="editarLinea" load-url="/Admin/Linea/_Edit/" size="Medium"></modal>
+<modal title="Detalle Linea" callback-modal="true" function="DetalleLinea" load-url="/Admin/Linea/_Detalle/" size="Medium"></modal>
+<modal title="Eliminar Linea" callback-modal="true" function="EliminarLinea" load-url="/Admin/Linea/_Delete/" size="Medium"></modal>
+
+<script>
+    $(document).ready(function () {
+        $('#listadoDeMarcas').DataTable({
+            "columnDefs": [{
+                "searchable": false,
+                "orderable": false,
+                //"targets": 3
+            }],
+            "language": {
+                'url': '@Url.Content("~/lib/arg.json")'
+            }
+        });
+    });
+</script>

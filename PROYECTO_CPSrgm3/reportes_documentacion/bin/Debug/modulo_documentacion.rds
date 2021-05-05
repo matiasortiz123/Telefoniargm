@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="modulo_documentacion">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Server=(localdb)\mssqllocaldb;Database=modulo_documentacion_local;Trusted_Connection=True;MultipleActiveResultSets=true</ConnectString>
+    <IntegratedSecurity>true</IntegratedSecurity>
+  </ConnectionProperties>
+  <DataSourceID>5b493dde-8db8-4e09-92c7-c075064266bd</DataSourceID>
+</RptDataSource>

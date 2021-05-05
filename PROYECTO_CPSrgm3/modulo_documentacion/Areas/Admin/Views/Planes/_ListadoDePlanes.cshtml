@@ -1,0 +1,75 @@
+﻿@using Commons.Models
+@model Page<modulo_documentacion.Areas.Admin.Models.Basicas.Planes>
+
+<box-header title="Listado de Lineas">
+
+    <div class="input-group input-group-sm pull-right" style="max-width: 300px;">
+        <a onclick="nuevoPlan()" class="btn btn-info btn-sm">
+            <i class="fa fa-plus"><span class="hidden-xs"> Nuevo</span></i>
+        </a>
+    </div>
+
+</box-header>
+<box-body table="true" style="padding-inline-start">
+    <table id="listadoDeMarcas" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Plan</th>
+                <th>Descripcion</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                        @if (item.NombrePlan == "Sin asignar")
+                        {
+                            <tr>
+                                <td scope="col">@Html.DisplayFor(modelItem => item.NombrePlan)</td>
+                                <td scope="col">@Html.DisplayFor(modelItem => item.Descripcion)</td>
+                                <td>
+                                    @*<a onclick="editarPlan('@item.Id')" title="Editar Plan" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i></a>*@
+                                    @*<a onclick="DetallePlan('@item.Id')" title="Detalle Plan" class="btn btn-success btn-xs"><i class="fa fa-eye"></i></a>*@
+                                    @*<a onclick="EliminarPlan('@item.Id')" title="Eliminar Plan" class="btn btn-danger btn-xs">
+                                    <i class="fa fa-trash"></i>
+                                </a>*@
+                                </td>
+                            </tr> 
+                        }
+                        else
+                        {
+                            <tr>
+                                <td scope="col">@Html.DisplayFor(modelItem => item.NombrePlan)</td>
+                                <td scope="col">@Html.DisplayFor(modelItem => item.Descripcion)</td>
+                                <td>
+                                    <a onclick="editarPlan('@item.Id')" title="Editar Plan" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i></a>
+                                    <a onclick="DetallePlan('@item.Id')" title="Detalle Plan" class="btn btn-success btn-xs"><i class="fa fa-eye"></i></a>
+                                    <a onclick="EliminarPlan('@item.Id')" title="Eliminar Plan" class="btn btn-danger btn-xs">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }            
+            }
+        </tbody>
+    </table>
+</box-body>
+<modal title="Nueva Plan" callback-modal="true" function="nuevoPlan" load-url="/Admin/Planes/_Create/" size="Medium"></modal>
+<modal title="Editar Plan" callback-modal="true" function="editarPlan" load-url="/Admin/Planes/_Edit/" size="Medium"></modal>
+<modal title="Detalle Plan" callback-modal="true" function="DetallePlan" load-url="/Admin/Planes/_Detalle/" size="Medium"></modal>
+<modal title="Eliminar Plan" callback-modal="true" function="EliminarPlan" load-url="/Admin/Planes/_Delete/" size="Medium"></modal>
+
+<script>
+    $(document).ready(function () {
+        $('#listadoDeMarcas').DataTable({
+            "columnDefs": [{
+                "searchable": false,
+                "orderable": false,
+                //"targets": 3
+            }],
+            "language": {
+                'url': '@Url.Content("~/lib/arg.json")'
+            }
+        });
+    });
+</script>

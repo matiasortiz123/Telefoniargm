@@ -1,0 +1,123 @@
+﻿@using Commons.Models
+@model IEnumerable<SidebarMenu>
+
+    <aside class="main-sidebar" style="background: #000000; background-image: url(/img/Fondo2.jpg); background-size: contain; background-repeat:no-repeat ; background-attachment:fixed;background-clip:content-box;">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            <!-- search form (Optional) -->
+            <!-- /.search form -->
+            <!-- Sidebar Menu -->
+            <ul class="sidebar-menu" data-widget="tree">
+                @foreach (var menu in Model as IEnumerable<SidebarMenu>)
+                {
+                    if (menu.Type == SidebarMenuType.Header)
+                    {
+                        <li class="header">@menu.Name</li>
+                    }
+                    else if (menu.Type == SidebarMenuType.Link)
+                    {
+                        var active = string.Empty;
+                        if (menu.URLPath != "/" && @Context.Request.Path.Value.Contains(menu.URLPath))
+                        {
+                            active = "active";
+                        }
+                        <li class="@active">
+                            <a href="@menu.URLPath">
+                                <i style="color:white" class="@menu.IconClassName"></i>
+                                <span style="color:white">@menu.Name</span>
+                                <span class="pull-right-container">
+                                    @{
+                                        if (menu.LinkCounter.Item1 > 0)
+                                        {
+                                            <small class="label pull-right bg-red">@menu.LinkCounter.Item1</small>
+                                        }
+                                        if (menu.LinkCounter.Item2 > 0)
+                                        {
+                                            <small class="label pull-right bg-green">@menu.LinkCounter.Item2</small>
+                                        }
+                                        if (menu.LinkCounter.Item3 > 0)
+                                        {
+                                            <small class="label pull-right bg-blue">@menu.LinkCounter.Item3</small>
+                                        }
+                                    }
+                                </span>
+                            </a>
+                        </li>
+
+                                        }
+                                        else if (menu.Type == SidebarMenuType.Tree)
+                                        {
+                                            var active = string.Empty;
+                                            if (menu.TreeChild.Any(x => @Context.Request.Path.Value.Contains(x.URLPath)) || menu.TreeChild.Where(x => x.Type == SidebarMenuType.Tree).SelectMany(x => x.TreeChild).Any(x => @Context.Request.Path.Value.Contains(x.URLPath)))
+                                            {
+                                                active = "active";
+                                            }
+
+                        <li class="treeview @active">
+                            <a href="#">
+                                <i style="color:white" class="@menu.IconClassName"></i> <span style="color:white">@menu.Name</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                @foreach (SidebarMenu subMenu in menu.TreeChild)
+                                {
+                                    if (subMenu.Type == SidebarMenuType.Link)
+                                    {
+                                        active = string.Empty;
+                                        if (Context.Request.Path.Value.Contains(subMenu.URLPath))
+                                            {
+                                                active = "active";
+                                            }
+                                            <li class="@active">
+                                                <a href="@subMenu.URLPath">
+                                                    <i class="@subMenu.IconClassName"></i> @subMenu.Name
+                                                </a>
+                                            </li>
+                                    }
+                                    else if (subMenu.Type == SidebarMenuType.Tree)
+                                    {
+                                        active = string.Empty;
+                                        if (subMenu.TreeChild.Any(x => @Context.Request.Path.Value.Contains(x.URLPath)))
+                                        {
+                                            active = "active";
+                                        }
+
+                                        <li class="treeview @active">
+                                            <a href="#">
+                                                <i class="@subMenu.IconClassName"></i> <span>@subMenu.Name</span>
+                                                <span class="pull-right-container">
+                                                    <i class="fa fa-angle-left pull-right"></i>
+                                                </span>
+                                            </a>
+                                                <ul class="treeview-menu">
+                                                    @foreach (SidebarMenu subSubMenu in subMenu.TreeChild)
+                                                    {
+                                                        if (subSubMenu.Type == SidebarMenuType.Link)
+                                                        {
+                                                            active = string.Empty;
+                                                            if (Context.Request.Path.Value.Contains(subSubMenu.URLPath))
+                                                                {
+                                                                    active = "active";
+                                                                }
+                                                                <li class="@active">
+                                                                    <a href="@subSubMenu.URLPath">
+                                                                        <i class="@subSubMenu.IconClassName"></i> @subSubMenu.Name
+                                                                    </a>
+                                                                </li>
+                                                        }
+                                                    }
+                                                </ul>
+                                        </li>
+                                    }
+                                }
+                            </ul>
+                        </li>
+                    }
+                }
+            </ul>
+            <!-- /.sidebar-menu -->
+        </section>
+        <!-- /.sidebar -->
+    </aside>

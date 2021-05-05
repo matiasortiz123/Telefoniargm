@@ -1,0 +1,23 @@
+﻿@model modulo_documentacion.Areas.Admin.Models.Basicas.Equipo
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <br />
+            <p>¿Esta seguro que desea desasignar el equipos?</p>
+            <p>Recuerde que la información no se puede recuerar</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <hr />
+            <form method="post" asp-controller="AsignarEquipos" asp-action="_Desasignar_Equipos_Borrar">
+                <input type="hidden" asp-for="Id" />
+                <button type="submit" class="btn btn-success ml-1">Desasignar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </form>
+        </div>
+    </div>
+    <br />
+</div>
+

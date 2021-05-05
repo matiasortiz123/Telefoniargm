@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "modulo_documentacion", "modulo_documentacion\modulo_documentacion.csproj", "{2CD6364F-362E-45FE-85AD-F42A5B2EF9B8}"
+EndProject
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "reportes_documentacion", "reportes_documentacion\reportes_documentacion.rptproj", "{E0963A92-7EF3-40A5-A499-A13F4F325325}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		DebugLocal|Any CPU = DebugLocal|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CD6364F-362E-45FE-85AD-F42A5B2EF9B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CD6364F-362E-45FE-85AD-F42A5B2EF9B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CD6364F-362E-45FE-85AD-F42A5B2EF9B8}.DebugLocal|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CD6364F-362E-45FE-85AD-F42A5B2EF9B8}.DebugLocal|Any CPU.Build.0 = Debug|Any CPU
+		{2CD6364F-362E-45FE-85AD-F42A5B2EF9B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CD6364F-362E-45FE-85AD-F42A5B2EF9B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0963A92-7EF3-40A5-A499-A13F4F325325}.Debug|Any CPU.ActiveCfg = Debug
+		{E0963A92-7EF3-40A5-A499-A13F4F325325}.Debug|Any CPU.Build.0 = Debug
+		{E0963A92-7EF3-40A5-A499-A13F4F325325}.Debug|Any CPU.Deploy.0 = Debug
+		{E0963A92-7EF3-40A5-A499-A13F4F325325}.DebugLocal|Any CPU.ActiveCfg = DebugLocal
+		{E0963A92-7EF3-40A5-A499-A13F4F325325}.DebugLocal|Any CPU.Build.0 = DebugLocal
+		{E0963A92-7EF3-40A5-A499-A13F4F325325}.Release|Any CPU.ActiveCfg = Release
+		{E0963A92-7EF3-40A5-A499-A13F4F325325}.Release|Any CPU.Build.0 = Release
+		{E0963A92-7EF3-40A5-A499-A13F4F325325}.Release|Any CPU.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73E70E1F-E93C-433B-882B-BBD6601615FD}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://186.189.235.156:8080/tfs/cpscollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = modulo_documentacion\\modulo_documentacion.csproj
+		SccProjectName1 = modulo_documentacion
+		SccLocalPath1 = modulo_documentacion
+		SccProjectUniqueName2 = reportes_documentacion\\reportes_documentacion.rptproj
+		SccProjectName2 = reportes_documentacion
+		SccLocalPath2 = reportes_documentacion
+	EndGlobalSection
+EndGlobal

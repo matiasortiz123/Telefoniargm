@@ -1,0 +1,148 @@
+﻿@model modulo_documentacion.Areas.Identity.Pages.RegisterModel.InputModel
+
+<form asp-action="_CreateUsuarioEnEquipo">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div id="BuscarPersonalMilitar">
+        <label class="control-label">Buscar por Dni</label>
+        <div class="input-group">
+            <input type="number" class="form-control" id="InputDni" name="dniPersonaMilitar">
+            <span class="input-group-btn">
+                <input type="button" class="btn btn-primary" value="Buscar" id="BuscarDni" name="dni" />
+            </span>
+        </div>
+    </div>
+    <br />
+    <div class="alert alert-warning alert-dismissible" id="alerta" hidden>
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <div id="TextoAlerta"></div>
+    </div>
+
+    <div id="carga" hidden>
+        <div class="form-group">
+            @*<input asp-for="@ViewBag.EquipoId" class="form-control readonlyClass" readonly />*@
+        </div>
+        <div class="form-group">
+            <label class="control-label">Usuario</label>
+            <input asp-for="Email" class="form-control readonlyClass" readonly />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Dni</label>
+            <input asp-for="Dni" id="Dni" class="form-control readonlyClass" readonly />
+            <span asp-validation-for="Dni" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Apellido</label>
+            <input asp-for="Apellido" id="Apellido" class="form-control readonlyClass" readonly />
+            <span asp-validation-for="Apellido" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Nombre</label>
+            <input asp-for="Nombre" id="Nombre" class="form-control readonlyClass" readonly />
+            <span asp-validation-for="Nombre" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Grado</label>
+            <input asp-for="Grado" id="Grado" class="form-control readonlyClass" readonly />
+            <span asp-validation-for="Grado" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Unidad</label>
+            <input asp-for="Unidad" id="Unidad" class="form-control readonlyClass" readonly />
+            <span asp-validation-for="Unidad" class="text-danger"></span>
+        </div>
+        <div class="form-group UserMilitar">
+            <label class="control-label">Contraseña</label>
+            <input asp-for="Password" id="Contra" class="form-control" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <div class="form-group UserMilitar">
+            <label class="control-label">Repetir Contraseña</label>
+            <input asp-for="ConfirmPassword" id="RepetirContra" class="form-control" />
+            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+        </div>
+        <div class="form-group UserMilitar">
+            <input type="text" value="@ViewBag.EquipoId" class="btn btn-primary pull-right" id="asignarEquipo" name="recibirIdEquipo" hidden/>
+        </div>
+        <a class="btn btn-default" data-dismiss="modal">Cancelar</a>
+        <input type="submit" value="Asignar" class="btn btn-primary pull-right" id="asignarEquipo" />
+    </div>
+
+    @*<input type="button" name="name" value="prueba" id="pruebaFranco" />*@
+</form>
+
+
+<script>
+
+    $(document).ready(function () {
+        //Declarar variables reutilizables
+        var guardarDni = $('#InputDni').val();
+        $('#BuscarDni').on('click', function () {
+            //$("#imagenCarga").show();
+            $.ajax({
+                url: "/Admin/AsignarEquipos/_BuscarPersonaMilitar",
+                data: {
+                    dniPersonaMilitar: $('#InputDni').val()
+                },
+                type: "GET",
+                dataType: "Json",
+                success: function (data) {
+                    if (data["Valido"]) {
+                        //$("#imagenCarga").hide();
+                        $("#carga").show();
+                        $(".UserMilitar").hide();
+                        $("#Dni").val(data["Dni"]);
+                        $("#Email").val(data["UserName"]);
+                        $("#Apellido").val(data["Apellido"]);
+                        $("#Nombre").val(data["Nombre"]);
+                        $("#Grado").val(data["Grado"]);
+                        $("#Unidad").val(data["Unidad"]);
+                    } else {
+                        //$("#imagenCarga").hide();
+                        $("#TextoAlerta").empty();
+                        $("#alerta").show();
+                        $("#TextoAlerta").append('<h4 id="alertaTexto"><i class="icon fa fa-warning"></i>' + data["texto"] + '</h4>');
+                    }
+                }
+            });
+        });
+
+        //$('#asignarEquipo').on('click', function () {
+        //    alert("Entro");
+        //    $.ajax({
+        //        url: "/Admin/AsignarEquipos/_CreateUsuarioEnEquipo",
+        //        data: {
+        //            recibirIdEquipo: $('#recibirIdEquipo').val()
+        //        },
+        //        type: "POST",
+        //        dataType: "Json",
+        //        success: function (data) {
+        //            if (data["Valido"]) {
+        //                //$("#imagenCarga").hide();
+        //                $("#carga").show();
+        //                $(".UserMilitar").hide();
+        //                $("#Dni").val(data["Dni"]);
+        //                $("#Email").val(data["UserName"]);
+        //                $("#Apellido").val(data["Apellido"]);
+        //                $("#Nombre").val(data["Nombre"]);
+        //                $("#Grado").val(data["Grado"]);
+        //                $("#Unidad").val(data["Unidad"]);
+        //            } else {
+        //                //$("#imagenCarga").hide();
+        //                $("#TextoAlerta").empty();
+        //                $("#alerta").show();
+        //                $("#TextoAlerta").append('<h4 id="alertaTexto"><i class="icon fa fa-warning"></i>' + data["texto"] + '</h4>');
+        //            }
+        //        }
+        //    });//Cierre del ajax
+
+        //});//Cierre de asignarEquipo
+
+    });//Cierre principal ultimo
+
+
+
+
+</script>
+

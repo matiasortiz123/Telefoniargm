@@ -1,0 +1,145 @@
+﻿@using Commons.Models
+@model Page<modulo_documentacion.Areas.Admin.Models.Basicas.Equipo>
+
+<box-header title="Listado de Equipos">
+
+    <div class="input-group input-group-sm pull-right" style="max-width: 300px;">
+        <a onclick="nuevoEquipo()" class="btn btn-info btn-sm">
+            <i class="fa fa-plus"><span class="hidden-xs"> Nuevo</span></i>
+        </a>
+    </div>
+
+</box-header>
+<box-body table="true" style="padding-inline-start">
+    <table id="listadoAsignarEquipos" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Imei</th>
+                <th>Accesorios</th>
+                <th>Gama</th>
+                <th>Condicion</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Empresa</th>
+                <th>Estado de equipo</th>
+                <th>Acciones</th>
+                @*<th>Linea</th>
+                  <th>Planes</th>*@
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                //Si el equipo es diferente de true , significa que el equipo no esta asignado
+                @if (item.Editable != true)
+                {
+                    <tr>
+                        <td scope="col">@Html.DisplayFor(modelItem => item.Imei)</td>
+                        <td scope="col">@Html.DisplayFor(modelItem => item.Accesorios)</td>
+                        <td scope="col">@Html.DisplayFor(modelItem => item.Gama)</td>
+                        <td scope="col">@Html.DisplayFor(modelItem => item.Condicion)</td>
+                        <td scope="col">@Html.DisplayFor(modelItem => item.Marca.Descripcion)</td>
+                        <td scope="col">@Html.DisplayFor(modelItem => item.Modelo.Descripcion)</td>
+                        <td scope="col">@Html.DisplayFor(modelItem => item.Empresa.Nombre)</td>
+                        <td scope="col">@Html.DisplayFor(modelItem => item.EstadoEquipo.Estado)</td>
+                        <td>
+                            <a onclick="AsignarEquipo('@item.Id')" title="Asignar equipo" class="btn btn-success btn-sm"><i class="fa fa-users"></i></a>
+                        </td>
+                    </tr>
+                }           
+            }
+        </tbody>
+    </table>
+</box-body>
+
+<br />
+<hr />
+<br />
+
+<box color="Warning">
+
+    <box-header title="Listado de Equipos ya asignados"></box-header>
+
+    <box-body table="true" style="padding-inline-start">
+        <table id="listadoDesasignarEquipos" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Imei</th>
+                    <th>Accesorios</th>
+                    <th>Gama</th>
+                    <th>Condicion</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Empresa</th>
+                    <th>Estado de equipo</th>
+                    <th>Acciones</th>
+                    @*<th>Linea</th>
+                        <th>Planes</th>*@
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Items)
+                {
+                    //Si el equipo es diferente de true , significa que el equipo no esta asignado
+                    @if (item.Editable != false)
+                    {
+                        <tr>
+                            <td scope="col">@Html.DisplayFor(modelItem => item.Imei)</td>
+                            <td scope="col">@Html.DisplayFor(modelItem => item.Accesorios)</td>
+                            <td scope="col">@Html.DisplayFor(modelItem => item.Gama)</td>
+                            <td scope="col">@Html.DisplayFor(modelItem => item.Condicion)</td>
+                            <td scope="col">@Html.DisplayFor(modelItem => item.Marca.Descripcion)</td>
+                            <td scope="col">@Html.DisplayFor(modelItem => item.Modelo.Descripcion)</td>
+                            <td scope="col">@Html.DisplayFor(modelItem => item.Empresa.Nombre)</td>
+                            <td scope="col">@Html.DisplayFor(modelItem => item.EstadoEquipo.Estado)</td>
+                            <td>
+                                <a onclick="DesasignarEquipo('@item.Id')" title="Desasignar equipo" class="btn btn-warning btn-sm"><i class="fa fa-ban"></i></a>
+                            </td>
+                        </tr>
+                     }
+                 }
+            </tbody>
+        </table>
+    </box-body>
+
+</box>
+
+
+@*<modal title="Nuevo equipo" callback-modal="true" function="nuevoEquipo" load-url="/Admin/Equipos/_Create/" size="Medium"></modal>*@
+@*<modal title="Desasignar equipo" callback-modal="true" function="DesasignarEquipo" load-url="" size="Medium"></modal>*@
+@*<modal title="Desasignar equipo" callback-modal="true" function="DesasignarEquipo" load-url="" size="Medium"></modal>*@
+<modal title="Asignar equipo" callback-modal="true" function="AsignarEquipo" load-url="/Admin/AsignarEquipos/_CreateSeleccion/" size="Medium"></modal>
+<modal title="Desasignar equipo" callback-modal="true" function="DesasignarEquipo" load-url="/Admin/AsignarEquipos/_Desasignar_Equipos/" size="Medium"></modal>
+
+<script>
+    $(document).ready(function () {
+
+        $('#listadoAsignarEquipos').DataTable({
+            "columnDefs": [{
+                "searchable": false,
+                "orderable": false,
+                //"targets": 3
+            }],
+            "language": {
+                'url': '@Url.Content("~/lib/arg.json")'
+            }
+        });
+
+        $('#listadoDesasignarEquipos').DataTable({
+            "columnDefs": [{
+                "searchable": false,
+                "orderable": false,
+                //"targets": 3
+            }],
+            "language": {
+                'url': '@Url.Content("~/lib/arg.json")'
+            }
+        });
+
+    });
+
+
+
+</script>

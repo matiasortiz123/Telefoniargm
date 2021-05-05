@@ -1,0 +1,58 @@
+﻿@using Commons.Models;
+@model Page<modulo_documentacion.Areas.Admin.Models.Basicas.Estado>
+<box-header title="Lista de Datos">
+    <box-search update-div="tablaEstado">
+        <div class="input-group input-group-sm pull-right" style="max-width: 300px;">
+            <a onclick="nuevoDJEstado()" class="btn btn-info btn-sm">
+                <i class="fa fa-plus"><span class="hidden-xs"> Nuevo</span></i>
+            </a>
+        </div>
+    </box-search>
+</box-header>
+<box-body table="true">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Codigo
+                </th>
+                <th>
+                    Descripcion
+                </th>
+                <th>
+                    Editar/Eliminar
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items.OrderBy(x => x.Codigo).ThenBy(x => x.Descripcion))
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Codigo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descripcion)
+                    </td>
+                    <td>
+                        <a onclick="editaDJEstado(@item.Id)" title="Editar" class="btn btn-primary btn-xs"><i class="fa fa-file-text-o"></i></a>
+                        <!--<a onclick="Eliminar('@item.Id')" title="Eliminar" class="btn btn-info btn-xs btn-danger"><i class="fa fa-trash"></i></a>-->
+                        <a asp-action="Delete"
+                           asp-route-id="@item.Id"
+                           title="Eliminar"
+                           confirm=""
+                           confirm-icon="Danger"
+                           class="btn btn-danger btn-xs">
+                            <i class="fa fa-trash"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</box-body>
+<box-footer page-update-div="tablaEstado"></box-footer>
+<modal title="Edicion de Estado" function="editaDJEstado" load-url="/Admin/Estado/_Edit/" size="Medium"></modal>
+<modal title="Nuevo Estado" function="nuevoDJEstado" load-url="/Admin/Estado/_Create/" size="Medium"></modal>
+<!--<modal title="Eliminar Estado" function="Eliminar" load-url="/Admin/Estado/_Delete/" size="Medium"></modal>-->

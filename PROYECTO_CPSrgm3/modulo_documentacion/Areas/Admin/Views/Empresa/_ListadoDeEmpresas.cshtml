@@ -1,0 +1,77 @@
+﻿@using Commons.Models
+@model Page<modulo_documentacion.Areas.Admin.Models.Basicas.Empresa>
+
+<box-header title="Listado de empresas">
+
+    <div class="input-group input-group-sm pull-right" style="max-width: 300px;">
+        <a onclick="nuevaEmpresa()" class="btn btn-info btn-sm">
+            <i class="fa fa-plus"><span class="hidden-xs"> Nuevo</span></i>
+        </a>
+    </div>
+
+</box-header>
+<box-body table="true">
+    <table id="listadoDeEmpresas" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Empresa</th>
+                <th>Contacto</th>
+                <th>Observación</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+
+                @if (item.Nombre == "Sin asignar")
+                {
+                    <tr>
+                        <td scope="col">@Html.DisplayFor(modelItem => item.Nombre)</td>
+                        <td scope="col">@Html.DisplayFor(modelItem => item.Contacto)</td>
+                        <td scope="col">@Html.DisplayFor(modelItem => item.Observacion)</td>
+                        <td>                       
+                        </td>  
+                    </tr> 
+                }
+                else
+                {
+                    <tr>
+                        <td scope="col">@Html.DisplayFor(modelItem => item.Nombre)</td>
+                        <td scope="col">@Html.DisplayFor(modelItem => item.Contacto)</td>
+                        <td scope="col">@Html.DisplayFor(modelItem => item.Observacion)</td>
+                        <td>
+                            <a onclick="editarEmpresa('@item.Id')" title="Editar empresa" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i></a>
+                            <a onclick="DetalleEmpresa('@item.Id')" title="Detalle empresa" class="btn btn-success btn-xs"><i class="fa fa-eye"></i></a>
+                            <a onclick="EliminarEmpresa('@item.Id')" class="btn btn-danger btn-xs">
+                                <i class="fa fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                }            
+                
+
+            }
+        </tbody>
+    </table>
+</box-body>
+
+<modal title="Nuevo equipo" callback-modal="true" function="nuevaEmpresa" load-url="/Admin/Empresa/_Create/" size="Medium"></modal>
+<modal title="Editar equipo" callback-modal="true" function="editarEmpresa" load-url="/Admin/Empresa/_Edit/" size="Medium"></modal>
+<modal title="Detalle equipo" callback-modal="true" function="DetalleEmpresa" load-url="/Admin/Empresa/_Detalle/" size="Medium"></modal>
+<modal title="Eliminar equipo" callback-modal="true" function="EliminarEmpresa" load-url="/Admin/Empresa/_Delete/" size="Medium"></modal>
+
+<script>
+    $(document).ready(function () {
+        $('#listadoDeEmpresas').DataTable({
+            "columnDefs": [{
+                "searchable": false,
+                "orderable": false,
+                //"targets": 3
+            }],
+            "language": {
+                'url': '@Url.Content("~/lib/arg.json")'
+            }
+        });
+    });
+</script>

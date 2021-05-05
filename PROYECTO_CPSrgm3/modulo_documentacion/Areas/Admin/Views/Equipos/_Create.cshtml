@@ -1,0 +1,68 @@
+﻿@model modulo_documentacion.Areas.Admin.Models.Basicas.Equipo
+
+
+<div class="row">
+    <div class="col-sm-12 p-4">
+        <form method="post" asp-controller="Equipos" asp-action="_Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Imei" class="control-label"></label>
+                <input asp-for="Imei" class="form-control" />
+                <span asp-validation-for="Imei" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Accesorios" class="control-label"></label>
+                <input asp-for="Accesorios" class="form-control" />
+                <span asp-validation-for="Accesorios" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gama" class="control-label"></label>
+                <input asp-for="Gama" class="form-control" />
+                <span asp-validation-for="Gama" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Condicion" class="control-label"></label>
+                <input asp-for="Condicion" class="form-control" />
+                <span asp-validation-for="Condicion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Empresa" class="control-label"></label>
+                <select asp-for="EmpresaId" class="form-control" asp-items="@ViewBag.Empresa"></select>
+                <span asp-validation-for="EmpresaId" class="text-danger"></span>
+                @*@Html.DropDownListFor(x => x.Empresa, (IEnumerable<SelectListItem>)ViewBag.Empresa, "Por favor seleccione una Empresa", new { @class = "form-control" })*@
+            </div>
+            <div class="form-group">
+                <label asp-for="Marca" class="control-label"></label>
+                <select asp-for="MarcaId" class="form-control" asp-items="@ViewBag.Marca"></select>
+                <span asp-validation-for="MarcaId" class="text-danger"></span>
+                @*@Html.DropDownListFor(x => x.Marca, (IEnumerable<SelectListItem>)ViewBag.Marca, "Por favor seleccione una Marca", new { @class = "form-control" })*@
+            </div>
+            <div class="form-group">
+                <label asp-for="Modelo" class="control-label"></label>
+                <select asp-for="ModeloId" class="form-control" asp-items="@ViewBag.Modelo"></select>
+                @*@Html.DropDownListFor(x => x.Modelo, (IEnumerable<SelectListItem>)ViewBag.Modelo, "Por favor seleccione una Modelo", new { @class = "form-control" })*@
+            </div>
+            <div class="form-group">
+                <label asp-for="Linea" class="control-label"></label>
+                <select asp-for="LineaId" class="form-control" asp-items="@ViewBag.Linea"></select>
+                @*@Html.DropDownListFor(x => x.Modelo, (IEnumerable<SelectListItem>)ViewBag.Modelo, "Por favor seleccione una Modelo", new { @class = "form-control" })*@
+            </div>
+            <div class="form-group">
+                <label asp-for="Planes" class="control-label"></label>
+                <select asp-for="PlanesId" class="form-control" asp-items="@ViewBag.Planes"></select>
+                @*@Html.DropDownListFor(x => x.Modelo, (IEnumerable<SelectListItem>)ViewBag.Modelo, "Por favor seleccione una Modelo", new { @class = "form-control" })*@
+            </div>              
+            <div class="form-group">
+                <label asp-for="EstadoEquipo" class="control-label">Estado del Equipo</label>
+                <select asp-for="EstadoEquipoId" class="form-control" asp-items="@ViewBag.Estado"></select>
+                @*@Html.DropDownListFor(x => x.EstadoEquipo, (IEnumerable<SelectListItem>)ViewBag.Estado, "Por favor seleccione una Estado", new { @class = "form-control" })*@
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Crear equipo" class="btn btn-success ml-1" />
+                <button class="btn btn-info" type="button" data-dismiss="modal">Cerrar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+

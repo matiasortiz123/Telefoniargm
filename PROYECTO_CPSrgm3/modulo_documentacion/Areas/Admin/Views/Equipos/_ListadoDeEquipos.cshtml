@@ -1,0 +1,74 @@
+﻿@using Commons.Models
+@model Page<modulo_documentacion.Areas.Admin.Models.Basicas.Equipo>
+
+<box-header title="Listado de Equipos">
+
+    <div class="input-group input-group-sm pull-right" style="max-width: 300px;">
+        <a onclick="nuevoEquipo()" class="btn btn-info btn-sm">
+            <i class="fa fa-plus"><span class="hidden-xs"> Nuevo</span></i>
+        </a>
+    </div>
+
+</box-header>
+<box-body table="true" style="padding-inline-start">
+    <table id="listadoCentroJurisdiccional" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Imei</th>
+                <th>Accesorios</th>
+                <th>Gama</th>
+                <th>Condicion</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Empresa</th>
+                @*<th>Linea</th>
+                <th>Planes</th>*@
+                <th>Estado de equipo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+            <tr>
+                <td scope="col">@Html.DisplayFor(modelItem => item.Imei)</td>
+                <td scope="col">@Html.DisplayFor(modelItem => item.Accesorios)</td>
+                <td scope="col">@Html.DisplayFor(modelItem => item.Gama)</td>
+                <td scope="col">@Html.DisplayFor(modelItem => item.Condicion)</td>
+                <td scope="col">@Html.DisplayFor(modelItem => item.Marca.Descripcion)</td>
+                <td scope="col">@Html.DisplayFor(modelItem => item.Modelo.Descripcion)</td>
+                <td scope="col">@Html.DisplayFor(modelItem => item.Empresa.Nombre)</td>              
+                <td scope="col">@Html.DisplayFor(modelItem => item.EstadoEquipo.Estado)</td>
+                <td>
+                    <a onclick="editarEquipo('@item.Id')" title="Editar equipo" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i></a>
+                    <a onclick="DetalleEquipo('@item.Id')" title="Detalle equipo" class="btn btn-success btn-xs"><i class="fa fa-eye"></i></a>
+                    <a onclick="EliminarEquipo('@item.Id')"                        
+                           confirm="Este registro ya no podra visualizarse"
+                           confirm-icon="Danger"               
+                           title="Eliminar equipo" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i>
+                    </a>
+                    @*<a asp-area="Preinscripcion" asp-controller="Turno" asp-action="DetallesTurno" asp-route-id="@item.Id" class="btn btn-warning btn-xs"><i class="fa fa-user-plus"></i></a>*@
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</box-body>
+<modal title="Nuevo equipo" callback-modal="true" function="nuevoEquipo" load-url="/Admin/Equipos/_Create/" size="Medium"></modal>
+<modal title="Editar equipo" callback-modal="true" function="editarEquipo" load-url="/Admin/Equipos/_Edit/" size="Medium"></modal>
+<modal title="Detalle equipo" callback-modal="true" function="DetalleEquipo" load-url="/Admin/Equipos/_Detalle/" size="Medium"></modal>
+<modal title="Eliminar equipo" callback-modal="true" function="EliminarEquipo" load-url="/Admin/Equipos/_Delete/" size="Medium"></modal>
+<script>
+    $(document).ready(function () {
+        $('#listadoCentroJurisdiccional').DataTable({
+            "columnDefs": [{
+                "searchable": false,
+                "orderable": false,
+                //"targets": 3
+            }],
+            "language": {
+                'url': '@Url.Content("~/lib/arg.json")'
+            }
+        });
+    });
+</script>

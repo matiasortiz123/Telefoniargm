@@ -1,0 +1,108 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <UserSecretsId>aspnet-modulo_documentacion-CB769A54-B342-4D90-A5A3-55B6B84EEB42</UserSecretsId>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <MvcRazorExcludeRefAssembliesFromPublish>false</MvcRazorExcludeRefAssembliesFromPublish>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Areas\Admin\Data\**" />
+    <Compile Remove="Controllers\DUFI\**" />
+    <Content Remove="Areas\Admin\Data\**" />
+    <Content Remove="Controllers\DUFI\**" />
+    <EmbeddedResource Remove="Areas\Admin\Data\**" />
+    <EmbeddedResource Remove="Controllers\DUFI\**" />
+    <None Remove="Areas\Admin\Data\**" />
+    <None Remove="Controllers\DUFI\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20190902141721_cambioguarnicionid.cs" />
+    <Compile Remove="Migrations\20190902141721_cambioguarnicionid.Designer.cs" />
+    <Compile Remove="Migrations\20190909183629_Unidad-PersonalMilitar.cs" />
+    <Compile Remove="Migrations\20190909183629_Unidad-PersonalMilitar.Designer.cs" />
+    <Compile Remove="Migrations\20190912230226_ContactoDDJJ.cs" />
+    <Compile Remove="Migrations\20190912230226_ContactoDDJJ.Designer.cs" />
+    <Compile Remove="Migrations\20190912230442_ContactoDDJJ.cs" />
+    <Compile Remove="Migrations\20190912230442_ContactoDDJJ.Designer.cs" />
+    <Compile Remove="Migrations\20191004215649_ver.cs" />
+    <Compile Remove="Migrations\20191004215649_ver.Designer.cs" />
+    <Compile Remove="Migrations\20191005161701_req.cs" />
+    <Compile Remove="Migrations\20191005161701_req.Designer.cs" />
+    <Compile Remove="Migrations\20191007210614_requir.cs" />
+    <Compile Remove="Migrations\20191007210614_requir.Designer.cs" />
+    <Compile Remove="Migrations\20191012003945_id-persona.cs" />
+    <Compile Remove="Migrations\20191012003945_id-persona.Designer.cs" />
+    <Compile Remove="Migrations\20191017153916_fechacasamientofamilia.cs" />
+    <Compile Remove="Migrations\20191017153916_fechacasamientofamilia.Designer.cs" />
+    <Compile Remove="Migrations\20191221003307_estadoDDJJ.cs" />
+    <Compile Remove="Migrations\20191221003307_estadoDDJJ.Designer.cs" />
+    <Compile Remove="Migrations\20191226134845_normalizacion.cs" />
+    <Compile Remove="Migrations\20191226134845_normalizacion.Designer.cs" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Castle.Core" Version="4.4.0" />
+    <PackageReference Include="Commons" Version="1.3.10" />
+    <PackageReference Include="CommonsCps" Version="1.0.10-beta1" />
+    <PackageReference Include="CommonsUI" Version="1.0.7" />
+    <PackageReference Include="GeoCoordinate" Version="2.0.1" />
+    <PackageReference Include="GeoCoordinate.NetCore" Version="1.0.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
+    <PackageReference Include="Mime" Version="3.1.0" />
+    <PackageReference Include="NETStandard.Library" Version="2.0.3" />
+    <PackageReference Include="Rotativa.AspNetCore" Version="1.2.0-beta" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Include="wwwroot\bower_components\Flot\jquery.flot.categories.js" />
+    <None Include="wwwroot\bower_components\Flot\jquery.flot.js" />
+    <None Include="wwwroot\bower_components\Flot\jquery.flot.pie.js" />
+    <None Include="wwwroot\bower_components\Flot\jquery.flot.resize.js" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Reportes\" />
+    <Folder Include="wwwroot\img\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Content Update="Areas\Admin\Views\_ViewImports.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Areas\Admin\Views\_ViewStart.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>

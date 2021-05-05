@@ -1,0 +1,70 @@
+﻿@using Commons.Models
+@model Page<modulo_documentacion.Areas.Admin.Models.Basicas.PersonaEquipos>
+@{
+    ViewData["Title"] = "MostrarEquiposAsignados";
+    Layout = "";
+}
+
+<box-header title="Listado de Equipos asignado">
+
+    <div class="input-group input-group-sm pull-right" style="max-width: 300px;">
+        <a onclick="nuevoEquipo()" class="btn btn-info btn-sm">
+            <i class="fa fa-plus"><span class="hidden-xs"> Nuevo</span></i>
+        </a>
+    </div>
+
+</box-header>
+<box-body table="true" style="padding-inline-start">
+    <table id="listadoCentroJurisdiccional" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Grado</th>
+                <th>Unidad</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Empresa</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                <tr>
+                    <td scope="col">@Html.DisplayFor(modelItem => item.Nombre)</td>
+                    <td scope="col">@Html.DisplayFor(modelItem => item.Apellido)</td>
+                    <td scope="col">@Html.DisplayFor(modelItem => item.Grado)</td>
+                    <td scope="col">@Html.DisplayFor(modelItem => item.Unidad)</td>
+                    <td scope="col">@Html.DisplayFor(modelItem => item.Equipo.Marca.Descripcion)</td>
+                    <td scope="col">@Html.DisplayFor(modelItem => item.Equipo.Modelo.Descripcion)</td>
+                    <td scope="col">@Html.DisplayFor(modelItem => item.Equipo.Empresa.Nombre)</td>
+                    <td>
+                        <a onclick="editarEquipo('@item.Id')" title="Editar equipo" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i></a>
+                    </td>
+                </tr>            
+            }
+        </tbody>
+    </table>
+</box-body>
+
+<script>
+    $(document).ready(function () {
+        $('#listadoCentroJurisdiccional').DataTable({
+            "columnDefs": [{
+                "searchable": false,
+                "orderable": false,
+                //"targets": 3
+            }],
+            "language": {
+                'url': '@Url.Content("~/lib/arg.json")'
+            }
+        });
+    });
+</script>
+
+
+@*Page @( Model.PageCount < Model.PageNumber ? 0 :Model.PageNumber) of @Model.PageCount
+    <br />
+    Total Item Count @Model.TotalItemCount*@
+
+@*@Html.PagedListPager(Model, page => Url.Action("MostrarEquiposAsignados", "AsignarEquipos", new { page, pageSize = ViewBag.PageSize}))*@
