@@ -27,11 +27,11 @@ namespace modulo_documentacion.Areas.Admin.Models.Basicas
 
         public bool Editable { get; set; }
         //Vinculaciones
-        public int EmpresaId { get; set; }
-        public virtual Empresa Empresa { get; set; }
+        //public int EmpresaId { get; set; }
+        //public virtual Empresa Empresa { get; set; }
 
-        public int ModeloId { get; set; }
-        public virtual Modelo Modelo { get; set; }
+        //public int ModeloId { get; set; }
+        //public virtual Modelo Modelo { get; set; }
 
         public int MarcaId { get; set; }
         public virtual Marca Marca { get; set; }
@@ -42,7 +42,7 @@ namespace modulo_documentacion.Areas.Admin.Models.Basicas
         public int LineaId { get; set; }
         public virtual Linea Linea { get; set; }
 
-        public int PlanesId { get; set; }
-        public virtual Planes Planes { get; set; }
+        //public int PlanesId { get; set; }
+        //public virtual Planes Planes { get; set; }
     }
 }

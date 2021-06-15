@@ -672,7 +672,6 @@ C:\Users\Frankito\Desktop\git 2\DUFI 3 intento\DUFI-main\PROYECTO_CPSrgm3\modulo
 C:\Users\Frankito\Desktop\git 2\DUFI 3 intento\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.pdb
 C:\Users\Frankito\Desktop\git 2\DUFI 3 intento\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.Views.dll
 C:\Users\Frankito\Desktop\git 2\DUFI 3 intento\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.Views.pdb
-C:\Users\Frankito\Desktop\git 2\DUFI 3 intento\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.csprojAssemblyReference.cache
 C:\Users\Frankito\Desktop\git 2\DUFI 3 intento\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.AssemblyInfoInputs.cache
 C:\Users\Frankito\Desktop\git 2\DUFI 3 intento\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.AssemblyInfo.cs
 C:\Users\Frankito\Desktop\git 2\DUFI 3 intento\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.csproj.CoreCompileInputs.cache
@@ -926,127 +925,793 @@ C:\Users\Frankito\Desktop\git 2\DUFI 3 intento\DUFI-main\PROYECTO_CPSrgm3\modulo
 C:\Users\Frankito\Desktop\git 2\DUFI 3 intento\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_DesasignacionDeEquipos.cshtml.g.cs
 C:\Users\Frankito\Desktop\git 2\DUFI 3 intento\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_Desasignar_Equipos.cshtml.g.cs
 C:\Users\Frankito\Desktop\git 2\DUFI 3 intento\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\Reportes.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.csprojAssemblyReference.cache
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.AssemblyInfoInputs.cache
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.AssemblyInfo.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.csproj.CoreCompileInputs.cache
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.RazorAssemblyInfo.cache
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.RazorAssemblyInfo.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.dll
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.pdb
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.TagHelpers.input.cache
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.TagHelpers.output.cache
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.RazorCoreGenerate.cache
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\DetalleCompletoDelEquipo.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\Index.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\IndexEquiposAsignados.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\MostrarEquiposAsignados.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\Reportes.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_CrearRol.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_Create.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_CreateSeleccion.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_DesasignacionDeEquipos.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_Desasignar_Equipos.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_ListadoDeAsignacionEquipos.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_MostrarEquiposAsignados.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Empresa\Index.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Empresa\_Create.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Empresa\_Delete.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Empresa\_Detalle.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Empresa\_Edit.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Empresa\_ListadoDeEmpresas.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Equipos\Index.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Equipos\_Create.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Equipos\_Delete.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Equipos\_Detalle.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Equipos\_Edit.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Equipos\_ListadoDeEquipos.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Estado\Index.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Estado\_Create.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Estado\_Delete.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Estado\_Edit.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Estado\_TablaEstado.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Linea\Index.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Linea\_Create.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Linea\_Delete.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Linea\_Detalle.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Linea\_Edit.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Linea\_ListadoDeLineas.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Marca\Index.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Marca\_Create.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Marca\_Delete.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Marca\_Detalle.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Marca\_Edit.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Marca\_ListadoDeMarcas.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Modelo\Index.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Modelo\_Create.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Modelo\_Delete.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Modelo\_Detalle.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Modelo\_Edit.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Modelo\_ListadoDeModelos.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Planes\Index.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Planes\_Create.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Planes\_Delete.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Planes\_Detalle.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Planes\_Edit.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Planes\_ListadoDePlanes.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Unidad\Details.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Unidad\Index.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Unidad\_Create.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Unidad\_Delete.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Unidad\_Edit.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Unidad\_TablaUnidad.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Usuario\Index.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Usuario\_Create.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Usuario\_Delete.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Usuario\_Edit.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Usuario\_TablaUsuario.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\AccessDenied.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewImports(1).cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index_Gestion.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\ControlSidebar\LayoutControlSidebar.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\Footer\LayoutFooter.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\Header\LayoutHeader.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\MenuMessage\LayoutMenuMessage.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\MenuNotification\LayoutMenuNotification.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\MenuTask\LayoutMenuTask.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\MenuUser\LayoutMenuUser.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\PageHeader\LayoutPageHeader.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\Sidebar\LayoutSidebar.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\DisplayTemplates\Boolean.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\DisplayTemplates\Byte.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\DisplayTemplates\DateTime.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LayoutLogin.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Reporte.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.cshtml.g.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.RazorTargetAssemblyInfo.cache
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.RazorTargetAssemblyInfo.cs
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\appsettings.Development.json
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\appsettings.json
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.deps.json
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.runtimeconfig.json
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.runtimeconfig.dev.json
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.dll
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.pdb
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.Views.dll
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.Views.pdb
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.Views.pdb
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.genruntimeconfig.cache
-C:\Users\user\Desktop\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.csproj.CopyComplete
+C:\Users\Frankito\Desktop\git 2\DUFI 3 intento\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.csprojAssemblyReference.cache
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.deps.json
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.runtimeconfig.json
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.runtimeconfig.dev.json
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.dll
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.pdb
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.Views.dll
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.Views.pdb
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.csprojAssemblyReference.cache
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.AssemblyInfoInputs.cache
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.AssemblyInfo.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.csproj.CoreCompileInputs.cache
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.RazorAssemblyInfo.cache
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.RazorAssemblyInfo.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.TagHelpers.input.cache
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.TagHelpers.output.cache
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.RazorCoreGenerate.cache
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\DetalleCompletoDelEquipo.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\IndexEquiposAsignados.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\MostrarEquiposAsignados.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\Reportes.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_CrearRol.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_CreateSeleccion.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_DesasignacionDeEquipos.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_Desasignar_Equipos.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_ListadoDeAsignacionEquipos.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_MostrarEquiposAsignados.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Empresa\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Empresa\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Empresa\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Empresa\_Detalle.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Empresa\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Empresa\_ListadoDeEmpresas.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Equipos\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Equipos\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Equipos\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Equipos\_Detalle.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Equipos\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Equipos\_ListadoDeEquipos.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Escolaridad\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Escolaridad\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Escolaridad\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Escolaridad\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Escolaridad\_TablaEscolaridad.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\EstadoCivil\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\EstadoCivil\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\EstadoCivil\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\EstadoCivil\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\EstadoCivil\_TablaEstadoCivil.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Estado\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Estado\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Estado\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Estado\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Estado\_TablaEstado.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Genero\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Genero\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Genero\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Genero\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Genero\_TablaGenero.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Guarnicion\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Guarnicion\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Guarnicion\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Guarnicion\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Guarnicion\_TablaGuarnicion.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Linea\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Linea\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Linea\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Linea\_Detalle.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Linea\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Linea\_ListadoDeLineas.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Marca\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Marca\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Marca\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Marca\_Detalle.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Marca\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Marca\_ListadoDeMarcas.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Modelo\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Modelo\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Modelo\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Modelo\_Detalle.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Modelo\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Modelo\_ListadoDeModelos.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Parentesco\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Parentesco\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Parentesco\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Parentesco\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Parentesco\_TablaParentesco.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Planes\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Planes\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Planes\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Planes\_Detalle.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Planes\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Planes\_ListadoDePlanes.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionFamiliar\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionFamiliar\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionFamiliar\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionFamiliar\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionFamiliar\_TablaSituacionFamiliar.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionLaboral\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionLaboral\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionLaboral\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionLaboral\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionLaboral\_TablaSituacionLaboral.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumentoAdjunto\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumentoAdjunto\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumentoAdjunto\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumentoAdjunto\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumentoAdjunto\_TablaTipoDocumentoAdjunto.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumento\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumento\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumento\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumento\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumento\_TablaTipoDocumento.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Unidad\Details.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Unidad\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Unidad\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Unidad\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Unidad\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Unidad\_TablaUnidad.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Usuario\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Usuario\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Usuario\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Usuario\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Usuario\_TablaUsuario.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Albacea\GestionAlbacea.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Albacea\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Albacea\_Crear.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Albacea\_Navegacion.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Albacea\_TablaAlbacea.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Comentario\_CrearComentario.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Comentario\_EditarComentario.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\PersonaAviso\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\PersonaAviso\_CrearPersonaAviso.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\PersonaAviso\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\PersonaAviso\_EditarPersonaAviso.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Seguro\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Seguro\_CrearSeguro.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Seguro\_EditarSeguro.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Seguro\_EliminarSeguro.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\VistaPrevia\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\_ViewImports.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\_ViewStart.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DDJJReportes\Gestion.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DDJJReportes\_ReporteIndividual.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DDJJReportes\_TablaDeclaracionJurada.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\DomicilioVivienda\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\DomicilioVivienda\_CrearDomicilio.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\DomicilioVivienda\_CrearVivienda.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\DomicilioVivienda\_EditarDomicilio.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\DomicilioVivienda\_EditarVivienda.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_CargaAdjunto.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_CrearCausa.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_CrearDocumento.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_CrearEstudio.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_EditarCausa.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_EditarDocumento.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_EditarEstudio.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\FamiliaContacto\CrearFamiliar.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\FamiliaContacto\EditarFamiliar.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\FamiliaContacto\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\FamiliaContacto\_CrearContacto.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\FamiliaContacto\_CrearEstadoCivil.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\FamiliaContacto\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\FamiliaContacto\_EditarContacto.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\FamiliaContacto\_EditarEstadoCivil.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\Gestion.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\GestionPersonal.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\VistaPrevia\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\VistaPrevia\_DetalleFamiliar.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\_Navegacion.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\_ObservadaElemento.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\_ObservadaPersonal.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\_SolicitarModificacion.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\_TablaDeclaracionJurada.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\_VerHistorial.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\Elevacion\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\Elevacion\_TablaElevacionDDJJ.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\_ViewImports.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\_ViewStart.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\AptEspDufi\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\AptEspDufi\_CrearAptEsp.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\AptEspDufi\_EditarAptEsp.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\CargoActual\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\CargoActual\_CrearCargoActual.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\CargoActual\_EditarCargoActual.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\ConductorMotorista\_CrearConductor.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\ConductorMotorista\_CrearRegistro.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\ConductorMotorista\_EditarConductor.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\ConductorMotorista\_EditarRegistro.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\CursosEspDufi\_CrearCurso.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\CursosEspDufi\_EditarCurso.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\DestinoFuturo\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\DestinoFuturo\_CrearDestinoFuturo.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\DestinoFuturo\_EditarDestinoFuturo.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\Dufi\GestionDufi.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\Dufi\_Navegacion.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\Dufi\_TablaDufi.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\ExpedienteCD\_CrearExpedienteCD.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\ExpedienteCD\_EditarExpedienteCD.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\GuarnicionFuturo\_CrearGuarnicionFuturo.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\GuarnicionFuturo\_EditarGuarnicionFuturo.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\IdiomaDufi\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\IdiomaDufi\_CrearCargoDoc.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\IdiomaDufi\_CrearIdioma.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\IdiomaDufi\_CrearOidioma.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\IdiomaDufi\_EditarCargoDoc.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\IdiomaDufi\_EditarIdioma.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\IdiomaDufi\_EditarOidioma.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\MisionComExt\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\MisionComExt\_CrearMision.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\MisionComExt\_EditarMision.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\RevisionDufi\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\_ViewImports.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\_ViewStart.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\AccessDenied.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewImports(1).cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index_Gestion.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\ControlSidebar\LayoutControlSidebar.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\Footer\LayoutFooter.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\Header\LayoutHeader.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\MenuMessage\LayoutMenuMessage.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\MenuNotification\LayoutMenuNotification.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\MenuTask\LayoutMenuTask.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\MenuUser\LayoutMenuUser.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\PageHeader\LayoutPageHeader.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\Sidebar\LayoutSidebar.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\DisplayTemplates\Boolean.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\DisplayTemplates\Byte.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\DisplayTemplates\DateTime.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LayoutLogin.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Reporte.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.RazorTargetAssemblyInfo.cache
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.RazorTargetAssemblyInfo.cs
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.Views.pdb
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.dll
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.pdb
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.genruntimeconfig.cache
+C:\Users\frannavarro\Desktop\CPS FRANCO COVID\DUFI-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.csproj.CopyComplete
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.deps.json
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.runtimeconfig.json
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.runtimeconfig.dev.json
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.dll
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.pdb
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.Views.dll
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.Views.pdb
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.csprojAssemblyReference.cache
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.AssemblyInfoInputs.cache
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.AssemblyInfo.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.csproj.CoreCompileInputs.cache
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.RazorAssemblyInfo.cache
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.RazorAssemblyInfo.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.TagHelpers.input.cache
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.TagHelpers.output.cache
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.RazorCoreGenerate.cache
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\DetalleCompletoDelEquipo.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\IndexEquiposAsignados.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\MostrarEquiposAsignados.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\Reportes.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_CrearRol.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_CreateSeleccion.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_DesasignacionDeEquipos.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_Desasignar_Equipos.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_ListadoDeAsignacionEquipos.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_MostrarEquiposAsignados.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Empresa\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Empresa\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Empresa\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Empresa\_Detalle.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Empresa\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Empresa\_ListadoDeEmpresas.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Equipos\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Equipos\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Equipos\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Equipos\_Detalle.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Equipos\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Equipos\_ListadoDeEquipos.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Escolaridad\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Escolaridad\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Escolaridad\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Escolaridad\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Escolaridad\_TablaEscolaridad.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\EstadoCivil\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\EstadoCivil\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\EstadoCivil\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\EstadoCivil\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\EstadoCivil\_TablaEstadoCivil.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Estado\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Estado\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Estado\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Estado\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Estado\_TablaEstado.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Genero\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Genero\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Genero\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Genero\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Genero\_TablaGenero.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Guarnicion\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Guarnicion\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Guarnicion\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Guarnicion\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Guarnicion\_TablaGuarnicion.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Linea\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Linea\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Linea\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Linea\_Detalle.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Linea\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Linea\_ListadoDeLineas.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Marca\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Marca\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Marca\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Marca\_Detalle.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Marca\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Marca\_ListadoDeMarcas.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Modelo\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Modelo\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Modelo\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Modelo\_Detalle.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Modelo\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Modelo\_ListadoDeModelos.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Parentesco\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Parentesco\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Parentesco\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Parentesco\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Parentesco\_TablaParentesco.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Planes\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Planes\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Planes\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Planes\_Detalle.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Planes\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Planes\_ListadoDePlanes.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionFamiliar\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionFamiliar\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionFamiliar\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionFamiliar\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionFamiliar\_TablaSituacionFamiliar.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionLaboral\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionLaboral\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionLaboral\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionLaboral\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionLaboral\_TablaSituacionLaboral.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumentoAdjunto\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumentoAdjunto\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumentoAdjunto\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumentoAdjunto\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumentoAdjunto\_TablaTipoDocumentoAdjunto.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumento\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumento\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumento\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumento\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumento\_TablaTipoDocumento.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Unidad\Details.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Unidad\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Unidad\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Unidad\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Unidad\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Unidad\_TablaUnidad.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Usuario\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Usuario\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Usuario\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Usuario\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Usuario\_TablaUsuario.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Albacea\GestionAlbacea.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Albacea\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Albacea\_Crear.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Albacea\_Navegacion.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Albacea\_TablaAlbacea.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Comentario\_CrearComentario.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Comentario\_EditarComentario.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\PersonaAviso\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\PersonaAviso\_CrearPersonaAviso.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\PersonaAviso\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\PersonaAviso\_EditarPersonaAviso.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Seguro\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Seguro\_CrearSeguro.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Seguro\_EditarSeguro.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Seguro\_EliminarSeguro.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\VistaPrevia\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\_ViewImports.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\_ViewStart.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DDJJReportes\Gestion.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DDJJReportes\_ReporteIndividual.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DDJJReportes\_TablaDeclaracionJurada.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\DomicilioVivienda\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\DomicilioVivienda\_CrearDomicilio.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\DomicilioVivienda\_CrearVivienda.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\DomicilioVivienda\_EditarDomicilio.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\DomicilioVivienda\_EditarVivienda.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_CargaAdjunto.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_CrearCausa.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_CrearDocumento.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_CrearEstudio.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_Edit.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_EditarCausa.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_EditarDocumento.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_EditarEstudio.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\FamiliaContacto\CrearFamiliar.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\FamiliaContacto\EditarFamiliar.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\FamiliaContacto\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\FamiliaContacto\_CrearContacto.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\FamiliaContacto\_CrearEstadoCivil.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\FamiliaContacto\_Delete.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\FamiliaContacto\_EditarContacto.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\FamiliaContacto\_EditarEstadoCivil.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\Gestion.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\GestionPersonal.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\VistaPrevia\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\VistaPrevia\_DetalleFamiliar.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\_Create.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\_Navegacion.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\_ObservadaElemento.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\_ObservadaPersonal.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\_SolicitarModificacion.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\_TablaDeclaracionJurada.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\_VerHistorial.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\Elevacion\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\Elevacion\_TablaElevacionDDJJ.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\_ViewImports.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\_ViewStart.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\AptEspDufi\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\AptEspDufi\_CrearAptEsp.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\AptEspDufi\_EditarAptEsp.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\CargoActual\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\CargoActual\_CrearCargoActual.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\CargoActual\_EditarCargoActual.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\ConductorMotorista\_CrearConductor.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\ConductorMotorista\_CrearRegistro.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\ConductorMotorista\_EditarConductor.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\ConductorMotorista\_EditarRegistro.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\CursosEspDufi\_CrearCurso.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\CursosEspDufi\_EditarCurso.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\DestinoFuturo\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\DestinoFuturo\_CrearDestinoFuturo.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\DestinoFuturo\_EditarDestinoFuturo.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\Dufi\GestionDufi.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\Dufi\_Navegacion.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\Dufi\_TablaDufi.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\ExpedienteCD\_CrearExpedienteCD.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\ExpedienteCD\_EditarExpedienteCD.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\GuarnicionFuturo\_CrearGuarnicionFuturo.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\GuarnicionFuturo\_EditarGuarnicionFuturo.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\IdiomaDufi\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\IdiomaDufi\_CrearCargoDoc.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\IdiomaDufi\_CrearIdioma.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\IdiomaDufi\_CrearOidioma.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\IdiomaDufi\_EditarCargoDoc.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\IdiomaDufi\_EditarIdioma.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\IdiomaDufi\_EditarOidioma.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\MisionComExt\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\MisionComExt\_CrearMision.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\MisionComExt\_EditarMision.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\RevisionDufi\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\_ViewImports.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\_ViewStart.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\AccessDenied.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewImports(1).cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index_Gestion.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\ControlSidebar\LayoutControlSidebar.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\Footer\LayoutFooter.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\Header\LayoutHeader.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\MenuMessage\LayoutMenuMessage.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\MenuNotification\LayoutMenuNotification.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\MenuTask\LayoutMenuTask.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\MenuUser\LayoutMenuUser.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\PageHeader\LayoutPageHeader.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\Sidebar\LayoutSidebar.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\DisplayTemplates\Boolean.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\DisplayTemplates\Byte.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\DisplayTemplates\DateTime.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LayoutLogin.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Reporte.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.RazorTargetAssemblyInfo.cache
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.RazorTargetAssemblyInfo.cs
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.Views.pdb
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.dll
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.pdb
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.genruntimeconfig.cache
+C:\Users\frannavarro\Desktop\RGM\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.csproj.CopyComplete
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.deps.json
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.runtimeconfig.json
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.runtimeconfig.dev.json
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.dll
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.pdb
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.Views.dll
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\bin\Debug\netcoreapp2.2\modulo_documentacion.Views.pdb
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.csprojAssemblyReference.cache
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.AssemblyInfoInputs.cache
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.AssemblyInfo.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.csproj.CoreCompileInputs.cache
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.RazorAssemblyInfo.cache
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.RazorAssemblyInfo.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.TagHelpers.input.cache
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.TagHelpers.output.cache
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.RazorCoreGenerate.cache
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\DetalleCompletoDelEquipo.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\IndexEquiposAsignados.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\MostrarEquiposAsignados.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\Reportes.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_CrearRol.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_Create.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_CreateSeleccion.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_DesasignacionDeEquipos.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_Desasignar_Equipos.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_ListadoDeAsignacionEquipos.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AsignarEquipos\_MostrarEquiposAsignados.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Empresa\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Empresa\_Create.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Empresa\_Delete.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Empresa\_Detalle.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Empresa\_Edit.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Empresa\_ListadoDeEmpresas.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Equipos\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Equipos\_Create.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Equipos\_Delete.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Equipos\_Detalle.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Equipos\_Edit.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Equipos\_ListadoDeEquipos.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Escolaridad\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Escolaridad\_Create.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Escolaridad\_Delete.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Escolaridad\_Edit.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Escolaridad\_TablaEscolaridad.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\EstadoCivil\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\EstadoCivil\_Create.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\EstadoCivil\_Delete.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\EstadoCivil\_Edit.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\EstadoCivil\_TablaEstadoCivil.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Estado\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Estado\_Create.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Estado\_Delete.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Estado\_Edit.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Estado\_TablaEstado.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Genero\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Genero\_Create.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Genero\_Delete.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Genero\_Edit.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Genero\_TablaGenero.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Guarnicion\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Guarnicion\_Create.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Guarnicion\_Delete.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Guarnicion\_Edit.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Guarnicion\_TablaGuarnicion.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Linea\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Linea\_Create.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Linea\_Delete.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Linea\_Detalle.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Linea\_Edit.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Linea\_ListadoDeLineas.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Marca\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Marca\_Create.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Marca\_Delete.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Marca\_Detalle.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Marca\_Edit.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Marca\_ListadoDeMarcas.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Modelo\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Modelo\_Create.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Modelo\_Delete.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Modelo\_Detalle.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Modelo\_Edit.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Modelo\_ListadoDeModelos.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Parentesco\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Parentesco\_Create.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Parentesco\_Delete.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Parentesco\_Edit.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Parentesco\_TablaParentesco.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Planes\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Planes\_Create.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Planes\_Delete.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Planes\_Detalle.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Planes\_Edit.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Planes\_ListadoDePlanes.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionFamiliar\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionFamiliar\_Create.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionFamiliar\_Delete.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionFamiliar\_Edit.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionFamiliar\_TablaSituacionFamiliar.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionLaboral\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionLaboral\_Create.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionLaboral\_Delete.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionLaboral\_Edit.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SituacionLaboral\_TablaSituacionLaboral.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumentoAdjunto\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumentoAdjunto\_Create.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumentoAdjunto\_Delete.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumentoAdjunto\_Edit.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumentoAdjunto\_TablaTipoDocumentoAdjunto.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumento\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumento\_Create.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumento\_Delete.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumento\_Edit.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\TipoDocumento\_TablaTipoDocumento.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Unidad\Details.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Unidad\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Unidad\_Create.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Unidad\_Delete.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Unidad\_Edit.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Unidad\_TablaUnidad.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Usuario\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Usuario\_Create.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Usuario\_Delete.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Usuario\_Edit.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Usuario\_TablaUsuario.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Albacea\GestionAlbacea.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Albacea\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Albacea\_Crear.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Albacea\_Navegacion.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Albacea\_TablaAlbacea.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Comentario\_CrearComentario.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Comentario\_EditarComentario.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\PersonaAviso\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\PersonaAviso\_CrearPersonaAviso.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\PersonaAviso\_Delete.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\PersonaAviso\_EditarPersonaAviso.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Seguro\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Seguro\_CrearSeguro.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Seguro\_EditarSeguro.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\Seguro\_EliminarSeguro.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\VistaPrevia\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\_ViewImports.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Albacea\Views\_ViewStart.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DDJJReportes\Gestion.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DDJJReportes\_ReporteIndividual.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DDJJReportes\_TablaDeclaracionJurada.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\DomicilioVivienda\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\DomicilioVivienda\_CrearDomicilio.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\DomicilioVivienda\_CrearVivienda.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\DomicilioVivienda\_EditarDomicilio.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\DomicilioVivienda\_EditarVivienda.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_CargaAdjunto.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_CrearCausa.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_CrearDocumento.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_CrearEstudio.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_Delete.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_Edit.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_EditarCausa.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_EditarDocumento.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\EstudioCausa\_EditarEstudio.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\FamiliaContacto\CrearFamiliar.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\FamiliaContacto\EditarFamiliar.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\FamiliaContacto\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\FamiliaContacto\_CrearContacto.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\FamiliaContacto\_CrearEstadoCivil.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\FamiliaContacto\_Delete.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\FamiliaContacto\_EditarContacto.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\FamiliaContacto\_EditarEstadoCivil.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\Gestion.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\GestionPersonal.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\VistaPrevia\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\VistaPrevia\_DetalleFamiliar.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\_Create.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\_Navegacion.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\_ObservadaElemento.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\_ObservadaPersonal.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\_SolicitarModificacion.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\_TablaDeclaracionJurada.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\DeclaracionJurada\_VerHistorial.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\Elevacion\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\Elevacion\_TablaElevacionDDJJ.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\_ViewImports.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DDJJ\Views\_ViewStart.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\AptEspDufi\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\AptEspDufi\_CrearAptEsp.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\AptEspDufi\_EditarAptEsp.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\CargoActual\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\CargoActual\_CrearCargoActual.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\CargoActual\_EditarCargoActual.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\ConductorMotorista\_CrearConductor.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\ConductorMotorista\_CrearRegistro.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\ConductorMotorista\_EditarConductor.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\ConductorMotorista\_EditarRegistro.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\CursosEspDufi\_CrearCurso.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\CursosEspDufi\_EditarCurso.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\DestinoFuturo\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\DestinoFuturo\_CrearDestinoFuturo.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\DestinoFuturo\_EditarDestinoFuturo.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\Dufi\GestionDufi.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\Dufi\_Navegacion.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\Dufi\_TablaDufi.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\ExpedienteCD\_CrearExpedienteCD.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\ExpedienteCD\_EditarExpedienteCD.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\GuarnicionFuturo\_CrearGuarnicionFuturo.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\GuarnicionFuturo\_EditarGuarnicionFuturo.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\IdiomaDufi\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\IdiomaDufi\_CrearCargoDoc.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\IdiomaDufi\_CrearIdioma.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\IdiomaDufi\_CrearOidioma.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\IdiomaDufi\_EditarCargoDoc.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\IdiomaDufi\_EditarIdioma.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\IdiomaDufi\_EditarOidioma.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\MisionComExt\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\MisionComExt\_CrearMision.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\MisionComExt\_EditarMision.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\RevisionDufi\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\_ViewImports.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\DUFI\Views\_ViewStart.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\AccessDenied.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewImports(1).cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index_Gestion.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\ControlSidebar\LayoutControlSidebar.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\Footer\LayoutFooter.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\Header\LayoutHeader.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\MenuMessage\LayoutMenuMessage.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\MenuNotification\LayoutMenuNotification.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\MenuTask\LayoutMenuTask.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\MenuUser\LayoutMenuUser.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\PageHeader\LayoutPageHeader.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\Sidebar\LayoutSidebar.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\DisplayTemplates\Boolean.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\DisplayTemplates\Byte.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\DisplayTemplates\DateTime.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LayoutLogin.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Reporte.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.RazorTargetAssemblyInfo.cache
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.RazorTargetAssemblyInfo.cs
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.Views.pdb
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.dll
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.pdb
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.genruntimeconfig.cache
+C:\Users\CPS-DLLO#11\Desktop\RGMNUEVO\Telefonia-RGM-main\Telefonia-RGM-main\PROYECTO_CPSrgm3\modulo_documentacion\obj\Debug\netcoreapp2.2\modulo_documentacion.csproj.CopyComplete

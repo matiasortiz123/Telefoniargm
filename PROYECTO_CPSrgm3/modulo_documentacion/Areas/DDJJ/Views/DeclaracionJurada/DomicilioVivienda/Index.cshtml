@@ -1,0 +1,209 @@
+﻿@model modulo_documentacion.Areas.DDJJ.ViewModels.DomicilioViviendaViewModel
+
+@{
+    ViewData["Title"] = "DDJJ - Domicilio y Vivienda";
+}
+
+<partial name="/Areas/DDJJ/Views/DeclaracionJurada/_Navegacion.cshtml" />
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">DOMICILIO</h3>
+                <div class="box-tools pull-right">
+                    @if (Model.Domicilio == null)
+                    {
+                        <a onclick="nuevoDomicilio(@Model.DeclaracionJuradaID)" class="btn btn-info btn-sm">
+                            <i class="fa fa-plus"><span class="hidden-xs txt-boton-grilla"> Agregar domicilio </span></i>
+                        </a>
+                    }
+                    </div>
+            </div>
+            <box-body table="true">
+                <table class="table table-striped">
+                    @if (Model.Domicilio != null)
+                    {
+                        <thead>
+                            <tr>
+                                <th>
+                                    Calle
+                                </th>
+                                <th>
+                                    Altura
+                                </th>
+                                <th>
+                                    Provincia
+                                </th>
+                                <th>
+                                    Localidad
+                                </th>
+
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.Domicilio.Calle)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.Domicilio.Altura)
+                                </td>
+                                @if (Model.Domicilio.ViveExterior == true)
+                                {
+                                    <td>
+                                        @Html.DisplayFor(modelItem => @Model.Domicilio.ProvinciaExterior)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => @Model.Domicilio.LocalidadExterior)
+                                    </td>
+                                }
+                                else
+                                {
+                                    <td>
+                                        @Html.DisplayFor(modelItem => @Model.Domicilio.Provincia.Descripcion)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => @Model.Domicilio.Localidad.Descripcion)
+                                    </td>
+                                }
+                                <td>
+                                    <a onclick="EditarDomicilio(@Html.DisplayFor(modelItem => @Model.Domicilio.ID))" title="Editar" class="btn btn-primary btn-xs "><i class="fa fa-edit"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                    else
+                    {
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="5" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+                <input type="hidden" name="djId" value="@Model.DeclaracionJuradaID" />
+
+            </box-body>
+        </box>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">SITUACION VIVIENDA</h3>
+                <div class="box-tools pull-right">
+                    @if (Model.Vivienda == null)
+                    {
+                        <a id="vivienda" onclick="nuevoVivienda(@Model.DeclaracionJuradaID)" class="btn btn-info btn-sm">
+                            <i class="fa fa-plus"><span class="hidden-xs txt-boton-grilla"> Agregar Vivienda </span></i>
+                        </a>
+                    }
+                </div>
+            </div>
+       
+
+        <box-body table="true">
+            <table class="table table-striped">
+                @if (Model.Vivienda != null)
+                {
+                    <thead>
+                        <tr>
+                            <th>
+                                Ocupa vivienda del estado
+                            </th>
+                            <th>
+                                Tiempo
+                            </th>
+                            <th>
+                                Posee vivienda propia
+                            </th>
+                            <th>
+                                Alquila
+                            </th>
+                            <th>
+                                Desde/Hasta  
+                            </th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => @Model.Vivienda.OcupaViviendaEstado)
+                            </td>
+                            @if (Model.Vivienda.OcupaViviendaEstado == true)
+                            {
+                                
+                                string tiempo;
+                                if (Model.Vivienda.TiempoOcupaVivienda == 1)
+                                {
+                                    tiempo = "año";
+                                }
+                                else
+                                {
+                                    tiempo = "años";
+                                }
+                                
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.Vivienda.TiempoOcupaVivienda) @tiempo
+                                </td>
+                            }
+                            else
+                            {
+                                <td>--</td>
+                            }
+                            <td>
+                                @Html.DisplayFor(modelItem => @Model.Vivienda.ViviendaPropia)
+                            <td>
+                                @Html.DisplayFor(modelItem => @Model.Vivienda.Alquila)
+                            </td>
+                            @if (Model.Vivienda.Alquila == true)
+                            {
+                                <td>@Html.DisplayFor(modelItem => @Model.Vivienda.AlquilaDesde) - @Html.DisplayFor(modelItem => @Model.Vivienda.AlquilaHasta)</td>
+                            }
+                            else
+                            {
+                                <td>--</td>
+                            }
+                            <td>
+                                <a onclick="EditarVivienda(@Html.DisplayFor(modelItem => @Model.Vivienda.ID))" title="Editar" class="btn btn-primary btn-xs "><i class="fa fa-edit"></i></a>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                }
+                else
+                {
+                    <tbody>
+                        <tr>
+                            <td class="text-danger" colspan="5" style="text-align:center">
+                                NO SE ENCONTRARON REGISTROS
+                            </td>
+                        </tr>
+                    </tbody>
+                }
+
+            </table>
+           
+        </box-body>
+        </box>
+         
+    </div>
+</div>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBmZkx2SlvDbhVMx4hhklPRTHNzRFzJrEQ" type="text/javascript"></script>
+<script src="~/js/google_maps.js" type="text/javascript"></script>
+<modal title="Domicilio" function="nuevoDomicilio" callback-modal="true" load-url="/DDJJ/DeclaracionJurada/_CrearDomicilio/" size="Large"></modal>
+<modal title="Nueva Vivienda" function="nuevoVivienda" callback-modal="true" load-url="/DDJJ/DeclaracionJurada/_CrearVivienda/" size="Large"></modal>
+<modal title="Editar Domicilio" function="EditarDomicilio" callback-modal="true" load-url="/DDJJ/DeclaracionJurada/_EditarDomicilio/" size="Large"></modal>
+<modal simple-modal="true" title="Editar Vivienda" function="EditarVivienda" callback-modal="true" load-url="/DDJJ/DeclaracionJurada/_EditarVivienda/" size="Large"></modal>
+
+
+

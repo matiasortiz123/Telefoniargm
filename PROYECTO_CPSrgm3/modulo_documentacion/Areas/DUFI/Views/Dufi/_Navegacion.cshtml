@@ -1,0 +1,30 @@
+﻿@model int
+
+    <div class="row" style="margin-bottom:10px">
+
+        @if (@ViewBag.MenuActivo == "CA")
+        {<div class="col-md-2"><a asp-controller="CargoActual" asp-route-id="@Model" class="btn btn-block" style="background-color:#0a3d62;color:white"><i class="fa fa-users pull-left"></i><b> Cargo Actual </b></a></div>}
+        else
+        {<div class="col-md-2"><a asp-controller="CargoActual" asp-route-id="@Model" class="btn btn-block" style="background-color:#82ccdd;color:#FFFFFF"><i class="fa fa-users pull-left"></i><b> Cargo Actual  </b></a></div>}
+        @if (@ViewBag.MenuActivo == "DF")
+        {<div class="col-md-2"><a asp-controller="DestinoFuturo" asp-route-id="@Model" class="btn btn-block" style="background-color:#0a3d62;color:white"><i class="fa fa-home pull-left"></i><b> Destino Futuro </b></a></div>}
+        else
+        { <div class="col-md-2"><a asp-controller="DestinoFuturo" asp-route-id="@Model" class="btn btn-block" style="background-color:#82ccdd;color:#FFFFFF"><i class="fa fa-home pull-left"></i><b> Destino Futuro </b></a></div>}
+        @if (@ViewBag.MenuActivo == "ID")
+        {<div class="col-md-2"><a asp-controller="IdiomaDufi" asp-route-id="@Model" class="btn btn-block" style="background-color:#0a3d62;color:white"><i class="fa fa-edit pull-left"></i><b> Idiomas y Cargos Doc. Prof. </b></a></div>}
+        else
+        {<div class="col-md-2"><a asp-controller="IdiomaDufi" asp-route-id="@Model" class="btn btn-block" style="background-color:#82ccdd;color:#FFFFFF"><i class="fa fa-edit pull-left"></i><b> Idiomas y Cargos Doc. Prof. </b></a></div>}
+        @if (@ViewBag.MenuActivo == "MC")
+        {<div class="col-md-2"><a asp-controller="MisionComExt" asp-route-id="@Model" class="btn btn-block" style="background-color:#0a3d62;color:white"><i class="fa fa-edit pull-left"></i><b> OOMMP y Com Ext </b></a></div>}
+        else
+        {<div class="col-md-2"><a asp-controller="MisionComExt" asp-route-id="@Model" class="btn btn-block" style="background-color:#82ccdd;color:#FFFFFF"><i class="fa fa-edit pull-left"></i><b> OOMMP y Com Ext </b></a></div>}
+        @if (@ViewBag.MenuActivo == "AE")
+        {<div class="col-md-2"><a asp-controller="AptEspDufi" asp-route-id="@Model" class="btn btn-block" style="background-color:#0a3d62;color:white"><i class="fa fa-edit pull-left"></i><b> Aptitudes y Cursos </b></a></div>}
+        else
+        {<div class="col-md-2"><a asp-controller="AptEspDufi" asp-route-id="@Model" class="btn btn-block" style="background-color:#82ccdd;color:#FFFFFF"><i class="fa fa-edit pull-left"></i><b> Aptitudes y Cursos </b></a></div>}
+        @if (@ViewBag.MenuActivo == "VP")
+        {<div class="col-md-2"><a asp-controller="RevisionDufi" asp-route-id="@Model" class="btn btn-block" style="background-color:#0a3d62;color:white"><i class="fa fa-edit pull-left"></i><b> Revisión y Elevación </b></a></div>}
+        else
+        {<div class="col-md-2"><a asp-controller="RevisionDufi" asp-route-id="@Model" class="btn btn-block" style="background-color:#82ccdd;color:#FFFFFF"><i class="fa fa-edit pull-left"></i><b> Revisión y Elevación </b></a></div>}
+    </div>
+

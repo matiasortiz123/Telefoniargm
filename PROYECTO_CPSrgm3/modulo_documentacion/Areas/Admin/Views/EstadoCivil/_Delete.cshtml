@@ -1,0 +1,17 @@
+﻿@model modulo_documentacion.Areas.Admin.Models.Basicas.EstadoCivil
+    <form class="form-horizontal" method="post" asp-action="_Delete" asp-controller="EstadoCivil">
+        <div class="box-body">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <d>
+                    @Html.DisplayFor(model => model.Descripcion)
+                </d>
+            </div>
+            <div class="form-group">
+                <a asp-action="Index" class="btn btn-default">Cancelar</a>
+                &nbsp;
+                <input type="submit" value="Delete" class="btn btn-danger" />
+            </div>
+        </div>
+    </form>

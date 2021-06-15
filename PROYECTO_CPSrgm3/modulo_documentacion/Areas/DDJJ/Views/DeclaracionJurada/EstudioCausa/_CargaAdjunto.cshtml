@@ -1,0 +1,15 @@
+﻿@model modulo_documentacion.Areas.DDJJ.Models.Documentacion
+
+<div>
+    <form asp-action="_CargaAdjunto" method="post" enctype="multipart/form-data">
+        <ul class="list-group list-group-unbordered">
+            <li class="list-group-item">
+                <input type="hidden" asp-for="Id" />
+                <div class="form-group">
+                    <input type="file" name="img" />
+                </div>
+            </li>
+        </ul>
+        <button type="submit" class="btn btn-primary btn-block"><b>Cargar Adjunto</b></button>
+    </form>
+</div>

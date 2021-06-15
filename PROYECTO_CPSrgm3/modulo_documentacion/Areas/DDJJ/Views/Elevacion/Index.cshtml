@@ -1,0 +1,54 @@
+﻿@model IList<modulo_documentacion.Areas.DDJJ.ViewModels.ElevacionDDJJViewModel>
+
+@{
+    ViewData["Title"] = "Elevacion de Declaraciones Juradas";
+    ViewData["BackArrow"] = "/Home/Index";
+}
+
+<box color="Info">
+    <form method="post" asp-action="ElevaElemento" asp-controller="Elevacion">
+        <box-header title="Elevacion de Declaraciones Juradas">
+        </box-header>
+        <box-body table="true">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Sel.</th>
+                        <th>Unidad</th>
+                        <th>Grado</th>
+                        <th>Titular</th>
+                        <th>Fecha</th>
+                        <th>Estado</th>
+                        <th>Observacion</th>
+                        <th>Descarga</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                    <tr>
+                        <td class="icheck-material-teal">
+                            @Html.CheckBoxFor(m => m[i].Seleccionada, new { id = @Model[i]})
+                            <label for="@Model[i]"></label>
+                            <!--<input type="checkbox" color="None" asp-for="@Model[i].Seleccionada" />-->
+                        </td>
+                        <td>Unidad</td>
+                        <td>Grado</td>
+                        <td>@Model[i].Titular</td>
+                        <td>@Model[i].Fecha.ToShortDateString()</td>
+                        <td>@Model[i].Estado</td>
+                        <td>@Model[i].Observacion</td>
+                        <td><a asp-route-id="@Model[i].DeclaracionJuradaID" asp-action="DescargaIndividual" title="Descargar" class="btn btn-primary btn-xs"><i class="fa fa-download"></i></a></td>
+                        <td><input type="hidden" asp-for="@Model[i].DeclaracionJuradaID" /></td>
+                        @*<td>
+            <a asp-route-id="@item.ID" asp-action="DomicilioVivienda" title="Editar" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i></a>
+                <a onclick="reporteDDJJ(@item.ID)" title="Ver" class="btn btn-success btn-xs"><i class="fa fa-file-text-o"></i></a>
+        </td>*@
+                    </tr>
+                    }
+                </tbody>
+            </table>
+            <input type="submit" value="Elevar seleccionadas" />
+        </box-body>
+    </form>
+</box>

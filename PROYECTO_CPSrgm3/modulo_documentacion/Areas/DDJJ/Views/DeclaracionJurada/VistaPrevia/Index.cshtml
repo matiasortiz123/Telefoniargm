@@ -1,0 +1,1282 @@
+﻿@model modulo_documentacion.Areas.DDJJ.ViewModels.VistaPreviaViewModel
+@{
+    ViewData["Title"] = "DDJJ - Revisión y Elevación";
+}
+
+<partial name="/Areas/DDJJ/Views/DeclaracionJurada/_Navegacion.cshtml" />
+
+@* Domicilio *@
+<div class="row">
+    <div class="col-sm-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">DOMICILIO</h3>
+            </div>
+            <box-body table="true">
+                <table class="table table-striped">
+                    @if (Model.DomicilioViviendaViewModel.Domicilio != null)
+                    {
+                        <thead>
+                            <tr>
+                                <th>
+                                    Calle
+                                </th>
+                                <th>
+                                    Altura
+                                </th>
+                                <th>
+                                    Piso
+                                </th>
+                                <th>
+                                    Dpto
+                                </th>
+                                <th>
+                                    Torre
+                                </th>
+                                <th>
+                                    Sector
+                                </th>
+                                <th>
+                                    Manzana
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Domicilio.Calle)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Domicilio.Altura)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Domicilio.Departamento)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Domicilio.Piso)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Domicilio.Torre)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Domicilio.Sector)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Domicilio.Manzana)
+                                </td>
+
+                            </tr>
+                        </tbody>
+                        <thead>
+                            <tr>
+                                <th>
+                                    Código Postal
+                                </th>
+                                <th>
+                                    Provincia
+                                </th>
+                                <th>
+                                    Localidad
+                                </th>
+                                @if (Model.DomicilioViviendaViewModel.Domicilio.ViveExterior)
+                                {
+                                    <th>
+                                        Pais
+                                    </th>
+                                }
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                @if (Model.DomicilioViviendaViewModel.Domicilio.ViveExterior)
+                                {
+                                    <td>
+                                        @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Domicilio.CodigoPostal)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Domicilio.ProvinciaExterior)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Domicilio.LocalidadExterior)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Domicilio.Pais)
+                                    </td>
+                                }
+                                else
+                                {
+                                    <td>
+                                        @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Domicilio.CodigoPostal)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Domicilio.Provincia.Descripcion)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Domicilio.Localidad.Descripcion)
+                                    </td>
+                                }
+                            </tr>
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="7" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+                @*Forma Vieja*@
+                @*<tr>
+                        <td>
+                            <b>Calle:</b>
+                            @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Domicilio.Calle)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Altura:</b>@Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Domicilio.Altura)
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+                            <b>Piso:</b>@Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Domicilio.Departamento)
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            <b>Dpto:</b> @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Domicilio.Piso)
+                            &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+                            <b>Torre:</b>@Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Domicilio.Torre)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Sector: </b>@Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Domicilio.Sector)
+                            &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                            <b>Manzana: </b>@Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Domicilio.Manzana)
+                            &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                            <b>Codigo Postal: </b>@Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Domicilio.CodigoPostal)
+                            &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Provincia:</b> Buenos Aires
+                            &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                            <b>Localidad:</b> Caseros
+                        </td>
+                    </tr>*@
+
+                @*Forma Nueva desalineada*@
+                @*
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Manzana
+                                </th>
+                                <th>
+                                    Código Postal
+                                </th>
+                                <th>
+                                    Provincia
+                                </th>
+                                <th>
+                                    Localidad
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Domicilio.Manzana)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Domicilio.CodigoPostal)
+                                </td>
+                                <td>
+                                    Buenos Aires
+                                </td>
+                                <td>
+                                    Caseros
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>*@
+            </box-body>
+        </box>
+
+    </div>
+</div>
+
+@* Vivienda *@
+<div class="row">
+    <div class="col-sm-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">VIVIENDA</h3>@*Rellenar los ifs*@
+            </div>
+            <box-body table="true">
+                @if (Model.DomicilioViviendaViewModel.Vivienda != null)
+                {
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Ocupa alojamiento en la Unidad
+                                </th>
+                                @if (Model.DomicilioViviendaViewModel.Vivienda.AlojaUnidad)
+                                {
+                                    <th>
+                                        En la Unidad
+                                    </th>
+                                }
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Vivienda.AlojaUnidad)
+                                </td>
+                                @if (Model.DomicilioViviendaViewModel.Vivienda.AlojaUnidad)
+                                {
+                                    <td>
+                                        @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Vivienda.AlojamientoUnidad.Descripcion)
+                                    </td>
+                                }
+                            </tr>
+                        </tbody>
+                        <thead>
+                            <tr>
+                                <th>
+                                    Posee vivienda propia
+                                </th>
+                                @if (Model.DomicilioViviendaViewModel.Vivienda.ViviendaPropia)
+                                {
+                                    <th>
+                                        Vivienda proxima a la Guarinición
+                                    </th>
+                                    if (Model.DomicilioViviendaViewModel.Vivienda.GuarnicionViviendaProxima2 != null)
+                                    {
+                                        <th>
+                                            Segunda vivienda proxima a la Guarinición
+                                        </th>
+                                    }
+                                }
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Vivienda.ViviendaPropia)
+                                </td>
+                                @if (Model.DomicilioViviendaViewModel.Vivienda.ViviendaPropia)
+                                {
+                                    <td>
+                                        @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Vivienda.GuarnicionViviendaProxima1.Descripcion)
+                                    </td>
+                                    if (Model.DomicilioViviendaViewModel.Vivienda.GuarnicionViviendaProxima2 != null)
+                                    {
+                                        <td>
+                                            ---@Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Vivienda.GuarnicionViviendaProxima2)
+                                        </td>
+                                    }
+                                }
+                            </tr>
+                        </tbody>
+                        <thead>
+                            <tr>
+                                @if (Model.DomicilioViviendaViewModel.Vivienda.ViviendaPropia && Model.DomicilioViviendaViewModel.Vivienda.GuarnicionViviendaProxima2 != null)
+                                {
+                                    <th>
+                                        Tercera vivienda proxima a la Guarinición
+                                    </th>
+                                }
+                                <th>
+                                    Satisface sus necesitades de vivienda
+                                </th>
+                                @if (Model.DomicilioViviendaViewModel.Vivienda.ViviendaPropia)
+                                {
+                                    <th>
+                                        Ocupa alguna de estas Viviendas
+                                    </th>
+                                }
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                @if (Model.DomicilioViviendaViewModel.Vivienda.ViviendaPropia && Model.DomicilioViviendaViewModel.Vivienda.GuarnicionViviendaProxima2 != null)
+                                {
+                                    <td>
+                                        ---@Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Vivienda.GuarnicionViviendaProxima3)
+                                    </td>
+
+                                }
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Vivienda.Satisface)
+                                </td>
+                                @if (Model.DomicilioViviendaViewModel.Vivienda.ViviendaPropia)
+                                {
+                                    <td>
+                                        @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Vivienda.OcupaPropia)
+                                    </td>
+                                }
+                            </tr>
+                        </tbody>
+                        <thead>
+                            <tr>
+                                <th>
+                                    Alquila vivienda
+                                </th>
+                                @if (Model.DomicilioViviendaViewModel.Vivienda.Alquila)
+                                {
+                                    <th>
+                                        Desde (según Contrato de Alquiler)
+                                    </th>
+                                    <th>
+                                        Hasta (según Contrato de Alquiler)
+                                    </th>
+                                }
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Vivienda.Alquila)
+                                </td>
+                                @if (Model.DomicilioViviendaViewModel.Vivienda.Alquila)
+                                {
+                                    <td>
+                                        @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Vivienda.AlquilaDesde)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Vivienda.AlquilaHasta)
+                                    </td>
+                                }
+                            </tr>
+                        </tbody>
+                        <thead>
+                            <tr>
+                                <th>
+                                    Ocupa vivienda del estado
+                                </th>
+                                @if (Model.DomicilioViviendaViewModel.Vivienda.OcupaViviendaEstado)
+                                {
+                                    <th>
+                                        Hace cuanto tiempo
+                                    </th>
+                                }
+                                <th>
+                                    Posee crédito de vivienda
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Vivienda.OcupaViviendaEstado)
+                                </td>
+                                @if (Model.DomicilioViviendaViewModel.Vivienda.OcupaViviendaEstado)
+                                {
+                                    string tiempo;
+                                    if (Model.DomicilioViviendaViewModel.Vivienda.TiempoOcupaVivienda == 1)
+                                    {
+                                        tiempo = "año";
+                                    }
+                                    else
+                                    {
+                                        tiempo = "años";
+                                    }
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Vivienda.TiempoOcupaVivienda) @tiempo
+                                    </td>
+                                }
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Vivienda.PoseeCreditoVivienda)
+                                </td>
+                            </tr>
+                        </tbody>
+                        <thead>
+                            <tr>
+                                <th>
+                                    Construye Vivienda
+                                </th>
+                                @if (Model.DomicilioViviendaViewModel.Vivienda.ConstruyeVivienda)
+                                {
+                                    <th>
+                                        Fecha estimada de Finalización
+                                    </th>
+                                }
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Vivienda.ConstruyeVivienda)
+                                </td>
+                                @if (Model.DomicilioViviendaViewModel.Vivienda.ConstruyeVivienda)
+                                {
+                                    <td>
+                                        @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Vivienda.FechaConstruye)
+                                    </td>
+                                }
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Además del lugar donde posee vivienda propia, en que guarnición soluciona por propios medios su situación de vivienda
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Vivienda.GuarnicionSoluciona.Descripcion)
+                                </td>
+                            </tr>
+                        </tbody>
+                        <thead>
+                            <tr>
+                                <th>
+                                    Situación economica que desea resaltar
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                @if (Model.DomicilioViviendaViewModel.Vivienda.SituacionEconomica == null)
+                                {
+                                    <td>
+                                        Ninguna
+                                    </td>
+                                }
+                                else
+                                {
+                                    <td>
+                                        @Html.DisplayFor(modelItem => @Model.DomicilioViviendaViewModel.Vivienda.SituacionEconomica)
+                                    </td>
+                                }
+                            </tr>
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <table class="table table-striped">
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="3" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                }
+
+            </box-body>
+        </box>
+    </div>
+</div>
+
+@*Estado  civil*@
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Estado Civil</h3>
+            </div>
+            <box-body table="true">
+                <table class="table table-striped">
+                    @if (Model.FamiliaContactoViewModel.EstadoCivil != null)
+                    {
+                        <thead>
+                            <tr>
+                                <th>
+                                    Estado Civil
+                                </th>
+                                <th>
+                                    Situacion Familiar
+                                </th>
+                                @if (Model.FamiliaContactoViewModel.OtraSituacion != null)
+                                {
+                                    <th>
+                                        Otra Situación
+                                    </th>
+                                }
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => Model.FamiliaContactoViewModel.EstadoCivil.Descripcion)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => Model.FamiliaContactoViewModel.SituacionFamiliar.Descripcion)
+                                </td>
+                                @if (Model.FamiliaContactoViewModel.OtraSituacion != null)
+                                {
+                                    <td>
+                                        @Html.DisplayFor(modelItem => Model.FamiliaContactoViewModel.OtraSituacion)
+                                    </td>
+                                }
+                            </tr>
+                            @*@foreach (var item in Model.FamiliaContactoViewModel.EstadoCivil)
+                                {
+
+                                }*@
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="2" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+
+                </table>
+
+            </box-body>
+
+        </box>
+    </div>
+</div>
+
+@* Familiares *@
+@foreach (var item in Model.FamiliaContactoViewModel.Familiares)
+{
+    <div class="row">
+        <div class="col-md-12">
+            <box color="Primary" class="box-solid">
+                <div class="box-header with-border">
+                    <h3 class="box-title">DATOS DEL FAMILIAR/PERSONA A SU CARGO - VÍNCULO (@Html.DisplayFor(modelItem => item.Parentesco.Descripcion))</h3>
+
+                </div>
+                <box-body table="true">
+                    <table class="table table-striped">
+                        @if (item.Vive)
+                        {
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Apellido y nombre
+                                    </th>
+                                    <th>
+                                        Tipo de documento @Html.DisplayFor(modelItem => item.TipoDocumento.Descripcion)
+                                    </th>
+                                    <th>
+                                        CUIL
+                                    </th>
+                                    <th>
+                                        Estado civil
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        @item.nombreCompleto()
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.NroDocumento)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Cuil)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.EstadoCivil.Descripcion)
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Fecha nacimiento
+                                    </th>
+                                    <th>
+                                        Género
+                                    </th>
+                                    <th>
+                                        Vínculo
+                                    </th>
+                                    <th>
+                                        Estudios cursados
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.FechaNacimiento)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Genero.Descripcion)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Parentesco.Descripcion)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Escolaridad.Descripcion)
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                            <thead>
+                                <tr>
+                                    @if (item.SituacionLaboral.Id != 6)
+                                    {
+                                        <th>
+                                            Situación laboral
+                                        </th>
+                                    }
+                                    @if (item.SituacionLaboral.Id >= 1 && item.SituacionLaboral.Id <= 4)
+                                    {
+                                        <th>
+                                            Fuerza a la que Pertenece
+                                        </th>
+                                        @if (item.SituacionLaboral.Id != 2 && item.SituacionLaboral.Id != 4)
+                                        {
+                                            <th>
+                                                Grado
+                                            </th>
+                                        }
+                                    }
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    @if (item.SituacionLaboral.Id != 6)
+                                    {
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.SituacionLaboral.Descripcion)
+                                        </td>
+                                    }
+                                    @if (item.SituacionLaboral.Id >= 1 && item.SituacionLaboral.Id <= 4)
+                                    {
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Fuerza.Nombre)
+                                        </td>
+                                        @if (item.SituacionLaboral.Id != 2 && item.SituacionLaboral.Id != 4)
+                                        {
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Grado.Nombre)
+                                            </td>
+
+                                        }
+                                    }
+                                </tr>
+                            </tbody>
+                            @if ((item.SituacionLaboral.Id >= 1 && item.SituacionLaboral.Id <= 4) || item.SituacionLaboral.Id == 6)
+                            {
+                                <thead>
+                                    <tr>
+                                        @if (item.SituacionLaboral.Id != 6)
+                                        {
+                                            <th>
+                                                Destino
+                                            </th>
+                                        }
+                                        else
+                                        {
+                                            <th>
+                                                Situación laboral
+                                            </th>
+                                        }
+                                        <th>
+                                            Antiguedad
+                                        </th>
+                                        <th>
+                                            Provincia
+                                        </th>
+                                        <th>
+                                            Localidad
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        @if (item.SituacionLaboral.Id != 6)
+                                        {
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Destino)
+                                            </td>
+                                        }
+                                        else
+                                        {
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.OtraSituacion)
+                                            </td>
+                                        }
+                                        @{
+                                            string tiempo;
+                                            if (item.Antiguedad == 1)
+                                            {
+                                                tiempo = "año";
+                                            }
+                                            else
+                                            {
+                                                tiempo = "años";
+                                            }
+                                        }
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Antiguedad) @tiempo
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.ProvinciaEmpleador.Descripcion)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.LocalidadEmpleador.Descripcion)
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            }
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Posee IOSFA
+                                    </th>
+                                    <th>
+                                        Posee alguna discapacidad
+                                    </th>
+                                    <th>
+                                        Convive con el declarante
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TieneIOSFA)
+                                    </td>
+                                    @if (item.Impedido)
+                                    {
+                                        if (item.Impedimiento == null)
+                                        {
+                                            <td>
+                                                Sí
+                                            </td>
+                                        }
+                                        else
+                                        {
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Impedimiento)
+                                            </td>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Impedido)
+                                        </td>
+                                    }
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Convive)
+                                    </td>
+                                </tr>
+                            </tbody>
+                            @if (!item.Convive)
+                            {
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Calle
+                                        </th>
+                                        <th>
+                                            Altura
+                                        </th>
+                                        <th>
+                                            Piso
+                                        </th>
+                                        <th>
+                                            Dpto
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Domicilio.Calle)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Domicilio.Altura)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Domicilio.Departamento)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Domicilio.Departamento)
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Torre
+                                        </th>
+                                        <th>
+                                            Sector
+                                        </th>
+                                        <th>
+                                            Manzana
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Domicilio.Torre)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Domicilio.Sector)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Domicilio.Manzana)
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Provincia
+                                        </th>
+                                        <th>
+                                            Localidad
+                                        </th>
+                                        @if (item.ViveExtranjero)
+                                        {
+                                            <th>
+                                                Pais
+                                            </th>
+                                        }
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        @if (item.ViveExtranjero)
+                                        {
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Domicilio.ProvinciaStr)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Domicilio.LocalidadStr)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Pais)
+                                            </td>
+                                        }
+                                        else
+                                        {
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Domicilio.Provincia.Descripcion)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Domicilio.Localidad.Descripcion)
+                                            </td>
+                                        }
+                                    </tr>
+                                </tbody>
+                            }
+                        }
+                        else
+                        {
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Apellido y nombre
+                                    </th>
+                                    <th>
+                                        Género
+                                    </th>
+                                    <th>
+                                        Vínculo
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        @item.nombreCompleto()
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Genero.Descripcion)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Parentesco.Descripcion)
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Fecha de fallecimiento
+                                    </th>
+                                    <th>
+                                        Provincia defunción
+                                    </th>
+                                    <th>
+                                        Localidad defunción
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.FechaDefuncion)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ProvinciaDefuncion.Descripcion)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.LocalidadDefuncion.Descripcion)
+                                    </td>
+                                </tr>
+                            </tbody>
+                        }
+                    </table>
+                </box-body>
+            </box>
+
+        </div>
+    </div>
+}
+@* Contactos *@
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">CONTACTOS</h3>
+            </div>
+            <box-body table="true">
+                <table class="table table-striped">
+                    @if (Model.FamiliaContactoViewModel.Contactos.Count != 0)
+                    {
+                        <thead>
+                            <tr>
+                                <th>
+                                    Tipo
+                                </th>
+                                <th>
+                                    Contacto
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.FamiliaContactoViewModel.Contactos)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TipoContacto.Descripcion)
+                                    </td>
+                                    <td>
+                                        @item.getContacto()
+                                    </td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="2" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+
+                </table>
+
+            </box-body>
+
+        </box>
+    </div>
+</div>
+
+
+@* Estudios *@
+<div class="row">
+    <div class="col-sm-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">ESTUDIOS</h3>
+            </div>
+            <box-body table="true">
+                <table class="table table-striped">
+                    @if (Model.EstudioCausaViewModel.Estudios.Count != 0)
+                    {
+                        <thead>
+                            <tr>
+                                <th>
+                                    Tipo
+                                </th>
+                                <th>
+                                    Descripción
+                                </th>
+                                <th>
+                                    Estado
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model.EstudioCausaViewModel.Estudios)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Escolaridad.Descripcion)
+                                    </td>
+                                    @if (item.Escolaridad.Id <= 4)
+                                    {
+                                        <td>
+                                            ---
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Descripcion)
+                                        </td>
+                                    }
+                                    <td>
+                                        @if (item.Finalizado)
+                                        {
+                                            <span>FINALIZADO</span>
+                                        }
+                                        else
+                                        {
+                                            <span>INCOMPLETO</span>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="2" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+
+
+@* Documentos *@
+<div class="row">
+    <div class="col-sm-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">DOCUMENTACION ADJUNTA</h3>
+            </div>
+            <box-body table="true">
+                <table class="table table-striped">
+                    @if (Model.EstudioCausaViewModel.Documentos.Count != 0)
+                    {
+                        <thead>
+                            <tr>
+                                <th>
+                                    Tipo Documento
+                                </th>
+                                <th>
+                                    Fojas
+                                </th>
+                                <th>
+                                    Observaciones
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.EstudioCausaViewModel.Documentos)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TipoDocumentoAdjunto.Descripcion)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Fojas)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Observaciones)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="3" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+
+                </table>
+            </box-body>
+
+        </box>
+    </div>
+</div>
+
+@* Causas *@
+<div class="row">
+    <div class="col-sm-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">CAUSAS JUDICIALES</h3>
+            </div>
+            <box-body table="true">
+                <table class="table table-striped">
+                    @if (Model.EstudioCausaViewModel.Causas.Count != 0)
+                    {
+                        <thead>
+                            <tr>
+                                <th>
+                                    Caratula
+                                </th>
+                                <th>
+                                    Expediente
+                                </th>
+                                <th>
+                                    Tipo
+                                </th>
+                                <th>
+                                    Situacion
+                                </th>
+                                <th>
+                                    Juzgado
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.EstudioCausaViewModel.Causas)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Caratula)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Expediente)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TipoExpediente.Descripcion)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.SituacionJudicial)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Juzgado)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="5" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+
+
+<!-- Elevar a Personal-->
+@if (Model.DeclaracionJurada.EstadoID == 2 || Model.DeclaracionJurada.EstadoID == 1)
+{
+    <box-body>
+        <form asp-action="Elevar">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <input type="submit" class="btn btn-success btn-block" value="Elevar Declaracion" />
+                    <input type="hidden" name="id" value="@Model.DeclaracionJuradaID" />
+                </div>
+            </div>
+        </form>
+    </box-body>
+}
+
+
+<!-- Elevar al Jefe de Elemento-->
+@if (Model.DeclaracionJurada.EstadoID == 3)
+{ 
+    <box color="Primary" class="box-solid">
+        <div class="box-header with-border">
+            <h3 class="box-title">Observaciones</h3>
+
+        </div>
+        <box-body>
+            <form asp-action="ElevarElemento">
+                <div class="row">
+                    <div class="col-md-12" style="margin-bottom:10px;">
+                        <textarea class="form-control" rows="3" name="observacion"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <input type="submit" class="btn btn-success btn-block" value="Elevar Declaracion al elemento" />
+                        <input type="hidden" name="id" value="@Model.DeclaracionJuradaID" />
+                    </div>
+                </div>
+            </form>
+        </box-body>
+    </box>
+}
+
+<!-- Elevar a la DGPB-->
+@if (Model.DeclaracionJurada.EstadoID == 6)
+{ 
+    <box color="Primary" class="box-solid">
+        <div class="box-header with-border">
+            <h3 class="box-title">Observaciones</h3>
+        </div>
+        <box-body>
+            <form asp-action="ElevarDGP">
+                <div class="row">
+                    <div class="col-md-12" style="margin-bottom:10px;">
+                        <textarea class="form-control" rows="3" name="observacion"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <input type="submit" class="btn btn-success btn-block" value="Elevar Declaracion a la DGP" />
+                        <input type="hidden" name="id" value="@Model.DeclaracionJuradaID" />
+                    </div>
+                </div>
+            </form>
+        </box-body>
+    </box>
+}

@@ -41,20 +41,24 @@ namespace modulo_documentacion.Areas.Admin.Controllers
             }
 
             page.SelectPage("/Admin/Equipos/_ListadoDeEquipos",
-               _context.Equipo.Include(u => u.Empresa).Include(u => u.Marca)
-               .Include(m => m.Modelo).Include(u => u.EstadoEquipo)
-               .Include(x => x.Linea).Include(x => x.Planes));
-       
+               _context.Equipo.Include(u => u.Marca)
+               .Include(m => m.Marca.Modelo)
+               .Include(m => m.Linea.Planes)
+               .Include(m => m.Linea.Planes.Empresa)
+               .Include(u => u.EstadoEquipo)
+               .Include(x => x.Linea));
+            //.Include(m => m.Modelo) - .Include(x => x.Planes) - .Include(u => u.Empresa)
             return PartialView("_ListadoDeEquipos", page);
         }
+
         //Http Get _Create
         public IActionResult _Create()
         {
-            ViewBag.Marca = _context.Marca.Select(i => new SelectListItem() { Text = i.Descripcion, Value = i.Id.ToString() });
-            ViewBag.Modelo = _context.Modelo.Select(i => new SelectListItem() { Text = i.Descripcion, Value = i.Id.ToString() });
-            ViewBag.Empresa = _context.Empresa.Select(i => new SelectListItem() { Text = i.Nombre, Value = i.Id.ToString() });
-            ViewBag.Linea = _context.Linea.Select(i => new SelectListItem() { Text = i.Numero, Value = i.Id.ToString() });
-            ViewBag.Planes = _context.Planes.Select(i => new SelectListItem() { Text = i.NombrePlan , Value = i.Id.ToString() });
+            ViewBag.Marca = _context.Marca.Select(i => new SelectListItem() { Text = i.Descripcion + " - " + i.Modelo.Descripcion , Value = i.Id.ToString() });
+            //ViewBag.Modelo = _context.Modelo.Select(i => new SelectListItem() { Text = i.Descripcion, Value = i.Id.ToString() });
+            //ViewBag.Empresa = _context.Empresa.Select(i => new SelectListItem() { Text = i.Nombre, Value = i.Id.ToString() });
+            ViewBag.Linea = _context.Linea.Select(i => new SelectListItem() { Text = i.Numero + " - " + i.Planes.Descripcion + " - " + i.Planes.Empresa.Nombre, Value = i.Id.ToString() });
+            //ViewBag.Planes = _context.Planes.Select(i => new SelectListItem() { Text = i.NombrePlan , Value = i.Id.ToString() });
             ViewBag.Estado = _context.EstadoEquipo.Select(i => new SelectListItem() { Text = i.Estado, Value = i.Id.ToString() });
 
             return PartialView();
@@ -64,12 +68,13 @@ namespace modulo_documentacion.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> _Create(Equipo equipo)
         {
-            //Remover id de equipo y asigno un false a todos los equipos creados
+            //Remover id de equipo;
             ModelState.Remove("Id");
-            equipo.Editable = false;
 
             if (ModelState.IsValid)
             {
+                //Asigno un false a todos los equipos creados
+                equipo.Editable = false;
                 _context.Equipo.Add(equipo);
                 await _context.SaveChangesAsync();
 
@@ -96,13 +101,12 @@ namespace modulo_documentacion.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            ViewBag.Marca = _context.Marca.Select(i => new SelectListItem() { Text = i.Descripcion, Value = i.Id.ToString() });
-            ViewBag.Modelo = _context.Modelo.Select(i => new SelectListItem() { Text = i.Descripcion, Value = i.Id.ToString() });
-            ViewBag.Empresa = _context.Empresa.Select(i => new SelectListItem() { Text = i.Nombre, Value = i.Id.ToString() });
+            ViewBag.Marca = _context.Marca.Select(i => new SelectListItem() { Text = i.Descripcion + " - " + i.Modelo.Descripcion, Value = i.Id.ToString() });
+            //ViewBag.Modelo = _context.Modelo.Select(i => new SelectListItem() { Text = i.Descripcion, Value = i.Id.ToString() });
+            //ViewBag.Empresa = _context.Empresa.Select(i => new SelectListItem() { Text = i.Nombre, Value = i.Id.ToString() });
             ViewBag.EstadoEquipo = _context.EstadoEquipo.Select(i => new SelectListItem() { Text = i.Estado, Value = i.Id.ToString() });
-            ViewBag.Planes = _context.Planes.Select(i => new SelectListItem() { Text = i.NombrePlan , Value = i.Id.ToString() });
-            ViewBag.Linea = _context.Linea.Select(i => new SelectListItem() { Text = i.Numero, Value = i.Id.ToString() });
-
+            //ViewBag.Planes = _context.Planes.Select(i => new SelectListItem() { Text = i.NombrePlan , Value = i.Id.ToString() });
+            ViewBag.Linea = _context.Linea.Select(i => new SelectListItem() { Text = i.Numero + " - " + i.Planes.Descripcion + " - " + i.Planes.Empresa.Nombre , Value = i.Id.ToString() });
 
             return PartialView(equipo);
         }
@@ -123,12 +127,12 @@ namespace modulo_documentacion.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            ViewBag.Marca = _context.Marca.Select(i => new SelectListItem() { Text = i.Descripcion, Value = i.Id.ToString() });
-            ViewBag.Modelo = _context.Modelo.Select(i => new SelectListItem() { Text = i.Descripcion, Value = i.Id.ToString() });
-            ViewBag.Empresa = _context.Empresa.Select(i => new SelectListItem() { Text = i.Nombre, Value = i.Id.ToString() });
+            ViewBag.Marca = _context.Marca.Select(i => new SelectListItem() { Text = i.Descripcion + " - " + i.Modelo.Descripcion, Value = i.Id.ToString() });
+            //ViewBag.Modelo = _context.Modelo.Select(i => new SelectListItem() { Text = i.Descripcion, Value = i.Id.ToString() });
+            //ViewBag.Empresa = _context.Empresa.Select(i => new SelectListItem() { Text = i.Nombre, Value = i.Id.ToString() });
             ViewBag.EstadoEquipo = _context.EstadoEquipo.Select(i => new SelectListItem() { Text = i.Estado, Value = i.Id.ToString() });
-            ViewBag.Planes = _context.Planes.Select(i => new SelectListItem() { Text = i.NombrePlan, Value = i.Id.ToString() });
-            ViewBag.Linea = _context.Linea.Select(i => new SelectListItem() { Text = i.Numero, Value = i.Id.ToString() });
+            //ViewBag.Planes = _context.Planes.Select(i => new SelectListItem() { Text = i.NombrePlan , Value = i.Id.ToString() });
+            ViewBag.Linea = _context.Linea.Select(i => new SelectListItem() { Text = i.Numero + " - " + i.Planes.Descripcion + " - " + i.Planes.Empresa.Nombre, Value = i.Id.ToString() });
 
             return PartialView(modelo);
         }

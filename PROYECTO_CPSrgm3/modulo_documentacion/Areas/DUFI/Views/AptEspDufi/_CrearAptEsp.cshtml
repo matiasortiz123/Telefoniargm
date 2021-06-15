@@ -1,0 +1,80 @@
+﻿@model modulo_documentacion.Areas.DUFI.Models.AptEspDufi
+
+
+<form class="form-horizontal" method="post" asp-action="_CrearAptEsp" asp-controller="AptEspDufi">
+    <div class="panel-body" style="margin-left:10px; margin-right:10px">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <label>Tipo </label>
+                    <select class="form-control" asp-items="@ViewBag.tipo" asp-for="TipoCapacitacionId">
+                        <option selected hidden value="">Seleccione</option>
+                    </select>
+                </div>
+                <div id="apt" class="col-md-4">
+                    <label>
+                        Aptitud
+                    </label>
+                    <select class="form-control" asp-items="@ViewBag.aptitud" asp-for="AptEspId" disabled="disabled">
+                        <option selected hidden value="">Seleccione</option>
+                    </select>
+                    <span asp-validation-for="AptEspId" class="text-danger"></span>
+                </div>
+                <div class="col-md-4 " id="fecha_apt">
+                    <label>Fecha de Habilitación</label>
+                    <input type="date" class="form-control" asp-for="FechaHabilitacion" />
+                    <span asp-validation-for="FechaHabilitacion" class="text-danger"></span>
+                </div>
+            </div>
+            <input type="hidden" name="DufiId" value="@ViewBag.DufiId" />
+            <div class="box-footer">
+                <a asp-action="Index/@ViewBag.DufiId" class="btn btn-danger">Cancelar</a>
+                <button type="submit" class="btn btn-info pull-right">Agregar</button>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+    $(document).ready(function () {
+        if ($("#AptEspId").val()=="66"||$("#AptEspId").val()=="24"||$("#AptEspId").val()=="26") {
+            $("#fecha_apt").show();
+        } else {
+            $("#fecha_apt").hide();
+        }
+    });
+
+    $("#AptEspId").change(function () {
+        if ($(this).val() == "66" || $(this).val() == "24" || $(this).val() == "26") {
+            $("#fecha_apt").show();
+        } else {
+            $("#fecha_apt").hide();
+        }
+    });
+
+    $("#TipoCapacitacionId").change(function () {
+        var tipo_apt = "";
+        tipo_apt += $("#TipoCapacitacionId option:selected").val();
+        $.ajax({
+            url: "/DUFI/AptEspDufi/SelectListJsonAptitudes?=" + tipo_apt,
+            type: "POST",
+            dataType: "JSON",
+            success: function (aptitudes) {
+                if ($("#TipoCapacitacionId").val()!="") {
+                    $("#AptEspId").prop('disabled',false)
+                    $('button[data-id="AptEspId"]').removeClass('disabled')
+                } else {
+                    $("#AptEspId").prop('disabled',true)
+                    $('button[data-id="AptEspId"]').addClass('disabled')
+                }
+                $('button[data-id="AptEspId"]').find('span.filter-option').html("Seleccione")
+                $('#AptEspId').val(0)
+                $('#apt').find('ul').empty()
+                $('#apt').find('ul').append('<li data-original-index="0"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Seleccione</span>"><span class="text">Seleccione</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>');
+                $.each(aptitudes, function (aptitudes) {
+                    $('#apt').find('ul').append('<li data-original-index="' + this.Value + '"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>' + this.Text + '</span>"><span class="text">' + this.Text + '</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>');
+                });
+            }
+
+        });
+    });
+</script>

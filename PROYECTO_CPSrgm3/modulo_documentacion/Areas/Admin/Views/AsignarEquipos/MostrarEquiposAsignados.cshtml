@@ -36,8 +36,8 @@
                     <td scope="col">@Html.DisplayFor(modelItem => item.Grado)</td>
                     <td scope="col">@Html.DisplayFor(modelItem => item.Unidad)</td>
                     <td scope="col">@Html.DisplayFor(modelItem => item.Equipo.Marca.Descripcion)</td>
-                    <td scope="col">@Html.DisplayFor(modelItem => item.Equipo.Modelo.Descripcion)</td>
-                    <td scope="col">@Html.DisplayFor(modelItem => item.Equipo.Empresa.Nombre)</td>
+                    @*<td scope="col">@Html.DisplayFor(modelItem => item.Equipo.Modelo.Descripcion)</td>*@
+                    @*<td scope="col">@Html.DisplayFor(modelItem => item.Equipo.Empresa.Nombre)</td>*@
                     <td>
                         <a onclick="editarEquipo('@item.Id')" title="Editar equipo" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i></a>
                     </td>

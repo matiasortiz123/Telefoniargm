@@ -1,0 +1,420 @@
+﻿@model modulo_documentacion.Areas.DDJJ.Models.Familiar
+
+@{
+    ViewData["Title"] = "Editar un Familiar";
+    ViewData["BackArrow"] = "javascript:history.back()";
+}
+
+
+<form method="post" asp-action="EditarFamiliar" asp-controller="DeclaracionJurada">
+    <box color="Primary" class="box-solid">
+        <div class="box-header with-border abm-familiar">
+            <h3 class="box-title">Información basica</h3>
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                    <i class="fa fa-minus"></i>
+                </button>
+            </div>
+        </div>
+        <box-body>
+            <div class="row">
+                <div class="form-group col-md-2">
+
+                    <input type="checkbox" asp-for="@Model.Vive">
+                    <label for="Vive" class="control-label"> Se encuentra con vida</label>
+                </div>
+                <div class="dropdown form-group col-md-2">
+                    <label asp-for="ParentescoID" class="control-label">Parentesco</label>
+                    <select asp-for="ParentescoID" class="form-control" asp-items="ViewBag.Parentesco"></select>
+                    <span asp-validation-for="ParentescoID" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-2">
+                    <label asp-for="Nombre" class="control-label"></label>
+                    <input asp-for="Nombre" class="form-control" />
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-2">
+                    <label asp-for="Apellido" class="control-label"></label>
+                    <input asp-for="Apellido" class="form-control" />
+                    <span asp-validation-for="Apellido" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-2">
+                    <label asp-for="GeneroID" class="control-label">Género</label>
+                    <select asp-for="GeneroID" class="form-control" asp-items="ViewBag.Genero"></select>
+                    <span asp-validation-for="GeneroID" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-2 defuncion" style="display:none">
+                    <label asp-for="FechaDefuncion" class="control-label">Fecha y hora de deceso</label>
+                    <input asp-for="FechaDefuncion" type="date" class="form-control" />
+                    <span asp-validation-for="FechaDefuncion" class="text-danger"></span>
+
+                </div>
+                <div class="form-group col-md-2 vive">
+                    <label asp-for="FechaNacimiento" class="control-label">Fecha de Nacimiento</label>
+                    <input asp-for="FechaNacimiento" type="date" class="form-control" />
+                    <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+                </div>
+
+            </div>
+            <div class="row vive">
+                <div class="form-group col-md-2">
+                    <label asp-for="TipoDocumentoID" class="control-label">Tipo</label>
+                    <select asp-for="TipoDocumentoID" class="form-control" asp-items="ViewBag.TipoDocumento"></select>
+                    <span asp-validation-for="TipoDocumentoID" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-2">
+                    <label asp-for="NroDocumento" class="control-label">Numero Documento</label>
+                    <input asp-for="NroDocumento" class="form-control" maxlength="8" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+                    <span asp-validation-for="NroDocumento" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-2">
+                    <label asp-for="Cuil" class="control-label"></label>
+                    <input asp-for="Cuil" type="number" class="form-control" maxlength="11" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"/>
+                    <span asp-validation-for="Cuil" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-2">
+                    <label asp-for="EscolaridadID" class="control-label">Escolaridad</label>
+                    <select asp-for="EscolaridadID" class="form-control" asp-items="ViewBag.Escolaridad"></select>
+                    <span asp-validation-for="EscolaridadID" class="text-danger"></span>
+                </div>
+                <div id="civil">
+                    <div class="form-group col-md-2" style="display:none">
+                        <label asp-for="EstadoCivilID" class="control-label">Estado Civil</label>
+                        <select asp-for="EstadoCivilID" class="form-control" asp-items="ViewBag.EstadoCivil"></select>
+                        <span asp-validation-for="EstadoCivilID" class="text-danger"></span>
+                    </div>
+                </div>
+                <!--<div class="form-group col-md-2 vive conyuge" id="FechaCasamiento" style="display:none">
+                    <label class="control-label">Fecha de Casamiento/Unión</label>
+                    <input asp-for="FechaCasamiento" type="date" class="form-control" />
+                    <span asp-validation-for="FechaCasamiento" class="text-danger"></span>
+                </div>
+                -->
+            </div>
+            <div class="row vive">
+                <div class="form-group col-md-2">
+                    <input type="checkbox" asp-for="Impedido">
+                    <label for="Impedido" class="control-label"> Posee alguna discapacidad</label>
+                    <div class="Impedimiento" style="display:none">
+                        <input asp-for="Impedimiento" class="form-control" placeholder="Impedimiento" />
+                    </div>
+                </div>
+                <div class="form-group col-md-2">
+                    <input type="checkbox" asp-for="TieneIOSFA" value="true"/>
+                    <label asp-for="TieneIOSFA" class="control-label">Tiene IOSFA</label>
+                    <div class="NroIOSFA" style="display:none">
+                        <input asp-for="NroIOSFA" class="form-control" placeholder="Nro. IOSFA" />
+                    </div>
+                </div>
+            </div>
+        </box-body>
+    </box>
+
+    <box color="Primary" class="box-solid vive">
+        <div class="box-header with-border abm-familiar">
+            <h3 class="box-title">Datos Laborales</h3>
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                    <i class="fa fa-minus"></i>
+                </button>
+            </div>
+        </div>
+        <box-body>
+            <div class="row">
+                <div class="dropdown form-group col-md-3">
+                    <label asp-for="SituacionLaboralID" class="control-label">Situación Laboral</label>
+                    <select asp-for="SituacionLaboralID" class="form-control" asp-items="ViewBag.SituacionLaboral"></select>
+                </div>
+                <div class="amadecasa">
+                    <div class="otros">
+                        <div class="form-group col-md-3 ">
+                            <label asp-for="FuerzaID" class="control-label">¿A que fuerza pertenece?</label>
+                            <select asp-for="FuerzaID" class="form-control" asp-items="ViewBag.Fuerza"></select>
+                        </div>
+                        <div class="form-group col-md-3 militar">
+                            <label asp-for="GradoID" class="control-label">Grado</label>
+                            <select asp-for="GradoID" class="form-control" asp-items="ViewBag.Grado"></select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="Destino" class="control-label">Destino</label>
+                            <input asp-for="Destino" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3 otro">
+                        <label asp-for="OtraSituacion" class="control-label">Actividad/Empleo</label>
+                        <input asp-for="OtraSituacion" class="form-control" />
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label asp-for="Antiguedad" class="control-label">Antiguedad</label>
+                        <input asp-for="Antiguedad" class="form-control" />
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label asp-for="Empleador" class="control-label">Empleador</label>
+                        <input asp-for="Empleador" class="form-control" />
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label asp-for="ProvinciaEmpleadorID" class="control-label">Provincia Empleador</label>
+                        <select asp-for="ProvinciaEmpleadorID" class="form-control" asp-items="ViewBag.Provincias"></select>
+                    </div>
+                    <div class="dropdown form-group col-md-3">
+                        <label asp-for="LocalidadEmpleadorID" class="control-label">Localidad Empleador</label>
+                        @{string titul;
+                            if (Model.LocalidadEmpleador != null)
+                            {
+                                titul = Model.LocalidadEmpleador.Descripcion;
+                                <input type="hidden" id="mantieneLocalidadEmpleador" value="@Model.LocalidadEmpleadorID" name="LocalidadEmpleadorID" />
+                            }
+                            else
+                            {
+                                titul = "Ingresar Localidad";
+                            }
+                        }
+                        <select-ajax name="LocalidadEmpleadorID" title=@titul
+                                     class="form-control"
+                                     url="@Url.Action("SelectListJsonLocalidades")"
+                                     class-btn="btn-flat"
+                                     text-no-results="No se encontraron Localidades"
+                                     text-initialized="Ingrese nombre de localidad"
+                                     text-placeholder="Buscar Localidad"
+                                     route-name="q">
+                        </select-ajax>
+                    </div>
+                </div>
+            </div>
+        </box-body>
+    </box>
+
+    <box color="Primary" class="box-solid">
+        <div class="box-header with-border abm-familiar">
+            <h3 class="box-title">Domicilio</h3>
+            <div class="box-tools pull-right">
+                @if (Model.Domicilio == null)
+                {
+                    <a onclick="nuevoDomicilio(@Model.DeclaracionJuradaID)" class="btn btn-info btn-sm">
+                        <i class="fa fa-plus"><span class="hidden-xs txt-boton-grilla"> Agregar domicilio </span></i>
+                    </a>
+                }
+            </div>
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                    <i class="fa fa-minus"></i>
+                </button>
+            </div>
+        </div>
+        <box-body>
+            <div class="vive">
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <input type="radio" value="true" asp-for="Convive" id="ConviveSi"> <b>Vive conmigo</b>
+                        <input @*onclick="EditarDomicilio(@Model.DeclaracionJuradaID)"*@ type="radio" value="false" asp-for="Convive" id="ConviveNo"> <b>No vive conmigo</b>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-3 convive">
+                        <input type="checkbox" asp-for="@Model.ViveExtranjero">
+                        <label for="ViveExtranjero" class="control-label"> Vive en el extranjero</label>
+                    </div>
+                </div>
+                <div class="row convive">
+                    <div class="form-group col-md-5">
+                        <label for="Calle" class="control-label">Calle</label>
+                        <input asp-for="@Model.Domicilio.Calle" type="text" class="form-control" name="Domicilio.Calle" placeholder="Calle">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="Altura" class="control-label">Altura</label>
+                        <input asp-for="@Model.Domicilio.Altura" type="text" class="form-control" name="Domicilio.Altura" placeholder="Altura">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="Piso" class="control-label">Piso</label>
+                        <input asp-for="@Model.Domicilio.Piso" type="text" class="form-control" name="Domicilio.Piso">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="Departamento" class="control-label">Dpto.</label>
+                        <input asp-for="@Model.Domicilio.Departamento" type="text" class="form-control" name="Domicilio.Departamento">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="Torre" class="control-label">Torre</label>
+                        <input asp-for="@Model.Domicilio.Torre" type="text" class="form-control" name="Domicilio.Torre">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="Sector" class="control-label">Sector</label>
+                        <input asp-for="@Model.Domicilio.Sector" type="text" class="form-control" name="Domicilio.Sector">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="Manzana" class="control-label">Manzana</label>
+                        <input asp-for="@Model.Domicilio.Manzana" type="text" class="form-control" name="Domicilio.Manzana">
+                    </div>
+                </div>
+                <div class="row convive">
+                    <div class="selectLocal">
+                        <div class="form-group col-md-4">
+                            <label for="Provincia" class="control-label">Provincia</label>
+                            <select asp-for="@Model.Domicilio.ProvinciaId" asp-items="@ViewBag.Provincias" name="Domicilio.ProvinciaId" class="form-control local"></select>
+                        </div>
+                        <div class="dropdown form-group col-md-4">
+                            <label for="Localidad" class="control-label">Localidad</label>
+                            @{string titulo;
+                                if (Model.Domicilio.Localidad != null)
+                                {
+                                    titulo = Model.Domicilio.Localidad.Descripcion;
+                                    <input type="hidden" id="mantieneLocalidad" value="@Model.Domicilio.LocalidadId" name="Domicilio.LocalidadId" />
+                                }
+                                else
+                                {
+                                    titulo = "Ingresar Localidad";
+                                }
+
+                            }
+                            <select-ajax name="Domicilio.LocalidadId" title=@titulo
+                                         class="form-control"
+                                         url="@Url.Action("SelectListJsonLocalidades")"
+                                         class-btn="btn-flat"
+                                         text-no-results="No se encontraron Localidades"
+                                         text-initialized="Ingrese nombre de localidad"
+                                         text-placeholder="Buscar Localidad"
+                                         route-name="q">
+                            </select-ajax>
+                        </div>
+                    </div>
+                    <div class="selectExterior" style="display:none">
+                        <div class="form-group col-md-3">
+                            <label asp-for="Pais" class="control-label">País</label>
+                            <input type="text" class="form-control" asp-for="Pais">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="Domicilio.ProvinciaStr" class="control-label">Provincia / Localidad</label>
+                            <input type="text" class="form-control" asp-for="Domicilio.ProvinciaStr">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="Domicilio.LocalidadStr" class="control-label">Ciudad / Estado</label>
+                            <input type="text" class="form-control" asp-for="Domicilio.LocalidadStr">
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="row defuncion" style="display:none">
+                    <div class="form-group col-md-4">
+                        <label for="ProvinciaDefuncionID" class="control-label">Provincia Defunción</label>
+                        <select asp-for="ProvinciaDefuncionID" asp-items="@ViewBag.Provincias" class="form-control"></select>
+                    </div>
+                    <div class="dropdown form-group col-md-4">
+                        <label for="LocalidadDefuncion" class="control-label">Localidad Defunción</label>
+                        @{string tituloDef;
+                            if (Model.LocalidadDefuncion != null)
+                            {
+                                tituloDef = Model.LocalidadDefuncion.Descripcion;
+                                <input type="hidden" id="mantieneLocalidadDefuncion" value="@Model.LocalidadDefuncionID" name="LocalidadDefuncionID" />
+                            }
+                            else
+                            {
+                                tituloDef = "Ingresar Localidad";
+                            }
+                        }
+                        <select-ajax name="LocalidadDefuncionID" title=@tituloDef
+                                     class="form-control"
+                                     url="@Url.Action("SelectListJsonLocalidades")";
+                                     class-btn="btn-flat"
+                                     text-no-results="No se encontraron Localidades"
+                                     text-initialized="Ingrese nombre de localidad"
+                                     text-placeholder="Buscar Localidad"
+                                     route-name="q">
+                        </select-ajax>
+                    </div>
+                </div>
+        </box-body>
+    </box>
+    <div class="row">
+        <div class="form-group col-md-2 pull-right">
+            <input type="hidden" value="@Model.DomicilioID" name="Domicilio.ID" />
+            <input type="hidden" value="@ViewBag.DJID" name="DeclaracionJuradaID" />
+            <input type="submit" value="Guardar Cambios" class="btn btn-success btn-block" />
+        </div>
+    </div>
+</form>
+<script src="~/js/Documentacion.js"></script>
+@*<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBmZkx2SlvDbhVMx4hhklPRTHNzRFzJrEQ" type="text/javascript"></script>
+<script src="~/js/google_maps.js" type="text/javascript"></script>
+<modal title="Editar Domicilio" function="EditarDomicilio" load-url="/DDJJ/DeclaracionJurada/_EditarDomicilioFamiliar/" size="Large"></modal>*@
+
+<script type="text/javascript">
+    //function pedirProv() {
+    //    var a=document.getElementById("ProvinciaDefuncionID");
+    //    console.log(a.value)
+    //}
+    //$('#ProvinciaDefuncionID').change(function () {
+    //    pedirProv();
+    //})
+    $(document).ready(function () {
+        function mostrar(idchecked, objamostrar) {
+            if ($(idchecked).is(':checked'))
+                $(objamostrar).show();
+        }
+        mostrar('#Tiene_IOSFA', '.NroIOSFA');
+        mostrar('#Impedido', '.Impedimiento');
+        //mostrar('#vive', '.vive');
+        //pedirProv();
+        
+        if ($('#Vive').is(':checked')) {
+            $('.vive').show();
+            $('#TituloDomicilio').html('Domicilio');
+            $('.defuncion').hide();
+            if ($('#ConviveSi').is(':checked')) {
+                $('.convive').hide();
+            } else {
+                if ($('#Domicilio_ViveExterior').is(':checked')) {
+                    $('.selectLocal').hide();
+                    $('.selectExterior').show();
+                }
+            }
+        } else {
+            $('#Impedido').prop("checked", false);
+            $('#Tiene_IOSFA').prop("checked", false);
+            $('.vive').hide();
+            $('#TituloDomicilio').html('Lugar de Defunción');
+            $('.defuncion').show();
+            $('.vive').find('input').not('#ConviveSi').not('#ConviveNo').not('#Domicilio_ViveExterior').val('');
+            $('#ConviveNo').prop("checked", true);
+            $('.convive').show();
+            $('#Domicilio_ViveExterior').prop("checked", false);
+            $('.selectLocal').show();
+            $('.selectExterior').hide();
+        }
+
+        switch ($('#SituacionLaboralID').val()) {
+
+            case '1': //Personal Militar
+            case '3':
+                $('.militar').show();
+                $('.amadecasa').show();
+                $('.otros').show();
+                $('.otro').hide();
+                break;
+            case '2':
+            case '4': // personal Civil de la fuerza
+                $('.militar').hide();
+                $('.amadecasa').show();
+                $('.otros').show();
+                $('.otro').hide();
+                break;
+
+            case '5':
+            case '7': //Ama de Casa y ninguno
+                $('.otro').hide();
+                $('.amadecasa').hide();
+                $('.amadecasa').find('input').val('');
+                break;
+            case '6': // muestra otros que no pertenecen a la fuerza
+                $('.amadecasa').show();
+                $('.otros').hide();
+                $('.otro').show();
+                break;
+            default:
+        }
+        if ($('#ParentescoID').val() == 1) {
+            $('#civil').hide();
+        } else {
+            $('#civil').show();
+        }
+    });
+</script>
+

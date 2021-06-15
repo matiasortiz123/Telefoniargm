@@ -1,0 +1,101 @@
+﻿@model modulo_documentacion.Areas.Albacea.Models.Albacea
+@{
+    ViewData["Title"] = "ALBACEA - Personas a quien avisar";
+}
+    <partial name="/Areas/Albacea/Views/Albacea/_Navegacion.cshtml" model="@Model.Id" />
+
+    <div class="row">
+        <div class="col-md-12">
+            <box color="Primary" class="box-solid">
+                <div class="box-header with-border">
+                    <h3 class="box-title">A quien avisar en caso de PREVISIONES, ACCIDENTE GRAVE o FALLECIMIENTO</h3>
+
+                    <div class="box-tools pull-right">
+                        <a onclick="nuevaPersonaAviso(@Model.Id)" class="btn btn-info btn-sm">
+                            <i class="fa fa-plus"><span class="hidden-xs txt-boton-grilla"> Agregar</span></i>
+                        </a>
+                    </div>
+                </div>
+                <box-body table="true">
+                    <table class="table">
+                        @if (@Model.PersonaAviso.Count != 0)
+                        {
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Dni
+                                    </th>
+                                    <th>
+                                        Apellido
+                                    </th>
+                                    <th>
+                                        Nombre
+                                    </th>
+                                    <th>
+                                        Telefono
+                                    </th>
+                                    <th>
+                                        Email
+                                    </th>
+                                    <th>
+                                        Acciones
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach (var item in Model.PersonaAviso)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Dni)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Apellido)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Nombre)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Telefono)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Email)
+                                        </td>
+                                        <td>
+                                            <a onclick="editarPersonaAviso(@item.Id)" title="Editar" class="btn btn-primary btn-xs"><i class="fa fa-file-text-o"></i></a>
+                                            <!--<a asp-action="Details" asp-route-id="@item.Id"><i class="fa fa-file-text-o"></i></a>
+                        <a onclick="eliminarPersonaAviso(@item.Id)" title="Eliminar" class="btn btn-info btn-xs btn-danger"><i class="fa fa-trash"></i></a>-->
+                                            <a asp-action="DeletePersonaAviso"
+                                               asp-route-id="@item.Id"
+                                               title="Eliminar"
+                                               confirm="Este registro ya no podra visualizarse"
+                                               confirm-icon="Danger"
+                                               class="btn btn-danger btn-xs">
+                                                <i class="fa fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        }
+                        else
+                        {
+                            <thead></thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-danger" colspan="6" style="text-align:center">
+                                        NO SE ENCONTRARON REGISTROS
+                                    </td>
+                                </tr>
+                            </tbody>
+                        }
+                    </table>
+                </box-body>
+            </box>
+        </div>
+    </div>
+    <modal title="Nuevo Persona Aviso" function="nuevaPersonaAviso" load-url="/Albacea/PersonaAviso/_CrearPersonaAviso/" size="Medium"></modal>
+    <modal title="Editar Persona Aviso" function="editarPersonaAviso" load-url="/Albacea/PersonaAviso/_EditarPersonaAviso/" size="Medium"></modal>
+    <modal title="Elimnar Persona Aviso" function="eliminarPersonaAviso" load-url="/Albacea/PersonaAviso/_Delete/" size="Medium"></modal>
+

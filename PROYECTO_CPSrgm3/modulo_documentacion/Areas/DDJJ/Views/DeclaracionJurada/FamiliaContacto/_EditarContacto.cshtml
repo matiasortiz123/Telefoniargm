@@ -1,0 +1,49 @@
+﻿@model modulo_documentacion.Areas.DDJJ.Models.ContactoDDJJ
+
+    <form class="form-horizontal" method="post" asp-action="_EditarContacto" asp-controller="DeclaracionJurada">
+        <div class="form-group">
+            <label for="TipoContactoId" class="col-sm-2 control-label">Tipo</label>
+            <div class="col-sm-10">
+                <select asp-items="@ViewBag.TipoContacto" name="TipoContactoId" class="form-control" asp-for="@Model.TipoContactoID"></select>
+            </div>
+        </div>
+        <div class="form-group" id="contacto" style="display:none">
+            <label for="Email" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="Email" value="@Model.Email">
+            </div>
+        </div>
+        <div class="form-group" id="tel">
+            <label for="PrefijoTel" class="col-sm-2 control-label">Prefijo</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" name="PrefijoTel" value="@Model.PrefijoTel">
+            </div>
+            <label for="NumeroTel" class="col-sm-2 control-label">Numero</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="NumeroTel" value="@Model.NumeroTel">
+            </div>
+        </div>
+        <input type="hidden" name="DeclaracionJuradaID" value="@ViewBag.DJId" />
+        <div class="box-footer">
+            <a asp-action="Index" class="btn btn-default">Cancelar</a>
+            <button type="submit" class="btn btn-info pull-right">Guardar</button>
+        </div>
+        <!-- /.box-footer -->
+    </form>
+    
+    <script src="~/js/Documentacion.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            let a = $('select[name="TipoContactoId"]').val();
+            if (a == 3) {
+                $('#contacto').show();
+                $('#tel').hide();
+                $('#tel').find('input').val('');
+            }
+            else {
+                $('#contacto').hide();
+                $('#tel').show();
+                $('#contacto').find('input').val('');
+            }
+        });
+    </script>

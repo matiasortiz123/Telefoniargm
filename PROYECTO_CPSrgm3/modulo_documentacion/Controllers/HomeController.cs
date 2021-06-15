@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using modulo_documentacion.Models;
+using modulo_documentacion.Areas.DDJJ.Models;
 using modulo_documentacion.ViewModels;
 using Commons.Identity.Extensions;
 using Microsoft.AspNetCore.Authorization;
@@ -14,6 +15,8 @@ using modulo_documentacion.Areas.Admin.Models.Basicas;
 using Commons.Identity.Services;
 using Commons.Identity;
 using Commons.Identity.Attributes;
+using modulo_documentacion.Areas.Albacea.Models;
+using modulo_documentacion.Areas.DUFI.Models;
 using Microsoft.AspNetCore.Http;
 using CommonsCps.Apis;
 
@@ -61,7 +64,7 @@ namespace modulo_documentacion.Controllers
 
             Usuario usuario = ObtenerUsuario(_userService);
             InicioPersonal inicio = new InicioPersonal();
-            //inicio.AgregarDocumentosActivos(_context, usuario);
+            inicio.AgregarDocumentosActivos(_context, usuario);
             return View(inicio);
         }
 

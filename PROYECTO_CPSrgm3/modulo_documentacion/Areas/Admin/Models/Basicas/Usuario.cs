@@ -11,7 +11,7 @@ namespace modulo_documentacion.Areas.Admin.Models.Basicas
     {
         /*
          * En esta clase hay que llamar a los metodos del DatosPersonalesService
-         */
+         */ 
 
         public PersonalMilitar Persona { get; set; }
 

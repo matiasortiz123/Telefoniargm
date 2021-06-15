@@ -1,0 +1,272 @@
+﻿@model modulo_documentacion.Areas.DDJJ.ViewModels.FamiliaContactoViewModel
+@{
+    ViewData["Title"] = "DDJJ - Estado civil, Familia y Contacto";
+
+}
+<partial name="/Areas/DDJJ/Views/DeclaracionJurada/_Navegacion.cshtml" />
+
+
+@* Estado Civil *@
+<div class="row">
+    <div class="col-md-12">
+        <form method="post" asp-action="ConfirmaEstadoCivil" asp-controller="DeclaracionJurada">
+            <box color="Primary" class="box-solid">
+                <div class="box-header with-border">
+                    <h3 class="box-title">ESTADO CIVIL</h3>
+                    <div class="box-tools pull-right">
+                        @if (@Model.EstadoCivilID == -1)
+                        {
+                            <a onclick="nuevoEstadoCivil(@Model.DeclaracionJuradaID)" class="btn btn-info btn-sm">
+                                <i class="fa fa-plus"><span class="hidden-xs txt-boton-grilla"> Agregar</span></i>
+                            </a>
+                        }
+
+                    </div>
+                </div>
+
+
+
+
+                <box-body table="true">
+                    <table class="table table-striped">
+                        @if (Model.EstadoCivil != null)
+                        {
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Estado Civil
+                                    </th>
+                                    @if (Model.DeclaracionJurada.FechaCasamiento != null)
+                                    { 
+                                        <th>
+                                            Fecha Casamiento
+                                        </th>
+                                    }
+                                    <th>
+                                        Situacion Familiar
+                                    </th>
+                                    @if (Model.OtraSituacion != null)
+                                    {
+                                        <th>
+                                            Otra Situación
+                                        </th>
+                                    }
+                                    <th>
+                                        Acciones
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => @Model.EstadoCivil.Descripcion)
+                                    </td>
+                                    @if (Model.DeclaracionJurada.FechaCasamiento != null)
+                                    {
+                                        <td>
+                                        @Html.DisplayFor(modelItem => @Model.DeclaracionJurada.FechaCasamiento)
+                                        </td>
+                                    }
+                                    <td>
+                                        @Html.DisplayFor(modelItem => @Model.SituacionFamiliar.Descripcion)
+                                    </td>
+                                    @if (Model.OtraSituacion != null)
+                                    {
+                                        <td>
+                                            @Html.DisplayFor(modelItem => @Model.DeclaracionJurada.OtraSituacionFamiliar)
+                                        </td>
+                                    }
+                                    @if (@Model.EstadoCivilID != -1)
+                                    {
+                                        <td>
+                                            <a onclick="EditarEstadoCivil(@Model.DeclaracionJuradaID)" title="Editar" class="btn btn-primary btn-xs"><i class="fa fa-file-text-o"></i></a>
+                                        </td>
+                                    }
+                                </tr>
+                            </tbody>
+                        }
+                        else
+                        {
+                            <thead></thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-danger" colspan="4" style="text-align:center">
+                                        NO SE ENCONTRARON REGISTROS
+                                    </td>
+                                </tr>
+                            </tbody>
+                        }
+
+
+                    </table>
+                    <input type="hidden" name="djId" value="@Model.DeclaracionJuradaID" />
+                </box-body>
+                <modal title="Agregar Estado Civil" function="nuevoEstadoCivil" load-url="/DDJJ/DeclaracionJurada/_CrearEstadoCivil/" size="Medium"></modal>
+                <modal title="Editar Estado Civil" function="EditarEstadoCivil" load-url="/DDJJ/DeclaracionJurada/_EditarEstadoCivil/" size="Medium"></modal>
+            </box>
+        </form>
+    </div>
+</div>
+
+@* Familiares *@
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">FAMILIARES</h3>
+                <div class="box-tools pull-right">
+                    <a asp-controller="DeclaracionJurada" asp-action="CrearFamiliar" asp-route-djid="@Model.DeclaracionJuradaID" class="btn btn-info btn-sm">
+                        <i class="fa fa-plus"><span class="hidden-xs txt-boton-grilla"> Agregar Familiar</span></i>
+                    </a>
+                </div>
+            </div>
+            <box-body table="true">
+                <table class="table table-striped">
+                    @if (Model.Familiares.Count != 0)
+                    {
+                        <thead>
+                            <tr>
+                                <th>
+                                    Nombre
+                                </th>
+                                <th>
+                                    Parentesco
+                                </th>
+                                <th>
+                                    Documento
+                                </th>
+                                <th>
+                                    Acciones
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Familiares)
+                            {
+                                <tr>
+                                    <td>
+                                        @item.nombreCompleto()
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Parentesco.Descripcion)
+                                    </td>
+                                    @if (item.Vive == true)
+                                    {
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.NroDocumento)
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            ---
+                                        </td>
+                                    }
+                                    <td>
+                                        <a asp-action="EditarFamiliar" asp-route-id="@item.Id" title="Editar" class="btn btn-primary btn-xs"><i class="fa fa-file-text-o"></i></a>
+                                        <a asp-action="DeleteFamiliar"
+                                           asp-route-id="@item.Id"
+                                           title="Eliminar"
+                                           confirm="Este registro ya no podra visualizarse"
+                                           confirm-icon="Danger"
+                                           class="btn btn-danger btn-xs">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="4" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+
+                </table>
+
+            </box-body>
+        </box>
+
+    </div>
+</div>
+@* Contacto *@
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">CONTACTOS</h3>
+                <div class="box-tools pull-right">
+                    <a onclick="nuevoContacto(@Model.DeclaracionJuradaID)" class="btn btn-info btn-sm">
+                        <i class="fa fa-plus"><span class="hidden-xs txt-boton-grilla"> Nuevo Contacto</span></i>
+                    </a>
+                </div>
+            </div>
+            <box-body table="true">
+                <table class="table table-striped">
+                    @if (Model.Contactos.Count != 0)
+                    {
+                        <thead>
+                            <tr>
+                                <th>
+                                    Tipo
+                                </th>
+                                <th>
+                                    Contacto
+                                </th>
+                                <th>
+                                    Acciones
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.DeclaracionJurada.Contactos)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TipoContacto.Descripcion)
+                                    </td>
+                                    <td>
+                                        @item.getContacto()
+                                    </td>
+                                    <td>
+                                        <a onclick="editarContacto(@item.ID)" title="Editar" class="btn btn-info btn-xs"><i class="fa fa-file-text-o"></i></a>
+                                        <a asp-action="DeleteContacto"
+                                           asp-route-id="@item.ID"
+                                           title="Eliminar"
+                                           confirm="Este registro ya no podra visualizarse"
+                                           confirm-icon="Danger"
+                                           class="btn btn-danger btn-xs">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="3" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+
+            </box-body>
+            <modal title="Nuevo Contacto" function="nuevoContacto" load-url="/DDJJ/DeclaracionJurada/_CrearContacto/" size="Medium"></modal>
+            <modal title="Editar Contacto" function="editarContacto" load-url="/DDJJ/DeclaracionJurada/_EditarContacto/" size="Medium"></modal>
+        </box>
+
+    </div>
+</div>

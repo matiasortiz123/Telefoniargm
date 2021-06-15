@@ -1,0 +1,53 @@
+﻿@model modulo_documentacion.Areas.DDJJ.ViewModels.FamiliaContactoViewModel
+
+    <form class="form-horizontal" method="post" asp-action="_CrearEstadoCivil" asp-controller="DeclaracionJurada">
+        <div class="">
+            <div class="dropdown form-group">
+                <div class="col-sm-5">
+                    <label for="EstadoCivil" class="control-label">Estado Civil</label>
+                </div>
+                <div class="col-sm-10 ">
+
+                    <select asp-items="@ViewBag.EstadoCivil" name="EstadoCivilID" class="form-control"></select>
+                </div>
+            </div>
+            <div class="dropdown form-group">
+                <div class="col-sm-5">
+                    <label for="SituacionFamiliar" class="control-label">Situacion Familiar</label>
+                </div>
+                <div class="col-sm-10">
+                    <select asp-items="@ViewBag.SituacionFamiliar" name="SituacionFamiliarID" class="form-control"></select>
+                </div>
+            </div>
+            <div id="Fecha" style="display:none">
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <label class="control-label">Fecha de Casamiento</label>
+                    </div>
+                    <div class="col-sm-10 ">
+                        <input class="form-control" name="FechaCasamiento" type="date" />
+                    </div>
+                </div>
+            </div>
+
+            <div id="Otra" style="display:none">
+                <div class="form-group  ">
+
+                    <div class="col-sm-5">
+                        <label for="OtraSituacion" class="control-label">Otras Situaciones</label>
+                    </div>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="OtraSituacion" placeholder="Otra situacion personal">
+                    </div>
+                </div>
+
+            </div>
+            <input type="hidden" name="DeclaracionJuradaID" value="@ViewBag.DJId" />
+            <div class="box-footer">
+                <a asp-action="Index" class="btn btn-default">Cancelar</a>
+                <button type="submit" class="btn btn-info pull-right">Agregar</button>
+            </div>
+        </div>
+            <!-- /.box-footer -->
+</form>
+<script src="~/js/Documentacion.js"></script>

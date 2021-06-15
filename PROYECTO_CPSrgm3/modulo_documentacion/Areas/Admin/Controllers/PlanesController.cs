@@ -1,6 +1,8 @@
 ﻿using Commons.Controllers;
 using Commons.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using modulo_documentacion.Areas.Admin.Models.Basicas;
 using modulo_documentacion.Models;
 using System.Linq;
@@ -32,7 +34,7 @@ namespace modulo_documentacion.Areas.Admin.Controllers
             }
 
             page.SelectPage("/Admin/Planes/_ListadoDePlanes",
-                _context.Planes.Where(v => v.NombrePlan.Contains(page.SearchText))
+                _context.Planes.Where(v => v.NombrePlan.Contains(page.SearchText)).Include(e => e.Empresa)
                 );
 
             //var LineasTelefonicas = _context.Linea.ToListAsync();
@@ -43,13 +45,12 @@ namespace modulo_documentacion.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult _Create()
         {
-
+            ViewBag.Empresa = _context.Empresa.Select(i => new SelectListItem() { Text = i.Nombre, Value = i.Id.ToString() });
             return PartialView();
         }
 
         //Http Post _Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> _Create(Planes planes)
         {
             ModelState.Remove("Id");

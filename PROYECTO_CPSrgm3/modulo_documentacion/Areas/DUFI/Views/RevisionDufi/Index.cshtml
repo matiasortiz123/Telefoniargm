@@ -1,0 +1,913 @@
+﻿@model modulo_documentacion.Areas.DUFI.Models.Dufi
+@{
+    ViewData["Title"] = "Revisión";
+}
+<partial name="/Areas/DUFI/Views/Dufi/_Navegacion.cshtml" model="@Model.Id" />
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Cargo Actual</h3>
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    @if (@Model.CargoActual != null)
+                    {
+                        <thead>
+                            <tr>
+                                <th>
+                                    Tiempo Guarnicion
+                                </th>
+                                <th>
+                                    Tiempo Destino
+                                </th>
+                                <th>
+                                    Tiempo Cargo
+                                </th>
+                                <th>
+                                    Cargo que Ocupa
+                                </th>
+                                <th>
+                                    Cargo Deseado
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                @{
+                                    string time(int dur)
+                                    {
+                                        string tiempo;
+
+                                        if (dur == 1)
+                                        {
+                                            tiempo = dur + " año";
+                                        }
+                                        else
+                                        {
+                                            tiempo = dur + " años";
+                                        }
+                                        return tiempo;
+                                    }
+                                }
+                                <td>
+                                    @time(Model.CargoActual.TiempoGuarnicion)
+                                </td>
+                                <td>
+                                    @time(Model.CargoActual.TiempoDestino)
+                                </td>
+                                <td>
+                                    @time(Model.CargoActual.TiempoCargo)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.CargoActual.CargoOcupa)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.CargoActual.CargoDeseado)
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="5" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+@*<modal title="Cargo Ocupa" function="nuevoCargo" load-url="/Dufi/CargoActual/_CrearCargoActual/" size="Medium"></modal>
+    <modal title="Editar Cargo Ocupa" function="editarCargoActual" load-url="/Dufi/CargoActual/_EditarCargoActual/" size="Medium"></modal>*@
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Destino Futuro</h3>
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    @if (@Model.DestinoFuturo != null)
+                    {
+                        <thead>
+                            <tr>
+                                <th>
+                                    Vínculo Afectivo
+                                </th>
+                                <th>
+                                    Parentesco Vínculo
+                                </th>
+                                <th>
+                                    Desea Cambio Guarnición
+                                </th>
+                                <th>
+                                    Desea Cambio Destino
+                                </th>
+                                <th>
+                                    Fundamento
+                                </th>
+                                <th>
+                                    Opinión Futura
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @foreach (var item in ViewBag.Guarniciones)
+                                    {
+                                        if (int.Parse(item.Value) == @Model.DestinoFuturo.VinculoAfectivo)
+                                        {
+                                            @item.Text;
+                                        }
+                                    }
+                                </td>
+                                <td>
+                                    @foreach (var item in ViewBag.Parentesco)
+                                    {
+                                        if (int.Parse(item.Value) == @Model.DestinoFuturo.VinculoParentesco)
+                                        {
+                                            @item.Text;
+                                        }
+                                    }
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DestinoFuturo.DeseaCambioGuarnicion)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DestinoFuturo.DeseaCambioDestino)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DestinoFuturo.Fundamento)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DestinoFuturo.OpinionFutura)
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="6" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+@*<modal title="Destino Futuro" function="nuevoDestinoFuturo" load-url="/Dufi/DestinoFuturo/_CrearDestinoFuturo/" size="Medium"></modal>
+    <modal title="Editar Destino Futuro" function="editarDestinoFuturo" load-url="/Dufi/DestinoFuturo/_EditarDestinoFuturo/" size="Medium"></modal>*@
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Expediente de Cambio de Destino</h3>
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    @if (@Model.ExpedienteCD.Count != 0)
+                    {
+                        <thead>
+                            <tr>
+                                <th>
+                                    Nro Expediente
+                                </th>
+                                <th>
+                                    Causa Expediente
+                                </th>
+                                <th>
+                                    Actualizó Expediente
+                                </th>
+                                <th>
+                                    Nro Expediente Actualizado
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var item in Model.ExpedienteCD)
+                            {
+                                <tr>
+                                    @if (item.TieneExpediente == 1)
+                                    {
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.NroExpediente)
+                                        </td>
+
+
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.CausaExpediente)
+                                        </td>
+
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.ActualizoExpediente)
+                                        </td>
+                                        @if (item.ActualizoExpediente == 1)
+                                        {
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.NroExpedienteAct)
+                                            </td>
+                                        }
+                                        else
+                                        {
+                                            <td class="text-danger">
+                                                NO CORRESPONDE
+                                            </td>
+                                        }
+                                    }
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="5" style="text-align:center">
+                                    NO POSEE EXPEDIENTE
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+@*<modal title="Nuevo Expediente Cambio Destino" function="nuevoExpedienteCD" load-url="/Dufi/ExpedienteCD/_CrearExpedienteCD/" size="Medium"></modal>
+    <modal title="Editar Expediente Cambio Destino" function="editarExpedienteCD" load-url="/Dufi/ExpedienteCD/_EditarExpedienteCD/" size="Medium"></modal>
+    <modal title="Elimnar Expediente Cambio Destino" function="eliminarExpedienteCD" load-url="/Dufi/ExpedienteCD/_EliminarExpedienteCD/" size="Medium"></modal>*@
+
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Cambio de Guarnición</h3>
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    @if (@Model.GuarnicionFuturo != null)
+                    {
+                        <thead>
+                            <tr>
+                                <th>
+                                    Primera Prioridad
+                                </th>
+                                <th>
+                                    Segunda Prioridad
+                                </th>
+                                <th>
+                                    Tercera Prioridad
+                                </th>
+                                <th>
+                                    En caso de no ingresar
+                                </th>
+                                <th>
+                                    Última Zona Desfavorable
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @foreach (var item in ViewBag.Guarniciones)
+                                    {
+                                        if (item.Value == @Model.GuarnicionFuturo.DeseaGuarnicion1)
+                                        {
+                                            @item.Text;
+                                        }
+                                    }
+                                </td>
+                                <td>
+                                    @foreach (var item in ViewBag.Guarniciones)
+                                    {
+                                        if (item.Value == @Model.GuarnicionFuturo.DeseaGuarnicion2)
+                                        {
+                                            @item.Text;
+                                        }
+                                    }
+                                </td>
+                                <td>
+                                    @foreach (var item in ViewBag.Guarniciones)
+                                    {
+                                        if (item.Value == @Model.GuarnicionFuturo.DeseaGuarnicion3)
+                                        {
+                                            @item.Text;
+                                        }
+                                    }
+                                </td>
+                                <td>
+                                    @foreach (var item in ViewBag.EnCaso)
+                                    {
+                                        if (int.Parse(item.Value) == @Model.GuarnicionFuturo.PermanecerGuarnicion)
+                                        {
+                                            @item.Text;
+                                        }
+                                    }
+                                </td>
+                                <td>
+                                    @foreach (var item in ViewBag.Guarniciones)
+                                    {
+                                        if (item.Value == @Model.GuarnicionFuturo.UltimaZona)
+                                        {
+                                            @item.Text;
+                                        }
+                                    }
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="5" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+@*<modal title="Nuevo Guarnicion Futuro" function="nuevoGuarnicionFuturo" load-url="/Dufi/GuarnicionFuturo/_CrearGuarnicionFuturo/" size="Large"></modal>
+    <modal title="Editar Guarnicion Futuro" function="editarGuarnicionFuturo" load-url="/Dufi/GuarnicionFuturo/_EditarGuarnicionFuturo/" size="Large"></modal>*@
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Idiomas y Nivel de EA</h3>
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    @if (@Model.IdiomaDufi.Count != 0)
+                    {
+                        int cont = 0;
+                        @foreach (var item in Model.IdiomaDufi)
+                        {
+                            if (item.IdiomaId != null)
+                            {
+                                cont += 1;
+                            }
+                        }
+
+                        @if (cont != 0)
+                        {
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Idioma
+                                    </th>
+                                    <th>
+                                        Nivel
+                                    </th>
+                                    <th>
+                                        Fecha Acreditación
+                                    </th>
+                                    <th>
+                                        Fecha Vencimiento
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach (var item in Model.IdiomaDufi)
+                                {
+                                    if (item.IdiomaId != null)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @foreach (var idioma in ViewBag.Idiomas)
+                                                {
+                                                    if (int.Parse(idioma.Value) == item.IdiomaId)
+                                                    {
+                                                        @idioma.Text;
+                                                    }
+                                                }
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Nivel)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.FechaAcreditacion)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.FechaVencimiento)
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        }
+                        else
+                        {
+                            <thead></thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-danger" colspan="4" style="text-align:center">
+                                        NO SE ENCONTRARON REGISTROS
+                                    </td>
+                                </tr>
+                            </tbody>
+                        }
+
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="4" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+@*<modal title="Nuevo Idioma" function="nuevoIdioma" load-url="/Dufi/IdiomaDufi/_CrearIdioma/" size="Medium"></modal>
+    <modal title="Editar Idioma" function="editarIdioma" load-url="/Dufi/IdiomaDufi/_EditarIdioma/" size="Medium"></modal>*@
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Idiomas (Otras certificaciones)</h3>
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    @if (@Model.IdiomaDufi.Count != 0)
+                    {
+                        int cont = 0;
+                        @foreach (var item in Model.IdiomaDufi)
+                        {
+                            if (item.IdiomaOtro != null)
+                            {
+                                cont += 1;
+                            }
+                        }
+
+                        @if (cont != 0)
+                        {
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Idioma
+                                    </th>
+                                    <th>
+                                        Nivel
+                                    </th>
+                                    <th>
+                                        Fecha Acreditación
+                                    </th>
+                                    <th>
+                                        Fecha Vencimiento
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach (var item in Model.IdiomaDufi)
+                                {
+                                    if (item.IdiomaOtro != null)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.IdiomaOtro)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Nivel)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.FechaAcreditacion)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.FechaVencimiento)
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        }
+                        else
+                        {
+                            <thead></thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-danger" colspan="4" style="text-align:center">
+                                        NO SE ENCONTRARON REGISTROS
+                                    </td>
+                                </tr>
+                            </tbody>
+                        }
+
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="4" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Cargos Profesionales</h3>
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    <thead>
+                    </thead>
+                    @if (@Model.CargoDocenteProf.Count != 0)
+                    {
+                        <tbody>
+                            @foreach (var item in Model.CargoDocenteProf)
+                            {
+                                <tr>
+                                    <td style="text-align:left">
+                                        @Html.DisplayFor(modelItem => item.Descripcion)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="2" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">OOMMP y Comisión Exterior</h3>
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                ¿Desea participar en OOMMP?
+                            </th>
+                            @*<th></th><th></th><th></th><th></th>*@
+                            <th>
+                                @Html.DisplayFor(modelItem => @Model.DeseaOOMMP)
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    @if (@Model.MisionComExt.Count != 0)
+                    {
+                        <thead>
+                            <tr>
+                                <th>
+                                    País
+                                </th>
+                                <th>
+                                    Cargo
+                                </th>
+                                <th>
+                                    Misión/Función
+                                </th>
+                                <th>
+                                    Fecha Inicio
+                                </th>
+                                <th>
+                                    Fecha finalización
+                                </th>
+                                <th>
+                                    Duración
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var item in Model.MisionComExt)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Pais)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Cargo)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Mision)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.FechaInicio)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.FechaFin)
+                                    </td>
+                                    @{ 
+                                        string tiempo;
+                                        if (item.Duracion == 1)
+                                        {
+                                            tiempo = "día";
+                                        }
+                                        else
+                                        {
+                                            tiempo = "días";
+                                        }
+                                    }
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Duracion) @tiempo
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="6" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+
+@*<modal title="Nuevo Idioma" function="nuevoIdioma" load-url="/Dufi/IdiomaDufi/_CrearIdioma/" size="Medium"></modal>
+    <modal title="Editar Idioma" function="editarIdioma" load-url="/Dufi/IdiomaDufi/_EditarIdioma/" size="Medium"></modal>
+    <modal title="Nuevo Otro Idioma" function="nuevoOidioma" load-url="/Dufi/IdiomaDufi/_CrearOidioma/" size="Medium"></modal>
+    <modal title="Editar Otro Idioma" function="editarOidioma" load-url="/Dufi/IdiomaDufi/_EditarOidioma/" size="Medium"></modal>*@
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Aptitudes Especiales</h3>
+            </div>
+            <box-body table="true">
+                <table class="table">
+
+                    @if (@Model.AptEspDufi.Count != 0)
+                    {
+                        <tbody>
+                            @foreach (var item in Model.AptEspDufi)
+                            {
+                                <tr>
+                                    <td>
+                                        @foreach (var TipoCapacitacion in ViewBag.tipo)
+                                        {
+                                            if (int.Parse(TipoCapacitacion.Value) == item.TipoCapacitacionId)
+                                            {
+                                                @TipoCapacitacion.Text;
+                                            }
+                                        }
+                                    </td>
+                                    <td>
+                                        @foreach (var AptitudEspecial in ViewBag.aptitud)
+                                        {
+                                            if (int.Parse(AptitudEspecial.Value) == item.AptEspId)
+                                            {
+                                                @AptitudEspecial.Text;
+                                            }
+                                        }
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.FechaHabilitacion)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="6" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+@*<modal title="Nuevo Aptitud Especial" function="nuevoAptEsp" load-url="/Dufi/AptEspDufi/_CrearAptEsp/" size="Medium"></modal>
+<modal title="Editar Aptitud Especial" function="editarAptEsp" load-url="/Dufi/AptEspDufi/_EditarAptEsp/" size="Medium"></modal>*@
+
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Cursos Especiales</h3>
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    <thead>
+                    </thead>
+                    @if (@Model.CursosEspDufi.Count != 0)
+                    {
+                        <tbody>
+                            @foreach (var item in Model.CursosEspDufi)
+                            {
+                                <tr>
+                                    <td>
+                                        @foreach (var CursoEspecial in ViewBag.curso)
+                                        {
+                                            if (int.Parse(CursoEspecial.Value) == item.CursoEspecialId)
+                                            {
+                                                @CursoEspecial.Text;
+                                            }
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="6" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+@*<modal title="Nuevo Curso" function="nuevoCurso" load-url="/Dufi/CursosEspDufi/_CrearCurso/" size="Medium"></modal>
+<modal title="Editar Curso" function="editarCurso" load-url="/Dufi/CursosEspDufi/_EditarCurso/" size="Medium"></modal>*@
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Licencia de Conducir</h3>
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    @if (@Model.ConductorMotorista != null)
+                    {
+                        <thead>
+                            <tr>
+                                <th>
+                                    Licencia
+                                </th>
+                                <th>
+                                    Fecha última Renovación
+                                </th>
+                                <th>
+                                    Fecha vencimiento registro
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.ConductorMotorista.LicenciaConducir)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.ConductorMotorista.FechaUltimaRenovacion)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.ConductorMotorista.FechaVencimiento)
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="6" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+@*<modal title="Nuevo" function="nuevoConductor" load-url="/Dufi/ConductorMotorista/_CrearConductor/" size="Medium"></modal>
+<modal title="Editar" function="editarConductor" load-url="/Dufi/ConductorMotorista/_EditarConductor/" size="Medium"></modal>*@
+
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Registro Clase</h3>
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    <thead>
+                        <tr>
+                        </tr>
+                    </thead>
+                    @if (@Model.RegistroConductorDufi.Count != 0)
+                    {
+                        <tbody>
+                            @foreach (var item in Model.RegistroConductorDufi)
+                            {
+                                <tr>
+                                    <td>
+                                        @foreach (var TipoRegistroConductor in ViewBag.tipoRegistro)
+                                        {
+                                            if (TipoRegistroConductor.Value == item.TipoRegistro)
+                                            {
+                                                @TipoRegistroConductor.Text;
+                                            }
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="6" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-2  pull-right">
+        <button type="submit" class="btn btn-success btn-block"><i class="fa fa-upload"></i>  Elevar a Personal</button>
+    </div>
+</div>

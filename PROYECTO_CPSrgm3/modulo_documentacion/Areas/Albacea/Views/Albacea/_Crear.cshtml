@@ -1,0 +1,118 @@
+﻿@model modulo_documentacion.Areas.Albacea.Models.Albacea
+
+<form class="form-horizontal" method="post" asp-action="_Crear" asp-controller="Albacea">
+    <div class="box-body">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <div class="col-md-8">
+                <label>Ingrese el Dni del Albacea Seleccionado</label>
+                @if (@ViewBag.Editar == "si")
+                {
+                    <input type="search" id="dni" value="@Model.DniAlbacea" class="form-control" name="dni">
+                }
+                else
+                {
+                    <input type="search" id="dni" class="form-control" name="dni">
+                }
+            </div>
+            <div class="col-md-4">
+                <br />
+                <input type="button" class="btn btn-primary" style="margin-top:3%;" value="Buscar" id="BuscarDni">
+                <span id="msgUsuario" style="display:none; color:red"></span>
+            </div>
+        </div>
+
+        <div class="" id="div_albacea" style="display:none">
+            <div class="form-group">
+                <div class="col-md-3">
+                    <label class="control-label">Dni</label>
+                    <input class="form-control albacea" id="DniAlbacea" name="DniAlbacea">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <label class="control-label">Grado</label>
+                    <input class="form-control albacea" id="GradoAlbacea" name="GradoAlbacea">
+                </div>
+                <div class="col-md-5">
+                    <label class="control-label">Nombre y Apellido</label>
+                    <input class="form-control albacea" id="datosAlbacea" name="datosAlbacea">
+                </div>
+                <div class="col-md-4">
+                    <label class="control-label">Unidad</label>
+                    <input class="form-control albacea" id="UnidadAlbacea" name="UnidadAlbacea">
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" name="AlbaceaId" value="@ViewBag.AlId" />
+    <input type="hidden" name="EstadoId" value="@ViewBag.AlEstadoId" />
+    <input type="hidden" name="FechaCreacion" value="@ViewBag.AlFecha" />
+    <div class="box-footer">
+        <a asp-action="Index/@ViewBag.AlId" class="btn btn-danger">Cancelar</a>
+        <button type="submit" class="btn btn-info pull-right">Agregar</button>
+    </div>
+</form>
+
+
+
+<script type="text/javascript">
+    $(this).on('shown.bs.modal', function () {
+        if ($('#dni').val() != "") {
+             buscardni();
+        }
+    });
+    //$('#_Crear').on('shown.bs.modal', function () {
+    //    if ($('#dni').val() != "") {
+    //         buscardni();
+    //    }
+    //});
+    //$('#Dni').change(function ()
+    $('#BuscarDni').click(function () {
+        buscardni();
+    });
+    function buscardni() {
+              let NroDocumento = $('#dni').val();
+        $.ajax({
+            type: "GET",
+            url: "/Albacea/Albacea/BusquedaDni/" + NroDocumento,
+            //data: "dni=" + NroDocumento,
+            datatype: "json",
+            beforeSend: function () {
+                $('#msgUsuario').show();
+                $('#msgUsuario').html('Verificando el documento espere por favor');
+
+            },
+            success: function (respuesta) {
+                $('#msgUsuario').hide();
+                $('.albacea').attr('readonly', 'readonly');
+                console.log("entra pro succes: " + respuesta.dni);
+
+                if (respuesta.dni) {
+                    $('#DniAlbacea').val(respuesta.dni);
+                    $('#div_albacea').show();
+                }
+                if (respuesta.Grado) {
+                    $('#GradoAlbacea').val(respuesta.Grado);
+                }
+                if (respuesta.Nombre && respuesta.Apellido && respuesta.Grado) {
+                    $('#datosAlbacea').val(respuesta.Nombre+ " " +respuesta.Apellido);
+                }
+                if (respuesta.AbreviaturaUnidad) {
+                    $('#UnidadAlbacea').val(respuesta.AbreviaturaUnidad);
+                }
+                else {
+                    $('#msgUsuario').show();
+                    $('#msgUsuario').html('Documento no disponible');
+                    $('#div_albacea').hide();
+                    $('#dni').val('');
+                    $('#dni').focus();
+                }
+            }
+        });//}
+    }
+</script>
+
+
+<!--change: buscar input vacio-->

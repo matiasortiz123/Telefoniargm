@@ -1,0 +1,48 @@
+﻿@model modulo_documentacion.Areas.Albacea.Models.Seguro
+
+
+    <form class="form-horizontal" method="post" asp-action="_CrearSeguro" asp-controller="Seguro">
+        <div class="box-body">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Tipo" class="col-sm-3"></label>
+                <div class="col-sm-6">
+                    <input asp-for="Tipo" class="form-control" />
+                    <span asp-validation-for="Tipo" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Entidad" class="col-sm-3"></label>
+                <div class="col-sm-6">
+                    <input asp-for="Entidad" class="form-control" />
+                    <span asp-validation-for="Entidad" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="NroPoliza" class="col-sm-3"></label>
+                <div class="col-sm-6">
+                    <input asp-for="NroPoliza" class="form-control" />
+                    <span asp-validation-for="NroPoliza" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Telefono" class="col-sm-3"></label>
+                <div class="col-sm-6">
+                    <input asp-for="Telefono" class="form-control" />
+                    <span asp-validation-for="Telefono" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="col-sm-3"></label>
+                <div class="col-sm-6">
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <input type="hidden" name="AlbaceaId" value="@ViewBag.AlId" />
+        <div class="box-footer">
+            <a asp-action="Index/@ViewBag.AlId" class="btn btn-danger">Cancelar</a>
+            <button type="submit" class="btn btn-info pull-right">Agregar</button>
+        </div>
+    </form>

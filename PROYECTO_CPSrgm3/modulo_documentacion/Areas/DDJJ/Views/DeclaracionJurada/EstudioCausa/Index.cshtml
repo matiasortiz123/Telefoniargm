@@ -1,0 +1,298 @@
+﻿@model modulo_documentacion.Areas.DDJJ.ViewModels.EstudioCausaViewModel
+@{
+    ViewData["Title"] = "DDJJ - Estudios, Adjuntos y Causas Judiciales";
+ 
+}
+<partial name="/Areas/DDJJ/Views/DeclaracionJurada/_Navegacion.cshtml" />
+@* Estudios *@
+<div class="row">
+    <div class="col-sm-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">ESTUDIOS</h3>
+                <div class="box-tools pull-right">
+                    <a onclick="nuevoEstudio(@Model.DeclaracionJuradaID)" class="btn btn-info btn-sm">
+                        <i class="fa fa-plus"><span class="hidden-xs txt-boton-grilla"> Agregar Estudio</span></i>
+                    </a>
+                </div>
+            </div>
+            <box-body table="true">
+                <table class="table table-striped">
+                    @if (Model.Estudios.Count != 0)
+                    {
+                        <thead>
+                            <tr>
+                                <th>
+                                    Tipo
+                                </th>
+                                <th>
+                                    Descripcion
+                                </th>
+                                <th>
+                                    Estado
+                                </th>
+                                <th>
+                                    Acciones
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Estudios)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Escolaridad.Descripcion)
+                                    </td>
+                                    @if (item.Escolaridad.Id <= 4)
+                                    {
+                                        <td>
+                                            ---
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Descripcion)
+                                        </td>
+                                    }
+
+                                    <td>
+                                        @if (item.Finalizado)
+                                        {
+                                            <span>FINALIZADO</span>
+                                        }
+                                        else
+                                        {
+                                            <span>INCOMPLETO</span>
+                                        }
+                                    </td>
+                                    <td>
+                                        <a onclick="EditarEstudio(@item.Id)" title="Editar" class="btn btn-primary btn-xs text-center"><i class="fa fa-file-text-o"></i></a>
+                                        <a asp-action="DeleteEstudio"
+                                           asp-route-id="@item.Id"
+                                           title="Eliminar"
+                                           confirm="Este registro ya no podra visualizarse"
+                                           confirm-icon="Danger"
+                                           class="btn btn-danger btn-xs">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="4" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+
+                </table>
+            </box-body>
+            <modal title="Nuevo Estudio" function="nuevoEstudio" load-url="/DDJJ/DeclaracionJurada/_CrearEstudio/" size="Medium"></modal>
+            <modal title="Editar Estudio" function="EditarEstudio" load-url="/DDJJ/DeclaracionJurada/_EditarEstudio/" size="Medium"></modal>
+        </box>
+    </div>
+</div>
+    @* Documentos *@
+<div class="row">
+    <div class="col-sm-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">DOCUMENTACION ADJUNTA</h3>
+                <div class="box-tools pull-right">
+                    <a onclick="nuevoDocumento(@Model.DeclaracionJuradaID)" class="btn btn-info btn-sm">
+                        <i class="fa fa-plus"><span class="hidden-xs txt-boton-grilla"> Adjuntar Documento</span></i>
+                    </a>
+                </div>
+            </div>
+            <box-body table="true">
+                <table class="table table-striped">
+                    @if (Model.Documentos.Count != 0)
+                    {
+                        <thead>
+                            <tr>
+                                <th>
+                                    Tipo Documento
+                                </th>
+                                <th>
+                                    Fojas
+                                </th>
+                                <th>
+                                    Observaciones
+                                </th>
+                                <th>
+                                    Acciones
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Documentos)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TipoDocumentoAdjunto.Descripcion)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Fojas)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Observaciones)
+                                    </td>
+                                    <td>
+                                        <a onclick="EditarDocumento(@item.Id)" title="Editar" class="btn btn-primary btn-xs"><i class="fa fa-file-text-o"></i></a>
+                                        @if (item.Adjunto == null)
+                                        {
+                                            <a onclick="imagen(@item.Id)" title="No ha ingresado el adjunto" class="btn btn-danger btn-xs">
+                                                <i class="fa fa-image"></i>
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <a asp-action="getAdjunto"
+                                               asp-route-id="@item.Id"
+                                               title="Ver"
+                                               class="btn btn-info btn-xs">
+                                                <i class="fa fa-image"></i>
+                                            </a>
+                                            //<a onclick="imagen(@item.Id)" title="Editar Adjunto" class="btn btn-primary btn-xs"><i class="fa fa-image"></i></a>
+                                            <a asp-action="delAdjunto"
+                                               asp-route-id="@item.Id"
+                                               title="Delete"
+                                               class="btn btn-danger btn-xs">
+                                                <i class="fa fa-image"></i>
+                                            </a>
+                                        }
+                                        <a asp-action="DeleteDocumento"
+                                           asp-route-id="@item.Id"
+                                           title="Eliminar"
+                                           confirm="Este registro ya no podra visualizarse"
+                                           confirm-icon="Danger"
+                                           class="btn btn-danger btn-xs">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="4" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+            <modal title="Nuevo Documento" function="nuevoDocumento" load-url="/DDJJ/DeclaracionJurada/_CrearDocumento/" size="Large"></modal>
+            <modal title="Editar Estudio" function="EditarDocumento" load-url="/DDJJ/DeclaracionJurada/_EditarDocumento/" size="Medium"></modal>
+            <modal title="Carga Adjunto" function="imagen" load-url="/DDJJ/DeclaracionJurada/_CargaAdjunto/" size="Medium"></modal>
+        </box>
+    </div>
+
+</div>
+
+@* Causas *@
+<div class="row">
+    <div class="col-sm-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">CAUSAS JUDICIALES</h3>
+                <div class="box-tools pull-right">
+                    <a onclick="nuevaCausa(@Model.DeclaracionJuradaID)" class="btn btn-info btn-sm">
+                        <i class="fa fa-plus"><span class="hidden-xs txt-boton-grilla"> Agregar Causa</span></i>
+                    </a>
+                </div>
+            </div>
+            <box-body table="true">
+                <table class="table table-striped">
+                    @if (Model.Causas.Count != 0)
+                    {
+                        <thead>
+                            <tr>
+                                <th>
+                                    Caratula
+                                </th>
+                                <th>
+                                    Expediente
+                                </th>
+                                <th>
+                                    Tipo
+                                </th>
+                                <th>
+                                    Situación
+                                </th>
+                                <th>
+                                    Juzgado
+                                </th>
+                                <th>
+                                    Acciones
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Causas)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Caratula)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Expediente)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TipoExpediente.Descripcion)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.SituacionJudicial)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Juzgado)
+                                    </td>
+                                    <td>
+                                        <a onclick="editarCausa(@item.Id)" title="Editar" class="btn btn-primary btn-xs"><i class="fa fa-file-text-o"></i></a>
+                                        <a asp-action="DeleteCausa"
+                                           asp-route-id="@item.Id"
+                                           title="Eliminar"
+                                           confirm="Este registro ya no podra visualizarse"
+                                           confirm-icon="Danger"
+                                           class="btn btn-danger btn-xs">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="6" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+            <modal title="Nuevo Causa Judicial" function="nuevaCausa" load-url="/DDJJ/DeclaracionJurada/_CrearCausa/" size="Large"></modal>
+            <modal title="Editar Causa Judicial" function="editarCausa" load-url="/DDJJ/DeclaracionJurada/_EditarCausa/" size="Large"></modal>
+        </box>
+    </div>
+</div>
+
+

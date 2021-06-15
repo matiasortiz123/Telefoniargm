@@ -1,0 +1,27 @@
+﻿@model modulo_documentacion.Areas.Admin.Models.Basicas.Escolaridad
+
+<form class="form-horizontal" method="post" asp-action="_Create" asp-controller="Escolaridad">
+    <div class="box-body">
+
+        <div class="form-group">
+            <label for="Descripcion" class="col-sm-2 control-label">Descripción</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="Descripcion" placeholder="Descripción">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Tipo" class="col-sm-2 control-label">Tipo</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="Tipo" placeholder="Tipo">
+            </div>
+        </div>
+        <div><p><i>Se utiliza tipo:<b>1</b> y <b>3</b> para declarante  -  tipo:<b>2</b> y <b>3</b> para familiares</i></p></div>
+    </div>
+    <!-- /.box-body -->
+    <div class="box-footer">
+        <a asp-action="Index" class="btn btn-default">Cancelar</a>
+        <button type="submit" class="btn btn-info pull-right">Agregar</button>
+    </div>
+    <!-- /.box-footer -->
+</form>
+

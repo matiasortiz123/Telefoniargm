@@ -38,8 +38,8 @@
                     <td scope="col">@Html.DisplayFor(modelItem => item.Unidad)</td>
                     <td><i class="fa fa-arrow-circle-right display-4"></i></td>
                     <td scope="col">@Html.DisplayFor(modelItem => item.Equipo.Marca.Descripcion)</td>
-                    <td scope="col">@Html.DisplayFor(modelItem => item.Equipo.Modelo.Descripcion)</td>
-                    <td scope="col">@Html.DisplayFor(modelItem => item.Equipo.Empresa.Nombre)</td>
+                    <td scope="col">@Html.DisplayFor(modelItem => item.Equipo.Marca.Modelo.Descripcion)</td>
+                    <td scope="col">@Html.DisplayFor(modelItem => item.Equipo.Linea.Planes.Empresa.Nombre)</td>
                     <td>
                         <a title="Ver detalle completo" asp-route-id="@item.Id" asp-area="Admin" asp-controller="AsignarEquipos"
                            asp-action="DetalleCompletoDelEquipo" name="EquipoPersonaDetalle"

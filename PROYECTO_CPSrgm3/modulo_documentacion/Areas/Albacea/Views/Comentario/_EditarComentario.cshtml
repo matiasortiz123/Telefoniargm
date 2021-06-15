@@ -1,0 +1,16 @@
+﻿@model modulo_documentacion.Areas.Albacea.Models.Comentario
+<form class="form-horizontal" method="post" asp-action="_EditarComentario" asp-controller="Comentario">
+    <div class="box-body">
+        <div class="form-group">
+            <label asp-for="Descripcion" class="col-sm-2 control-label"></label>
+            <textarea asp-for="Descripcion" class="form-control" rows="3" placeholder="" style="resize:none"></textarea>
+            <span asp-validation-for="Descripcion" class="text-danger"></span>
+        </div>
+        <input type="hidden" name="AlbaceaId" value="@ViewBag.AlId" />
+        <div class="box-footer">
+            <a asp-action="Index/@ViewBag.AlId" class="btn btn-danger">Cancelar</a>
+            <button type="submit" class="btn btn-info pull-right">Agregar</button>
+        </div>
+    </div>
+</form>
+

@@ -89,11 +89,23 @@
 
   <ItemGroup>
     <Folder Include="Areas\Admin\Reportes\" />
+    <Folder Include="Areas\Albacea\Data\" />
+    <Folder Include="Areas\DDJJ\Data\" />
+    <Folder Include="Areas\DUFI\Data\" />
     <Folder Include="wwwroot\img\" />
   </ItemGroup>
 
 
   <ItemGroup>
+    <Content Update="Areas\Admin\Views\EstadoCivil\Index.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Areas\Admin\Views\Guarnicion\Index.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Areas\Admin\Views\SituacionFamiliar\Index.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
     <Content Update="Areas\Admin\Views\_ViewImports.cshtml">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>

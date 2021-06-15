@@ -1,0 +1,15 @@
+﻿@model modulo_documentacion.Areas.DDJJ.Models.DeclaracionJurada
+
+<form asp-action="ObservadaPersonal">
+    <div class="row">
+        <div class="col-md-12" style="margin-bottom:10px;">
+            <textarea class="form-control" rows="3" name="observacion"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <input type="submit" class="btn btn-warning btn-block" value="Observar DDJJ" />
+            <input type="hidden" name="id" value="@Model.ID" />
+        </div>
+    </div>
+</form>

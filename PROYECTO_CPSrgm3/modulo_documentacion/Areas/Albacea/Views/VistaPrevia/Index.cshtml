@@ -1,0 +1,251 @@
+﻿@model modulo_documentacion.Areas.Albacea.Models.Albacea
+@{
+    ViewData["Title"] = "ALBACEA - Revisión y Elevación";
+}
+<partial name="/Areas/Albacea/Views/Albacea/_Navegacion.cshtml" model="@Model.Id" />
+@**@
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">A quien avisar en caso de PREVISIONES, ACCIDENTE GRAVE o FALLECIMIENTO</h3>
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    @if (@Model.PersonaAviso.Count != 0)
+                    {
+                        <thead>
+                            <tr>
+                                <th>
+                                    Dni
+                                </th>
+                                <th>
+                                    Apellido
+                                </th>
+                                <th>
+                                    Nombre
+                                </th>
+                                <th>
+                                    Telefono
+                                </th>
+                                <th>
+                                    Email
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var item in Model.PersonaAviso)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Dni)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Apellido)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Nombre)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Telefono)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Email)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="5" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Seguros de Vida del Causante</h3>
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    @if (@Model.Seguro.Count != 0)
+                    {
+                        <thead>
+                            <tr>
+                                <th>
+                                    Tipo
+                                </th>
+                                <th>
+                                    Entidad
+                                </th>
+                                <th>
+                                    Nro Poliza
+                                </th>
+                                <th>
+                                    Telefono
+                                </th>
+                                <th>
+                                    Email
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var item in Model.Seguro)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Tipo)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Entidad)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.NroPoliza)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Telefono)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Email)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="5" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">A quien desea designar como su ALBACEA</h3>
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                Grado
+                            </th>
+                            <th>
+                                Dni
+                            </th>
+                            <th>
+                                Apellido y Nombre
+                            </th>
+                            <th>
+                                Unidad
+                            </th>
+                        </tr>
+                    </thead>
+                    @if (@Model.DniAlbacea != null)
+                    {
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.GradoAlbacea)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DniAlbacea)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DatosAlbacea)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.UnidadAlbacea)
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="5" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Cualquier otro dato y/o indicación que desee formular</h3>
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    <thead>
+                    </thead>
+                    @if (@Model.Comentario.Count != 0)
+                    {
+                        <tbody>
+                            @foreach (var item in Model.Comentario)
+                            {
+                                <tr>
+                                    <td style="text-align:left">
+                                        @Html.DisplayFor(modelItem => item.Descripcion)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="2" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2  pull-right">
+        <button type="submit" class="btn btn-success btn-block"><i class="fa fa-upload"></i>  Elevar a Personal</button>
+    </div>
+</div>

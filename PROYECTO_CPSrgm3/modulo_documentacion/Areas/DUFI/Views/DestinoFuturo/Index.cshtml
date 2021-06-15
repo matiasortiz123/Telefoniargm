@@ -1,0 +1,350 @@
+﻿@model modulo_documentacion.Areas.DUFI.Models.Dufi
+
+@{
+    ViewData["Title"] = "Destino Futuro";
+}
+<partial name="/Areas/DUFI/Views/Dufi/_Navegacion.cshtml" model="@Model.Id" />
+
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Destino Futuro</h3>
+                @if (Model.DestinoFuturo == null)
+                {
+                    <div class="box-tools pull-right">
+                        <a onclick="nuevoDestinoFuturo(@Model.Id)" class="btn btn-info btn-sm">
+                            <i class="fa fa-plus"><span class="hidden-xs txt-boton-grilla"> Agregar</span></i>
+                        </a>
+                    </div>
+                }
+                </div>
+            <box-body table="true">
+                <table class="table">
+                    @if (@Model.DestinoFuturo != null)
+                    {
+                        <thead>
+                            <tr>
+                                <th>
+                                    Vínculo Afectivo
+                                </th>
+                                <th>
+                                    Parentesco Vínculo
+                                </th>
+                                <th>
+                                    Desea Cambio Guarnición
+                                </th>
+                                <th>
+                                    Desea Cambio Destino
+                                </th>
+                                <th>
+                                    Fundamento
+                                </th>
+                                <th>
+                                    Opinión Sintética
+                                </th>
+                                <th>
+                                    Acciones
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @foreach (var item in ViewBag.Guarniciones)
+                                    {
+                                        if (int.Parse(item.Value) == @Model.DestinoFuturo.VinculoAfectivo)
+                                        {
+                                            @item.Text;
+                                        }
+                                    }
+                                </td>
+                                <td>
+                                    @foreach (var item in ViewBag.Parentesco)
+                                    {
+                                        if (int.Parse(item.Value) == @Model.DestinoFuturo.VinculoParentesco)
+                                        {
+                                            @item.Text;
+                                        }
+                                    }
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DestinoFuturo.DeseaCambioGuarnicion)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DestinoFuturo.DeseaCambioDestino)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DestinoFuturo.Fundamento)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DestinoFuturo.OpinionFutura)
+                                </td>
+                                <td>
+                                    <a onclick="editarDestinoFuturo(@Model.DestinoFuturo.Id)" title="Editar" class="btn btn-primary btn-xs"><i class="fa fa-file-text-o"></i></a>
+                                    <!--<a asp-action="Details" asp-route-id="atitem.Id"><i class="fa fa-file-text-o"></i></a>
+                    <a onclick="eliminarPersonaAviso(atitem.Id)" title="Eliminar" class="btn btn-info btn-xs btn-danger"><i class="fa fa-trash"></i></a>-->
+                                    <a asp-action="EliminarDestinoFuturo"
+                                       asp-route-id="@Model.DestinoFuturo.Id"
+                                       title="Eliminar"
+                                       confirm="Este registro ya no podra visualizarse"
+                                       confirm-icon="Danger"
+                                       class="btn btn-danger btn-xs">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="7" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+<modal title="Destino Futuro" function="nuevoDestinoFuturo" load-url="/Dufi/DestinoFuturo/_CrearDestinoFuturo/" size="Medium"></modal>
+<modal title="Editar Destino Futuro" function="editarDestinoFuturo" load-url="/Dufi/DestinoFuturo/_EditarDestinoFuturo/" size="Medium"></modal>
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Expediente de Cambio de Destino</h3>
+                @if (Model.ExpedienteCD.Count == 0)
+                {
+                    <div class="box-tools pull-right">
+                        <a onclick="nuevoExpedienteCD(@Model.Id)" class="btn btn-info btn-sm">
+                            <i class="fa fa-plus"><span class="hidden-xs txt-boton-grilla"> Agregar</span></i>
+                        </a>
+                    </div>
+                }
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    @if (@Model.ExpedienteCD.Count != 0)
+                    {
+                        <thead>
+                            <tr>
+                                <th>
+                                    Nro Expediente
+                                </th>
+                                <th>
+                                    Causa Expediente
+                                </th>
+                                <th>
+                                    Actualizó Expediente
+                                </th>
+                                <th>
+                                    Nro Expediente Actualizado
+                                </th>
+                                <th>
+                                    Acciones
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var item in Model.ExpedienteCD)
+                            {
+                                <tr>
+                                    @if (item.TieneExpediente == 1)
+                                    {
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.NroExpediente)
+                                        </td>
+
+
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.CausaExpediente)
+                                        </td>
+
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.ActualizoExpediente)
+                                        </td>
+                                        @if (item.ActualizoExpediente == 1)
+                                        {
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.NroExpedienteAct)
+                                            </td>
+                                        }
+                                        else
+                                        {
+                                            <td>
+                                                ---
+                                            </td>
+                                        }
+                                        <td>
+                                            <a onclick="editarExpedienteCD(@item.Id)" title="Editar" class="btn btn-primary btn-xs"><i class="fa fa-file-text-o"></i></a>
+                                            <!--<a asp-action="Details" asp-route-id="@item.Id"><i class="fa fa-file-text-o"></i></a>
+                            <a onclick="eliminarPersonaAviso(@item.Id)" title="Eliminar" class="btn btn-info btn-xs btn-danger"><i class="fa fa-trash"></i></a>-->
+                                            <a asp-controller="ExpedienteCD"
+                                               asp-action="EliminarExpedienteCD"
+                                               asp-route-id="@item.Id"
+                                               title="Eliminar"
+                                               confirm="Este registro ya no podra visualizarse"
+                                               confirm-icon="Danger"
+                                               class="btn btn-danger btn-xs">
+                                                <i class="fa fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    }
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="6" style="text-align:center">
+                                    NO POSEE EXPEDIENTE
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+<modal title="Nuevo Expediente Cambio Destino" function="nuevoExpedienteCD" load-url="/Dufi/ExpedienteCD/_CrearExpedienteCD/" size="Medium"></modal>
+<modal title="Editar Expediente Cambio Destino" function="editarExpedienteCD" load-url="/Dufi/ExpedienteCD/_EditarExpedienteCD/" size="Medium"></modal>
+<modal title="Elimnar Expediente Cambio Destino" function="eliminarExpedienteCD" load-url="/Dufi/ExpedienteCD/_EliminarExpedienteCD/" size="Medium"></modal>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Cambio de Guarnición</h3>
+                @if (Model.GuarnicionFuturo == null)
+                {
+                    <div class="box-tools pull-right">
+                        <a onclick="nuevoGuarnicionFuturo(@Model.Id)" class="btn btn-info btn-sm">
+                            <i class="fa fa-plus"><span class="hidden-xs txt-boton-grilla"> Agregar</span></i>
+                        </a>
+                    </div>
+                }
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    @if (@Model.GuarnicionFuturo != null)
+                    {
+                        <thead>
+                            <tr>
+                                <th>
+                                    Primera Prioridad
+                                </th>
+                                <th>
+                                    Segunda Prioridad
+                                </th>
+                                <th>
+                                    Tercera Prioridad
+                                </th>
+                                <th>
+                                    En caso de no ingresar
+                                </th>
+                                <th>
+                                    Última Zona Desfavorable
+                                </th>
+                                <th>
+                                    Acciones
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @foreach (var item in ViewBag.Guarniciones)
+                                    {
+                                        if (item.Value == @Model.GuarnicionFuturo.DeseaGuarnicion1)
+                                        {
+                                            @item.Text;
+                                        }
+                                    }
+                                </td>
+                                <td>
+                                    @foreach (var item in ViewBag.Guarniciones)
+                                    {
+                                        if (item.Value == @Model.GuarnicionFuturo.DeseaGuarnicion2)
+                                        {
+                                            @item.Text;
+                                        }
+                                    }
+                                </td>
+                                <td>
+                                    @foreach (var item in ViewBag.Guarniciones)
+                                    {
+                                        if (item.Value == @Model.GuarnicionFuturo.DeseaGuarnicion3)
+                                        {
+                                            @item.Text;
+                                        }
+                                    }
+                                </td>
+                                <td>
+                                    @foreach (var item in ViewBag.EnCaso)
+                                    {
+                                        if (int.Parse(item.Value) == @Model.GuarnicionFuturo.PermanecerGuarnicion)
+                                        {
+                                            @item.Text;
+                                        }
+                                    }
+                                </td>
+                                <td>
+                                    @foreach (var item in ViewBag.Guarniciones)
+                                    {
+                                        if (item.Value == @Model.GuarnicionFuturo.UltimaZona)
+                                        {
+                                            @item.Text;
+                                        }
+                                    }
+                                </td>
+                                <td>
+                                    <a onclick="editarGuarnicionFuturo(@Model.GuarnicionFuturo.Id)" title="Editar" class="btn btn-primary btn-xs"><i class="fa fa-file-text-o"></i></a>
+                                    <!--<a asp-action="Details" asp-route-id="atitem.Id"><i class="fa fa-file-text-o"></i></a>
+                    <a onclick="eliminarPersonaAviso(atitem.Id)" title="Eliminar" class="btn btn-info btn-xs btn-danger"><i class="fa fa-trash"></i></a>-->
+                                    <a asp-controller="GuarnicionFuturo"
+                                       asp-action="EliminarGuarnicionFuturo"
+                                       asp-route-id="@Model.GuarnicionFuturo.Id"
+                                       title="Eliminar"
+                                       confirm="Este registro ya no podra visualizarse"
+                                       confirm-icon="Danger"
+                                       class="btn btn-danger btn-xs">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="6" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+<modal title="Nuevo Guarnicion Futuro" function="nuevoGuarnicionFuturo" load-url="/Dufi/GuarnicionFuturo/_CrearGuarnicionFuturo/" size="Large"></modal>
+<modal title="Editar Guarnicion Futuro" function="editarGuarnicionFuturo" load-url="/Dufi/GuarnicionFuturo/_EditarGuarnicionFuturo/" size="Large"></modal>

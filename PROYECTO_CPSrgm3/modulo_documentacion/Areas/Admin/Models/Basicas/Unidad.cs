@@ -21,7 +21,7 @@ namespace modulo_documentacion.Areas.Admin.Models.Basicas
         // public virtual Co Co { get; set; }
         public List<PersonalMilitar> Integrantes { get; set; }
         public int GuarnicionId { get; set; }
-        //public virtual Guarnicion Guarnicion { get; set; }
+        public virtual Guarnicion Guarnicion { get; set; }
         // public virtual Domicilio Domicilio { get; set; }
         // public List<Contactos> Contacto { get; set; }
     }

@@ -14,5 +14,9 @@ namespace modulo_documentacion.Areas.Admin.Models.Basicas
         public string NombrePlan { get; set; }
         [Required(ErrorMessage = "La descripción de la linea es obligatorio")]
         public string Descripcion { get; set; }
+
+        //Vinculaciones
+        public int EmpresaId { get; set; }
+        public virtual Empresa Empresa { get; set; }
     }
 }

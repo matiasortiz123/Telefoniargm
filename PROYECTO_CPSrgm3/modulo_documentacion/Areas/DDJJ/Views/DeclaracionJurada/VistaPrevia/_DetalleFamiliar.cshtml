@@ -1,0 +1,66 @@
+﻿@model modulo_documentacion.Areas.DDJJ.Models.Familiar
+
+    <div class="row">
+        <div class="form-group col-md-6">
+            <input type="checkbox" asp-for="@Model.Vive" checked>
+            <label for="Vive" class="control-label"> Se encuentra con vida</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-6">
+            <b>Parentesco:</b>@Html.DisplayFor(modelItem => Model.Parentesco.Descripcion)
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-6">
+            <b>Nombre:</b> @Html.DisplayFor(modelItem => Model.Nombre)
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-6">
+            <b>Nombre:</b> @Html.DisplayFor(modelItem => Model.Apellido)
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-6">
+            <b>Genero:</b> @Html.DisplayFor(modelItem => Model.Genero.Descripcion)
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-6 defuncion" style="display:none">
+            <b>Fecha y hora de deceso:</b>@Html.DisplayFor(modelItem => Model.FechaDefuncion)
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-6 vive">
+            <b>Fecha de nacimiento:</b>@Html.DisplayFor(modelItem => Model.FechaNacimiento)
+        </div>
+    </div>
+<div class="row">
+    <div class="form-group col-md-6">
+        <b>Tipo de documento:</b>@Html.DisplayFor(modelItem => Model.TipoDocumento)
+    </div>
+    <div class="form-group col-md-6">
+        <b>Numero Documento</b>@Html.DisplayFor(modelItem => Model.NroDocumento)
+    </div>
+    <div class="form-group col-md-6">
+        <b>Cuil</b>@Html.DisplayFor(modelItem => Model.Cuil)
+    </div>
+    <div class="form-group col-md-2">
+        <b>Escolariodad</b>@Html.DisplayFor(modelItem => Model.Escolaridad)
+    </div>
+    <div class="form-group col-md-2">
+        <b>Estado Civil</b>@Html.DisplayFor(modelItem => Model.EstadoCivil)
+    </div>
+    <div class="form-group col-md-2">
+        <input class="form-check-input" asp-for="TieneIOSFA" />
+        <label asp-for="TieneIOSFA" class="control-label">Tiene IOSFA</label>
+        <input asp-for="NroIOSFA" class="form-control" placeholder="Nro. IOSFA" />
+    </div>
+    <div class="row">
+        <div class="form-group col-md-2 text-center">
+            <input type="checkbox" asp-for="@Model.Impedido">
+            <label for="Impedido" class="control-label"> Posee alguna discapacidad</label>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,307 @@
+﻿@model modulo_documentacion.Areas.DUFI.Models.Dufi
+
+@{
+    ViewData["Title"] = "Idiomas y Cargos Profesionales";
+}
+
+<partial name="/Areas/DUFI/Views/Dufi/_Navegacion.cshtml" model="@Model.Id" />
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Idiomas y Nivel de EA</h3>
+
+                <div class="box-tools pull-right">
+                    <a onclick="nuevoIdioma(@Model.Id)" class="btn btn-info btn-sm">
+                        <i class="fa fa-plus"><span class="hidden-xs txt-boton-grilla"> Agregar</span></i>
+                    </a>
+                </div>
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    @if (@Model.IdiomaDufi.Count != 0)
+                    {
+                        int cont = 0;
+                        @foreach (var item in Model.IdiomaDufi)
+                        {
+                            if (item.IdiomaId != null)
+                            {
+                                cont += 1;
+                            }
+                        }
+
+                        @if (cont != 0)
+                        {
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Idioma
+                                    </th>
+                                    <th>
+                                        Nivel
+                                    </th>
+                                    <th>
+                                        Fecha Acreditación
+                                    </th>
+                                    <th>
+                                        Fecha Vencimiento
+                                    </th>
+                                    <th>
+                                        Acciones
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach (var item in Model.IdiomaDufi)
+                                {
+                                    if (item.IdiomaId != null)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @foreach (var idioma in ViewBag.Idiomas)
+                                                {
+                                                    if (int.Parse(idioma.Value) == item.IdiomaId)
+                                                    {
+                                                        @idioma.Text;
+                                                    }
+                                                }
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Nivel)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.FechaAcreditacion)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.FechaVencimiento)
+                                            </td>
+                                            <td>
+                                                <a onclick="editarIdioma(@item.Id)" title="Editar" class="btn btn-primary btn-xs"><i class="fa fa-file-text-o"></i></a>
+                                                <!--<a asp-action="Details" asp-route-id="@item.Id"><i class="fa fa-file-text-o"></i></a>
+                                                <a onclick="eliminarPersonaAviso(@item.Id)" title="Eliminar" class="btn btn-info btn-xs btn-danger"><i class="fa fa-trash"></i></a>-->
+                                                <a asp-action="EliminarIdioma"
+                                                   asp-route-id="@item.Id"
+                                                   title="Eliminar"
+                                                   confirm="Este registro ya no podra visualizarse"
+                                                   confirm-icon="Danger"
+                                                   class="btn btn-danger btn-xs">
+                                                    <i class="fa fa-trash"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        }
+                        else
+                        {
+                            <thead></thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-danger" colspan="4" style="text-align:center">
+                                        NO SE ENCONTRARON REGISTROS
+                                    </td>
+                                </tr>
+                            </tbody>
+                        }
+
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="4" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+<modal title="Nuevo Idioma" function="nuevoIdioma" load-url="/Dufi/IdiomaDufi/_CrearIdioma/" size="Medium"></modal>
+<modal title="Editar Idioma" function="editarIdioma" load-url="/Dufi/IdiomaDufi/_EditarIdioma/" size="Medium"></modal>
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Idiomas (Otras certificaciones)</h3>
+
+                <div class="box-tools pull-right">
+                    <a onclick="nuevoOidioma(@Model.Id)" class="btn btn-info btn-sm">
+                        <i class="fa fa-plus"><span class="hidden-xs txt-boton-grilla"> Agregar</span></i>
+                    </a>
+                </div>
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    @if (@Model.IdiomaDufi.Count != 0)
+                    {
+                        int cont = 0;
+                        @foreach (var item in Model.IdiomaDufi)
+                        {
+                            if (item.IdiomaOtro != null)
+                            {
+                                cont += 1;
+                            }
+                        }
+
+                        @if (cont != 0)
+                        {
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Idioma
+                                    </th>
+                                    <th>
+                                        Nivel
+                                    </th>
+                                    <th>
+                                        Fecha Acreditación
+                                    </th>
+                                    <th>
+                                        Fecha Vencimiento
+                                    </th>
+                                    <th>
+                                        Acciones
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach (var item in Model.IdiomaDufi)
+                                {
+                                    if (item.IdiomaOtro != null)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.IdiomaOtro)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Nivel)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.FechaAcreditacion)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.FechaVencimiento)
+                                            </td>
+                                                <td>
+                                                    <a onclick="editarOidioma(@item.Id)" title="Editar" class="btn btn-primary btn-xs"><i class="fa fa-file-text-o"></i></a>
+                                                    <!--<a asp-action="Details" asp-route-id="@item.Id"><i class="fa fa-file-text-o"></i></a>
+                                                    <a onclick="eliminarPersonaAviso(@item.Id)" title="Eliminar" class="btn btn-info btn-xs btn-danger"><i class="fa fa-trash"></i></a>-->
+                                                    <a asp-action="EliminarIdioma"
+                                                       asp-route-id="@item.Id"
+                                                       title="Eliminar"
+                                                       confirm="Este registro ya no podra visualizarse"
+                                                       confirm-icon="Danger"
+                                                       class="btn btn-danger btn-xs">
+                                                        <i class="fa fa-trash"></i>
+                                                    </a>
+                                                </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        }
+                        else
+                        {
+                            <thead></thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-danger" colspan="4" style="text-align:center">
+                                        NO SE ENCONTRARON REGISTROS
+                                    </td>
+                                </tr>
+                            </tbody>
+                        }
+
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="4" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Cargos Profesionales</h3>
+
+                <div class="box-tools pull-right">
+                    <a onclick="nuevoCargoDoc(@Model.Id)" class="btn btn-info btn-sm">
+                        <i class="fa fa-plus"><span class="hidden-xs txt-boton-grilla"> Agregar</span></i>
+                    </a>
+                </div>
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    <thead>
+                    </thead>
+                    @if (@Model.CargoDocenteProf.Count != 0)
+                    {
+                        <tbody>
+                            @foreach (var item in Model.CargoDocenteProf)
+                            {
+                                <tr>
+                                        <td style="text-align:left">
+                                            @Html.DisplayFor(modelItem => item.Descripcion)
+                                        </td>
+                                        <td style="text-align:right;padding-right:12.4%;">
+                                            <a onclick="editarCargoDoc(@item.Id)" title="Editar" class="btn btn-primary btn-xs"><i class="fa fa-file-text-o"></i></a>
+                                            <!--<a asp-action="Details" asp-route-id="@item.Id"><i class="fa fa-file-text-o"></i></a>
+                                            <a onclick="eliminarPersonaAviso(@item.Id)" title="Eliminar" class="btn btn-info btn-xs btn-danger"><i class="fa fa-trash"></i></a>-->
+                                            <a asp-action="EliminarCargoDoc"
+                                               asp-route-id="@item.Id"
+                                               title="Eliminar"
+                                               confirm="Este registro ya no podra visualizarse"
+                                               confirm-icon="Danger"
+                                               class="btn btn-danger btn-xs">
+                                                <i class="fa fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="2" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+
+<modal title="Nuevo Idioma" function="nuevoIdioma" load-url="/Dufi/IdiomaDufi/_CrearIdioma/" size="Medium"></modal>
+<modal title="Editar Idioma" function="editarIdioma" load-url="/Dufi/IdiomaDufi/_EditarIdioma/" size="Medium"></modal>
+<modal title="Nuevo Otro Idioma" function="nuevoOidioma" load-url="/Dufi/IdiomaDufi/_CrearOidioma/" size="Medium"></modal>
+<modal title="Editar Otro Idioma" function="editarOidioma" load-url="/Dufi/IdiomaDufi/_EditarOidioma/" size="Medium"></modal>
+<modal title="Nuevo Cargo" function="nuevoCargoDoc" load-url="/Dufi/IdiomaDufi/_CrearCargoDoc/" size="Medium"></modal>
+<modal title="Editar Cargo" function="editarCargoDoc" load-url="/Dufi/IdiomaDufi/_EditarCargoDoc/" size="Medium"></modal>

@@ -1,0 +1,143 @@
+﻿@model modulo_documentacion.Areas.DUFI.Models.Dufi
+
+@{
+    ViewData["Title"] = "OOMMP y Comisión Exterior";
+}
+
+<partial name="/Areas/DUFI/Views/Dufi/_Navegacion.cshtml" model="@Model.Id" />
+
+<form method="post" asp-action="DeseaOOMMP" asp-controller="MisionComExt">
+    <div class="row">
+        <div class="col-md-12">
+            <box color="Primary" class="box-solid">
+                <box-body>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label class="control-label">¿Desea participar en OOMMP?</label>
+                            <div style="float:right;">
+                                <input asp-for="DeseaOOMMP" type="radio" value=1>  <b>Si</b>
+                                <input asp-for="DeseaOOMMP" type="radio" value=0> <b>No</b>
+                                <span asp-validation-for="DeseaOOMMP" class="text-danger"></span>
+                            </div>
+                            <br />
+                            <input type="hidden" asp-for="Id" />
+                            <div class="box-tools pull-right">
+                                <button type="submit" class="btn btn-info btn-sm">
+                                    <i class="fa fa-save"><span class="hidden-xs txt-boton-grilla"> Guardar Cambios</span></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </box-body>
+            </box>
+        </div>
+    </div>
+</form>
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">OOMMP y Comisión Exterior</h3>
+
+                <div class="box-tools pull-right">
+                    <a onclick="nuevoMision(@Model.Id)" class="btn btn-info btn-sm">
+                        <i class="fa fa-plus"><span class="hidden-xs txt-boton-grilla"> Agregar</span></i>
+                    </a>
+                </div>
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    @if (@Model.MisionComExt.Count != 0)
+                    {
+                        <thead>
+                            <tr>
+                                <th>
+                                    País
+                                </th>
+                                <th>
+                                    Cargo
+                                </th>
+                                <th>
+                                    Misión/Función
+                                </th>
+                                <th>
+                                    Fecha Inicio
+                                </th>
+                                <th>
+                                    Fecha finalización
+                                </th>
+                                <th>
+                                    Duración
+                                </th>
+                                <th>
+                                    Acciones
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var item in Model.MisionComExt)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Pais)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Cargo)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Mision)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.FechaInicio)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.FechaFin)
+                                    </td>
+                                    @{ 
+                                        string tiempo;
+                                        if (item.Duracion == 1)
+                                        {
+                                            tiempo = "día";
+                                        }
+                                        else
+                                        {
+                                            tiempo = "días";
+                                        }
+                                    }
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Duracion) @tiempo
+                                    </td>
+                                    <td>
+                                        <a onclick="editarMision(@item.Id)" title="Editar" class="btn btn-primary btn-xs"><i class="fa fa-file-text-o"></i></a>
+                                        <a asp-action="EliminarMision"
+                                           asp-route-id="@item.Id"
+                                           title="Eliminar"
+                                           confirm="Este registro ya no podra visualizarse"
+                                           confirm-icon="Danger"
+                                           class="btn btn-danger btn-xs">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="7" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+<modal title="Nuevo OOMMP Y Comisión Exterior" function="nuevoMision" load-url="/Dufi/MisionComExt/_CrearMision/" size="Medium"></modal>
+<modal title="Editar OOMMP Y Comisión Exterior" function="editarMision" load-url="/Dufi/MisionComExt/_EditarMision/" size="Medium"></modal>

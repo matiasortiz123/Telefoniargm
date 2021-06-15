@@ -1,0 +1,98 @@
+﻿@model modulo_documentacion.Areas.Albacea.Models.Albacea
+@{
+    ViewData["Title"] = "ALBACEA - Seguros de Vida";
+}
+    <partial name="/Areas/Albacea/Views/Albacea/_Navegacion.cshtml" model="@Model.Id" />
+
+    <div class="row">
+        <div class="col-md-12">
+            <box color="Primary" class="box-solid">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Seguros de Vida del Causante</h3>
+
+                    <div class="box-tools pull-right">
+                        <a onclick="nuevoSeguro(@Model.Id)" class="btn btn-info btn-sm">
+                            <i class="fa fa-plus"><span class="hidden-xs txt-boton-grilla"> Agregar</span></i>
+                        </a>
+                    </div>
+                </div>
+                <box-body table="true">
+                    <table class="table">
+                        @if (@Model.Seguro.Count != 0)
+                        {
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Tipo
+                                    </th>
+                                    <th>
+                                        Entidad
+                                    </th>
+                                    <th>
+                                        Nro Poliza
+                                    </th>
+                                    <th>
+                                        Telefono
+                                    </th>
+                                    <th>
+                                        Email
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach (var item in Model.Seguro)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Tipo)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Entidad)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.NroPoliza)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Telefono)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Email)
+                                        </td>
+                                        <td>
+                                            <a onclick="editarSeguro(@item.Id)" title="Editar" class="btn btn-primary btn-xs"><i class="fa fa-file-text-o"></i></a>
+                                            <!--<a asp-action="Details" asp-route-id="@item.Id"><i class="fa fa-file-text-o"></i></a>
+                        <a onclick="eliminarSeguro(@item.Id)" title="Eliminar" class="btn btn-info btn-xs btn-danger"><i class="fa fa-trash"></i></a>-->
+                                            <a asp-action="DeleteSeguro"
+                                               asp-route-id="@item.Id"
+                                               title="Eliminar"
+                                               confirm="Este registro ya no podra visualizarse"
+                                               confirm-icon="Danger"
+                                               class="btn btn-danger btn-xs">
+                                                <i class="fa fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        }
+                        else
+                        {
+                            <thead></thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-danger" colspan="5" style="text-align:center">
+                                        NO SE ENCONTRARON REGISTROS
+                                    </td>
+                                </tr>
+                            </tbody>
+                        }
+                    </table>
+                </box-body>
+            </box>
+        </div>
+    </div>
+    <modal title="Nuevo Seguro" function="nuevoSeguro" load-url="/Albacea/Seguro/_CrearSeguro/" size="Medium"></modal>
+    <modal title="Editar Seguro" function="editarSeguro" load-url="/Albacea/Seguro/_EditarSeguro/" size="Medium"></modal>
+    <modal title="Elimnar Seguro" function="eliminarSeguro" load-url="/Albacea/Seguro/_EliminarSeguro/" size="Medium"></modal>

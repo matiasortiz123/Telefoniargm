@@ -1,0 +1,59 @@
+﻿@using Commons.Models;
+@model Page<modulo_documentacion.Areas.DDJJ.Models.DeclaracionJurada>
+
+
+<box-header title="Estado de su ultima Declaracion Jurada">
+    <form asp-controller="DeclaracionJurada" asp-action="CrearDDJJ" method="post">
+        @if (Model.Items.Count() < 1) {
+            <button type="submit" class="btn btn-info btn-sm">
+                <i class="fa fa-plus"><span class="hidden-xs"> Nueva DDJJ </span></i>
+            </button>
+         } 
+    </form>
+
+
+</box-header>
+<box-body table="true">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Fecha
+                </th>
+                <th>
+                    Estado
+                </th>
+                <th>
+                    Descripción
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items.OrderBy(x => x.FechaCreacion))
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaCreacion)
+                </td>
+                <td>
+                    <span class="label label-success" style="font-weight:800"> @Html.DisplayFor(modelItem => item.Estado.Descripcion)</span>
+                </td>
+                <td>
+                    @if (item.EstadoID == 2 || item.EstadoID == 1)
+                    {
+                     <a asp-route-id="@item.ID" asp-action="DomicilioVivienda" title="Editar" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i></a>
+                    }
+                    @if (item.EstadoID == 3 || item.EstadoID == 6 || item.EstadoID == 9)
+                    {
+                     <a onclick="reporteDDJJ(@item.ID)" title="Ver" class="btn btn-success btn-xs"><i class="fa fa-file-text-o"></i></a>
+                     <a asp-route-id="@item.ID" asp-controller="DeclaracionJurada" asp-action="SolicitarModificacion" title="Solicitar modificacion" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i></a>
+                    }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</box-body>
+<box-footer page-update-div="tablaDeclaracionJurada"></box-footer>
+<modal title="Declaracion Jurada" function="reporteDDJJ" load-url="/DDJJ/DDJJReportes/_ReporteIndividual/" size="Large"></modal>

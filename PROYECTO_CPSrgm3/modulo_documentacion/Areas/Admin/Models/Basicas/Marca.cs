@@ -13,5 +13,9 @@ namespace modulo_documentacion.Areas.Admin.Models.Basicas
         [Display(Name = "Marca")]
         [Required(ErrorMessage = "La marca es obligatoria .")]
         public string Descripcion { get; set; }
+
+        //Vinculaciones
+        public int ModeloId { get; set; }
+        public virtual Modelo Modelo { get; set; }
     }
 }

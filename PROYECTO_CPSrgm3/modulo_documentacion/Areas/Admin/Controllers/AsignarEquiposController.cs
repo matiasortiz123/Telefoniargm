@@ -42,10 +42,17 @@ namespace modulo_documentacion.Areas.Admin.Controllers
             }
 
             page.SelectPage("/Admin/Equipos/_ListadoDeAsignacionEquipos",
-               _context.Equipo.Include(u => u.Empresa).Include(u => u.Marca)
-               .Include(m => m.Modelo).Include(u => u.EstadoEquipo)
-               .Include(x => x.Linea).Include(x => x.Planes));
-        
+               _context.Equipo.Include(u => u.Marca)
+               .Include(u => u.Marca.Modelo)
+               .Include(u => u.EstadoEquipo)
+               .Include(x => x.Linea)
+               .Include(x => x.Linea.Planes)
+               .Include(x => x.Linea.Planes.Empresa)
+               );
+     
+            //.Include(m => m.Modelo) - .Include(x => x.Planes)  - .Include(u => u.Empresa)
+
+
             return PartialView("_ListadoDeAsignacionEquipos", page);
         }
 
@@ -82,10 +89,11 @@ namespace modulo_documentacion.Areas.Admin.Controllers
 
             page.SelectPage("/Admin/Equipos/_MostrarEquiposAsignados",
                 _context.PersonaEquipos.Include(u => u.Equipo)
-                .Include(u => u.Equipo.Marca).Include(m => m.Equipo.Modelo).Include(e => e.Equipo.Empresa)
-                .Include(u => u.Equipo.EstadoEquipo).Include(x => x.Equipo.Linea)
-                .Include(x => x.Equipo.Planes));
-
+                .Include(u => u.Equipo.Marca).Include(u => u.Equipo.Marca.Modelo)
+                .Include(u => u.Equipo.EstadoEquipo)
+                .Include(x => x.Equipo.Linea)
+                );
+            //.Include(m => m.Equipo.Modelo) -.Include(x => x.Equipo.Planes) - .Include(e => e.Equipo.Empresa)
             return PartialView("_MostrarEquiposAsignados", page);
         }
 
@@ -187,7 +195,7 @@ namespace modulo_documentacion.Areas.Admin.Controllers
                 AddPageAlerts(PageAlertType.Success, "El usuario se asigno correctamente al equipo.");
                 return RedirectToAction(nameof(Index));
             }
-
+            
             AddPageAlerts(PageAlertType.Error, "Hubo un error al asignar el equipo al Usuario.");
             return RedirectToAction(nameof(Index));
 
@@ -198,15 +206,16 @@ namespace modulo_documentacion.Areas.Admin.Controllers
             if (Id != null)
             {
                 var personaEquipos = _context.PersonaEquipos.Include(u => u.Equipo)
-                .Include(u => u.Equipo.Marca).Include(m => m.Equipo.Modelo).Include(e => e.Equipo.Empresa)
+                .Include(u => u.Equipo.Marca).Include(u => u.Equipo.Marca.Modelo)
                 .Include(u => u.Equipo.EstadoEquipo).Include(x => x.Equipo.Linea)
-                .Include(x => x.Equipo.Planes).FirstOrDefault(i => i.Id == Id);
+                .Include(u => u.Equipo.Linea).Include(x => x.Equipo.Linea.Planes)
+                .Include(x => x.Equipo.Linea.Planes.Empresa).FirstOrDefault(i => i.Id == Id);
 
+                //.Include(m => m.Equipo.Modelo) - .Include(x => x.Equipo.Planes) - .Include(e => e.Equipo.Empresa)
                 AddPageAlerts(PageAlertType.Success, "El equipo se encontro correctamente, aqui esta el detalle completo.");
                 return View(personaEquipos);
             }
-
-
+            
             AddPageAlerts(PageAlertType.Error, "Hubo un error, no se a podido mostrar el detalle completo del equipo asignado.");
             return RedirectToAction(nameof(_MostrarEquiposAsignados));
         }

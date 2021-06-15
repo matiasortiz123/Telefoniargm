@@ -1,0 +1,113 @@
+﻿@model modulo_documentacion.Areas.DUFI.Models.Dufi
+@{
+    ViewData["Title"] = "Cargo Actual";
+}
+<partial name="/Areas/DUFI/Views/Dufi/_Navegacion.cshtml" model="@Model.Id" />
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Cargo Actual</h3>
+                @if (Model.CargoActual == null)
+                {
+                    <div class="box-tools pull-right">
+                        <a onclick="nuevoCargo(@Model.Id)" class="btn btn-info btn-sm">
+                            <i class="fa fa-plus"><span class="hidden-xs txt-boton-grilla"> Agregar</span></i>
+                        </a>
+                    </div>
+                }
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    @if (@Model.CargoActual != null)
+                    {
+                        <thead>
+                            <tr>
+                                <th>
+                                    Tiempo Guarnicion
+                                </th>
+                                <th>
+                                    Tiempo Destino
+                                </th>
+                                <th>
+                                    Tiempo Cargo
+                                </th>
+                                <th>
+                                    Cargo que Ocupa
+                                </th>
+                                <th>
+                                    Cargo Deseado
+                                </th>
+                                <th>
+                                    Acciones
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                @{
+                                    string time(int dur) {
+                                        string tiempo;
+
+                                        if (dur == 1)
+                                        {
+                                            tiempo = dur + " año";
+                                        }
+                                        else
+                                        {
+                                            tiempo = dur + " años";
+                                        }
+                                        return tiempo;
+                                    }
+                                }
+                                <td>
+                                    @time(Model.CargoActual.TiempoGuarnicion)
+                                </td>
+                                <td>
+                                    @time(Model.CargoActual.TiempoDestino)
+                                </td>
+                                <td>
+                                    @time(Model.CargoActual.TiempoCargo)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.CargoActual.CargoOcupa)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.CargoActual.CargoDeseado)
+                                </td>
+                                <td>
+                                    <a onclick="editarCargoActual(@Model.CargoActual.Id)" title="Editar" class="btn btn-primary btn-xs"><i class="fa fa-file-text-o"></i></a>
+                                    <!--<a asp-action="Details" asp-route-id="atitem.Id"><i class="fa fa-file-text-o"></i></a>
+        <a onclick="eliminarPersonaAviso(atitem.Id)" title="Eliminar" class="btn btn-info btn-xs btn-danger"><i class="fa fa-trash"></i></a>-->
+                                    <a asp-action="DeleteCargoOcupa"
+                                       asp-route-id="@Model.CargoActual.Id"
+                                       title="Eliminar"
+                                       confirm="Este registro ya no podra visualizarse"
+                                       confirm-icon="Danger"
+                                       class="btn btn-danger btn-xs">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="6" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+<modal title="Cargo Ocupa" function="nuevoCargo" callback-modal="true" load-url="/Dufi/CargoActual/_CrearCargoActual/" size="Medium"></modal>
+<modal title="Editar Cargo Ocupa" function="editarCargoActual" callback-modal="true" load-url="/Dufi/CargoActual/_EditarCargoActual/" size="Medium"></modal>

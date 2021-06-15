@@ -1,0 +1,27 @@
+﻿@model int
+
+<div class="row" style="margin-bottom:10px">
+
+    @if (@ViewBag.MenuActivo == "PA")
+    {<div class="col-md-3"><a asp-controller="PersonaAviso" asp-route-id="@Model" class="btn btn-block" style="background-color:#0a3d62;color:white"><i class="fa fa-users pull-left"></i><b> Cargar Personas </b></a></div>}
+    else
+    {<div class="col-md-3"><a asp-controller="PersonaAviso" asp-route-id="@Model" class="btn btn-block" style="background-color:#82ccdd;color:#FFFFFF"><i class="fa fa-users pull-left"></i><b>  Cargar Personas </b></a></div>}
+
+    @*@(@ViewBag.MenuActivo == "DF" ? "class='btn btn-block btn-success'" : "class=\"btn btn-block\"style=\"background-color:#b5b5b5;color:#FFFFFF\"")*@
+
+    @if (@ViewBag.MenuActivo == "SE")
+    {<div class="col-md-3"><a asp-controller="Seguro" asp-route-id="@Model" class="btn btn-block" style="background-color:#0a3d62;color:white"><i class="fa fa-home pull-left"></i><b> Seguros de Vida </b></a></div>}
+    else
+    { <div class="col-md-3"><a asp-controller="Seguro" asp-route-id="@Model" class="btn btn-block" style="background-color:#82ccdd;color:#FFFFFF"><i class="fa fa-home pull-left"></i><b> Seguros de Vida </b></a></div>}
+
+    @if (@ViewBag.MenuActivo == "AL")
+    {<div class="col-md-3"><a asp-controller="Albacea"  asp-route-id="@Model" class="btn btn-block" style="background-color:#0a3d62;color:white"><i class="fa fa-file-text-o pull-left"></i><b> Albacea </b></a></div>}
+    else
+    {<div class="col-md-3"><a asp-controller="Albacea"  asp-route-id="@Model" class="btn btn-block" style="background-color:#82ccdd;color:#FFFFFF"><i class="fa fa-file-text-o pull-left"></i><b> Albacea </b></a></div>}
+
+    @if (@ViewBag.MenuActivo == "VP")
+    {<div class="col-md-3"><a asp-controller="VistaPrevia" asp-route-id="@Model" class="btn btn-block" style="background-color:#0a3d62;color:white"><i class="fa fa-edit pull-left"></i><b> Revisión y Elevación </b></a></div>}
+    else
+    {<div class="col-md-3"><a asp-controller="VistaPrevia" asp-route-id="@Model" class="btn btn-block" style="background-color:#82ccdd;color:#FFFFFF"><i class="fa fa-edit pull-left"></i><b> Revisión y Elevación </b></a></div>}
+</div>
+

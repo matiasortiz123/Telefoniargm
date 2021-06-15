@@ -1,0 +1,30 @@
+﻿@model List<modulo_documentacion.Areas.DDJJ.Models.BitacoraDDJJ>
+
+<box-body table="true">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Fecha
+                </th>
+                <th>
+                    Detalle
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.OrderBy(x => x.FechaHora))
+            {
+                <tr>
+                    <td>
+                        @item.FechaHora
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descripcion)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</box-body>

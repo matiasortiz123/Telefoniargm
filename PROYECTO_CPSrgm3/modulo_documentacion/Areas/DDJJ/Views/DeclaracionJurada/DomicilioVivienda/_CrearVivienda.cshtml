@@ -1,0 +1,191 @@
+﻿@model modulo_documentacion.Areas.DDJJ.Models.Vivienda
+
+<form id="formDomicilioVivienda" method="post" asp-action="_CrearVivienda" asp-controller="DeclaracionJurada">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <b> Vivienda Propia</b>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <label for="ViviendaPropia" class="control-label">Posee vivienda propia</label><br />
+                    <input type="radio" value="true" name="Vivienda.ViviendaPropia" id="ViviendaPropiaSi"> <b>Si</b>
+                    <input type="radio" value="false" name="Vivienda.ViviendaPropia" id="ViviendaPropiaNo" > <b>No</b>
+                </div>
+            </div>
+
+            <!-- SI POSEE VIVIENDA PROPIA-->
+            <div class="Si_Posee_vivienda" style="display:none">
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <input class="Input_Si_Posee" id="ConstruyeVivienda" type="checkbox" value="true" name="Vivienda.ConstruyeVivienda" />
+                        <label for="Construye" class="control-label">Construye vivienda</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="FechaConstruye" style="display:none">
+                        <div class="form-group col-md-3">
+                            <label for="FechaConstruye" class="control-label">Fecha estimada finalización</label>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <input id="FechaConstruye" type="date" class="form-control" name="Vivienda.FechaConstruye">
+                        </div>
+                        <!--
+                        <div class="form-group col-md-3">
+                            <label for="GuarnicionConstruye" class="control-label">Proximo a que Guarnición</label>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <select id="GuarnicionConstruye" asp-items="@ViewBag.Guarniciones" name="Vivienda.GuarnicionConstruyeID" class="form-control local"></select>
+                        </div>
+                        -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="ViviendaOcupaPropia" class="control-label">Ocupa su vivienda</label><br />
+                        <input class="Input_Si_Posee" type="radio" value="true" name="Vivienda.OcupaPropia" id="ViviendaOcupaPropiaSi" asp-for="@Model.OcupaPropia"> <b>Si</b>
+                        <input class="Input_Si_Posee" type="radio" value="false" name="Vivienda.OcupaPropia" id="ViviendaOcupaPropiaNo" asp-for="@Model.OcupaPropia"> <b>No</b>
+
+                    </div>
+                </div>
+
+                <!--SI OCUPA VIVIENDA-->
+                <div class="Si_Vivienda_Ocupa_Propia" style="display:none">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <input class="Input_Si_Posee" type="checkbox" value="true" id="Satisface" name="Vivienda.Satisface" />
+                            <label for="Satisface" class="control-label">Sastiface sus necesidades de vivienda</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <input class="Input_Si_Posee" type="checkbox" value="true" id="PoseeCreditoVivienda" name="Vivienda.PoseeCreditoVivienda" />
+                            <label for="PoseeCreditoVivienda" class="control-label">Posee credito de vivienda</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- NO POSEE VIVIENDA PROPIA-->
+
+            <div class="No_Posee_Vivienda" style="display:none">
+                <div class="row" id="viv_alojaUnidad">
+                    <div class="form-group col-md-6">
+                        <input class="Input_No_Posee" id="AlojaUnidad" type="checkbox" value="true" name="Vivienda.AlojaUnidad" />
+                        <label for="AlojaUnidad" class="control-label">Se aloja en la unidad</label>
+                    </div>
+
+                    <div class="selectUnidad" style="display:none">
+                        <div class="form-group col-md-2">
+                            <label for="AlojaUnidad" class="control-label">En que  Unidad</label>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <select id="SelectUnidad" asp-items="@ViewBag.Unidad" placeholder="Seleccione una unidad" name="Vivienda.AlojamientoUnidadID" class="form-control local"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="viv_estado">
+                    <div class="form-group col-md-4">
+                        <input class="Input_No_Posee" id="OcupaViviendaEstado" type="checkbox" value="true" name="Vivienda.OcupaViviendaEstado" />
+                        <label for="Alquila" class="control-label">Ocupa vivienda del Estado</label>
+                    </div>
+                    <div class="TiempoOcupaVivienda" style="display:none">
+                        <div class="form-group col-md-3">
+                            <label for="TiempoOcupaVivienda" class="control-label">Hace cuanto tiempo (en años)</label>
+                        </div>
+                        <div class="form-group col-md-1">
+                            <input id="TiempoOcupaVivienda" type="text" class="form-control" name="Vivienda.TiempoOcupaVivienda">
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="viv_alquila">
+                    <div class="form-group col-md-3">
+                        <input class="Input_No_Posee" id="Alquila" type="checkbox" value="true" name="Vivienda.Alquila" />
+                        <label for="Alquila" class="control-label">Alquila vivienda</label>
+                    </div>
+                    <div class="Alquila" style="display:none">
+                        <div class="form-group col-md-1">
+                            <label for="AlquilaDesde" class="control-label">Desde</label>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <input id="AlquilaDesde" type="date" class="form-control" name="Vivienda.AlquilaDesde">
+                        </div>
+                        <div class="form-group col-md-1">
+                            <label for="AlquilaHasta" class="col-md-2 control-label">Hasta</label>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <input id="AlquilaHasta" type="date" class="form-control" name="Vivienda.AlquilaHasta">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+        </div>
+    </div>
+    <div class="panel panel-info" id="guarnicion_cercana" style="display:none">
+        <div class="panel-heading">
+            <b>Indique la guarnición donde se encuentra su vivienda (en su defecto indique la más cercana)</b>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                @*<div class="form-group col-md-3">
+
+                    <select-ajax title="Elija las guarniciones"
+                                 class="form-control"
+                                 id="select2"
+                                 url="@Url.Action(" GetGuarniciones")"
+                                 color="Info"
+                                 menu-size="50"
+                                 multiple-max-options="3"
+                                 class-btn="btn-flat"
+                                 text-no-results="Oh no! No encontraste nada!"
+                                 text-initialized=""
+                                 text-placeholder="Escriba algo"
+                                 route-name="q">
+                    </select-ajax>
+                </div>*@
+                <div class="form-group col-md-3">
+                    <label for="guarnicion_vivienda_proxima1" class="control-label">Guarnición</label>
+                    <select asp-items="@ViewBag.Guarniciones" name="Vivienda.GuarnicionViviendaProxima1ID" class="form-control local"></select>
+                </div>
+                @*<div class="form-group col-md-3">
+                    <label for="guarnicion_vivienda_proxima1" class="control-label">Guarnición</label>
+                    <select asp-items="@ViewBag.Guarniciones" name="Vivienda.GuarnicionViviendaProxima3" class="form-control local"></select>
+                </div>
+                <div class="form-group col-md-3">
+       
+                </div>*@
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <b>En que otra guarnición soluciona por propio medios su situación de vivienda</b>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label for="GuarnicionSolucionaID" class="control-label">Guarnición</label>
+                    <select asp-items="@ViewBag.Guarniciones" name="Vivienda.GuarnicionSolucionaID" class="form-control local"></select>
+                </div>
+                <div class="form-group col-md-8">
+                    <label for="SituacionEconomica" class="control-label">Situación economica que desea resaltar</label>
+                    <input type="text" class="form-control" name="Vivienda.SituacionEconomica">
+                </div>
+            </div>
+            <input type="hidden" name="Vivienda.DeclaracionJuradaID" value="@ViewBag.DJId">
+            <br /><br />
+        </div>
+    </div>
+    <div class="box-footer">
+        <a asp-action="Index" class="btn btn-danger">Cancelar</a>
+        <button type="submit" class="btn btn-info pull-right">Agregar</button>
+    </div>
+    </form>
+<link  rel="stylesheet" href="~/css/select2.min.css" type="text/css"  />
+<script src="~/js/Documentacion.js"></script>

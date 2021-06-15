@@ -1,0 +1,25 @@
+﻿<div class="row" style="margin-bottom:10px">
+
+    @if (@ViewBag.MenuActivo == "DF")
+    {<div class="col-md-3"><a asp-action="DomicilioVivienda" asp-route-id="@Model.DeclaracionJuradaID" class="btn btn-block" style="background-color:#0a3d62;color:white"><i class="fa fa-home pull-left"></i><b> Domicilio y Vivienda</b></a></div>}
+    else
+    {<div class="col-md-3"><a asp-action="DomicilioVivienda" asp-route-id="@Model.DeclaracionJuradaID" class="btn btn-block" style="background-color:#82ccdd;color:#FFFFFF"><i class="fa fa-home pull-left"></i><b> Domicilio y Vivienda</b></a></div>}
+
+    @*@(@ViewBag.MenuActivo == "DF" ? "class='btn btn-block btn-success'" : "class=\"btn btn-block\"style=\"background-color:#b5b5b5;color:#FFFFFF\"")*@
+
+    @if (@ViewBag.MenuActivo == "FC")
+    {<div class="col-md-3"><a asp-action="FamiliaContacto" asp-route-id="@Model.DeclaracionJuradaID" class="btn btn-block" style="background-color:#0a3d62;color:white"><i class="fa fa-users pull-left"></i><b> Estado Civil, Familia y Contacto</b></a></div>}
+    else
+    { <div class="col-md-3"><a asp-action="FamiliaContacto" asp-route-id="@Model.DeclaracionJuradaID" class="btn btn-block" style="background-color:#82ccdd;color:#FFFFFF"><i class="fa fa-users pull-left"></i><b> Estado Civil, Familia y Contacto</b></a></div>}
+
+    @if (@ViewBag.MenuActivo == "EC")
+    {<div class="col-md-3"><a asp-action="EstudioCausa" asp-route-id="@Model.DeclaracionJuradaID" class="btn btn-block" style="background-color:#0a3d62;color:white"><i class="fa fa-university pull-left"></i> <b> Estudios,  Adjuntos y Causas</b></a></div>}
+    else
+    {<div class="col-md-3"><a asp-action="EstudioCausa" asp-route-id="@Model.DeclaracionJuradaID" class="btn btn-block" style="background-color:#82ccdd;color:#FFFFFF"><i class="fa fa-university pull-left"></i> <b> Estudios, Adjuntos y Causas</b></a></div>}
+
+    @if (@ViewBag.MenuActivo == "VP")
+    {<div class="col-md-3"><a asp-action="VistaPrevia" asp-route-id="@Model.DeclaracionJuradaID" class="btn btn-block" style="background-color:#0a3d62;color:white"><i class="fa fa-edit pull-left"></i><b> Revisión y Elevación </b></a></div>}
+    else
+    {<div class="col-md-3"><a asp-action="VistaPrevia" asp-route-id="@Model.DeclaracionJuradaID" class="btn btn-block" style="background-color:#82ccdd;color:#FFFFFF"><i class="fa fa-edit pull-left"></i><b> Revisión y Elevación </b></a></div>}
+</div>
+

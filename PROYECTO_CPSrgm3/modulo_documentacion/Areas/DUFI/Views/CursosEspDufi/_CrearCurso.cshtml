@@ -1,0 +1,23 @@
+﻿@model modulo_documentacion.Areas.DUFI.Models.CursosEspDufi
+
+<form class="form-horizontal" method="post" asp-action="_CrearCurso" asp-controller="CursosEspDufi">
+    <div class="panel-body" style="margin-left:10px; margin-right:10px">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-8">
+                    <label>Tipo </label>
+                    <select class="form-control" asp-for="CursoEspecialId" asp-items="@ViewBag.CursoEspecial">
+                        <option selected hidden value="">Seleccione</option>
+                    </select>
+                    <span asp-validation-for="CursoEspecialId" class="text-danger"></span>
+                </div>
+            </div>
+            <input type="hidden" name="DufiId" value="@ViewBag.DufiId" />
+        </div>
+        <div class="box-footer">
+            <a asp-action="Index/@ViewBag.DufiId" class="btn btn-danger">Cancelar</a>
+            <button type="submit" class="btn btn-info pull-right">Agregar</button>
+        </div>
+    </div>
+</form>

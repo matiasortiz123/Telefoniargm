@@ -15,6 +15,7 @@
         <thead>
             <tr>
                 <th>Numero</th>
+                <th>Planes</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -25,6 +26,7 @@
                 {
                     <tr>
                         <td scope="col">@Html.DisplayFor(modelItem => item.Numero)</td>
+                        <td scope="col">@Html.DisplayFor(modelItem => item.Planes.NombrePlan)</td>
                         <td>
                             @*<a onclick="editarLinea('@item.Id')" title="Editar equipo" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i></a>*@
                             @*<a onclick="DetalleLinea('@item.Id')" title="Detalle equipo" class="btn btn-success btn-xs"><i class="fa fa-eye"></i></a>*@
@@ -38,6 +40,7 @@
                 {
                     <tr>
                         <td scope="col">@Html.DisplayFor(modelItem => item.Numero)</td>
+                        <td scope="col">@Html.DisplayFor(modelItem => item.Planes.NombrePlan)</td>
                         <td>
                             <a onclick="editarLinea('@item.Id')" title="Editar equipo" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i></a>
                             <a onclick="DetalleLinea('@item.Id')" title="Detalle equipo" class="btn btn-success btn-xs"><i class="fa fa-eye"></i></a>

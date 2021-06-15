@@ -1,0 +1,306 @@
+﻿@model modulo_documentacion.Areas.DUFI.Models.Dufi
+
+@{
+    ViewData["Title"] = "Aptitud Especial";
+}
+<partial name="/Areas/DUFI/Views/Dufi/_Navegacion.cshtml" model="@Model.Id" />
+
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Aptitudes Especiales</h3>
+
+                <div class="box-tools pull-right">
+                    <a onclick="nuevoAptEsp(@Model.Id)" class="btn btn-info btn-sm">
+                        <i class="fa fa-plus"><span class="hidden-xs txt-boton-grilla"> Agregar</span></i>
+                    </a>
+                </div>
+            </div>
+            <box-body table="true">
+                <table class="table">
+
+                    @if (@Model.AptEspDufi.Count != 0)
+                    {
+                        <tbody>
+                            @foreach (var item in Model.AptEspDufi)
+                            {
+                                <tr>
+                                    <td>
+                                        @foreach (var TipoCapacitacion in ViewBag.tipo)
+                                        {
+                                            if (int.Parse(TipoCapacitacion.Value) == item.TipoCapacitacionId)
+                                            {
+                                                @TipoCapacitacion.Text;
+                                            }
+                                        }
+                                    </td>
+                                    <td>
+                                        @foreach (var AptitudEspecial in ViewBag.aptitud)
+                                        {
+                                            if (int.Parse(AptitudEspecial.Value) == item.AptEspId)
+                                            {
+                                                @AptitudEspecial.Text;
+                                            }
+                                        }
+                                    </td>
+                                    @if(item.FechaHabilitacion != null){
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.FechaHabilitacion)
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            ---
+                                        </td>
+                                    }
+                                    <td>
+                                        <a onclick="editarAptEsp(@item.Id)" title="Editar" class="btn btn-primary btn-xs"><i class="fa fa-file-text-o"></i></a>
+                                        <a asp-action="EliminarAptEsp"
+                                           asp-route-id="@item.Id"
+                                           title="Eliminar"
+                                           confirm="Este registro ya no podra visualizarse"
+                                           confirm-icon="Danger"
+                                           class="btn btn-danger btn-xs">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="6" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+<modal title="Nuevo Aptitud Especial" function="nuevoAptEsp" load-url="/Dufi/AptEspDufi/_CrearAptEsp/" size="Medium"></modal>
+<modal title="Editar Aptitud Especial" function="editarAptEsp" load-url="/Dufi/AptEspDufi/_EditarAptEsp/" size="Medium"></modal>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Cursos Especiales</h3>
+
+                <div class="box-tools pull-right">
+                    <a onclick="nuevoCurso(@Model.Id)" class="btn btn-info btn-sm">
+                        <i class="fa fa-plus"><span class="hidden-xs txt-boton-grilla"> Agregar</span></i>
+                    </a>
+                </div>
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    <thead>
+                    </thead>
+                    @if (@Model.CursosEspDufi.Count != 0)
+                    {
+                        <tbody>
+                            @foreach (var item in Model.CursosEspDufi)
+                            {
+                                <tr>
+                                    <td>
+                                        @foreach (var CursoEspecial in ViewBag.curso)
+                                        {
+                                            if (int.Parse(CursoEspecial.Value) == item.CursoEspecialId)
+                                            {
+                                                @CursoEspecial.Text;
+                                            }
+                                        }
+                                    </td>
+                                    <td>
+                                        <a onclick="editarCurso(@item.Id)" title="Editar" class="btn btn-primary btn-xs"><i class="fa fa-file-text-o"></i></a>
+                                        <a asp-controller="CursosEspDufi"
+                                           asp-action="EliminarCurso"
+                                           asp-route-id="@item.Id"
+                                           title="Eliminar"
+                                           confirm="Este registro ya no podra visualizarse"
+                                           confirm-icon="Danger"
+                                           class="btn btn-danger btn-xs">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="6" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+<modal title="Nuevo Curso" function="nuevoCurso" load-url="/Dufi/CursosEspDufi/_CrearCurso/" size="Medium"></modal>
+<modal title="Editar Curso" function="editarCurso" load-url="/Dufi/CursosEspDufi/_EditarCurso/" size="Medium"></modal>
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Licencia de Conducir</h3>
+                @if (Model.ConductorMotorista == null)
+                {
+                    <div class="box-tools pull-right">
+                        <a onclick="nuevoConductor(@Model.Id)" class="btn btn-info btn-sm">
+                            <i class="fa fa-plus"><span class="hidden-xs txt-boton-grilla"> Agregar</span></i>
+                        </a>
+                    </div>
+                }
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    @if (@Model.ConductorMotorista != null)
+                    {
+                        <thead>
+                            <tr>
+                                <th>
+                                    Licencia
+                                </th>
+                                <th>
+                                    Fecha última Renovación
+                                </th>
+                                <th>
+                                    Fecha vencimiento registro
+                                </th>
+                                <th>
+                                    Acciones
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.ConductorMotorista.LicenciaConducir)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.ConductorMotorista.FechaUltimaRenovacion)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.ConductorMotorista.FechaVencimiento)
+                                </td>
+                                <td>
+                                    <a onclick="editarConductor(@Model.ConductorMotorista.Id)" title="Editar" class="btn btn-primary btn-xs"><i class="fa fa-file-text-o"></i></a>
+                                    <a asp-controller="ConductorMotorista"
+                                       asp-action="EliminarConductor"
+                                       asp-route-id="@Model.ConductorMotorista.Id"
+                                       title="Eliminar"
+                                       confirm="Este registro ya no podra visualizarse"
+                                       confirm-icon="Danger"
+                                       class="btn btn-danger btn-xs">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="6" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+<modal title="Nuevo" function="nuevoConductor" load-url="/Dufi/ConductorMotorista/_CrearConductor/" size="Medium"></modal>
+<modal title="Editar" function="editarConductor" load-url="/Dufi/ConductorMotorista/_EditarConductor/" size="Medium"></modal>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Registro Clase</h3>
+
+                <div class="box-tools pull-right">
+                    <a onclick="nuevoRegistro(@Model.Id)" class="btn btn-info btn-sm">
+                        <i class="fa fa-plus"><span class="hidden-xs txt-boton-grilla"> Agregar</span></i>
+                    </a>
+                </div>
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    <thead>
+                        <tr>
+                        </tr>
+                    </thead>
+                    @if (@Model.RegistroConductorDufi.Count != 0)
+                    {
+                        <tbody>
+                            @foreach (var item in Model.RegistroConductorDufi)
+                            {
+                                <tr>
+                                    <td>
+                                        @foreach (var TipoRegistroConductor in ViewBag.tipoRegistro)
+                                        {
+                                            if (TipoRegistroConductor.Value == item.TipoRegistro)
+                                            {
+                                                @TipoRegistroConductor.Text;
+                                            }
+                                        }
+                                    </td>
+                                    <td>
+                                        <a onclick="editarRegistro(@item.Id)" title="Editar" class="btn btn-primary btn-xs"><i class="fa fa-file-text-o"></i></a>
+                                        <a asp-controller="ConductorMotorista"
+                                           asp-action="EliminarRegistro"
+                                           asp-route-id="@item.Id"
+                                           title="Eliminar"
+                                           confirm="Este registro ya no podra visualizarse"
+                                           confirm-icon="Danger"
+                                           class="btn btn-danger btn-xs">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="6" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+<modal title="Nuevo Registro" function="nuevoRegistro" load-url="/Dufi/ConductorMotorista/_CrearRegistro/" size="Medium"></modal>
+<modal title="Editar Registro" function="editarRegistro" load-url="/Dufi/ConductorMotorista/_EditarRegistro/" size="Medium"></modal>

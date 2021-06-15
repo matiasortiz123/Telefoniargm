@@ -30,26 +30,26 @@
         <tbody>
             @foreach (var item in Model.Items)
             {
-            <tr>
-                <td scope="col">@Html.DisplayFor(modelItem => item.Imei)</td>
-                <td scope="col">@Html.DisplayFor(modelItem => item.Accesorios)</td>
-                <td scope="col">@Html.DisplayFor(modelItem => item.Gama)</td>
-                <td scope="col">@Html.DisplayFor(modelItem => item.Condicion)</td>
-                <td scope="col">@Html.DisplayFor(modelItem => item.Marca.Descripcion)</td>
-                <td scope="col">@Html.DisplayFor(modelItem => item.Modelo.Descripcion)</td>
-                <td scope="col">@Html.DisplayFor(modelItem => item.Empresa.Nombre)</td>              
-                <td scope="col">@Html.DisplayFor(modelItem => item.EstadoEquipo.Estado)</td>
-                <td>
-                    <a onclick="editarEquipo('@item.Id')" title="Editar equipo" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i></a>
-                    <a onclick="DetalleEquipo('@item.Id')" title="Detalle equipo" class="btn btn-success btn-xs"><i class="fa fa-eye"></i></a>
-                    <a onclick="EliminarEquipo('@item.Id')"                        
-                           confirm="Este registro ya no podra visualizarse"
-                           confirm-icon="Danger"               
-                           title="Eliminar equipo" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i>
-                    </a>
-                    @*<a asp-area="Preinscripcion" asp-controller="Turno" asp-action="DetallesTurno" asp-route-id="@item.Id" class="btn btn-warning btn-xs"><i class="fa fa-user-plus"></i></a>*@
-                </td>
-            </tr>
+                <tr>
+                    <td scope="col">@Html.DisplayFor(modelItem => item.Imei)</td>
+                    <td scope="col">@Html.DisplayFor(modelItem => item.Accesorios)</td>
+                    <td scope="col">@Html.DisplayFor(modelItem => item.Gama)</td>
+                    <td scope="col">@Html.DisplayFor(modelItem => item.Condicion)</td>
+                    <td scope="col">@Html.DisplayFor(modelItem => item.Marca.Descripcion)</td>
+                    <td scope="col">@Html.DisplayFor(modelItem => item.Marca.Modelo.Descripcion)</td>
+                    <td scope="col">@Html.DisplayFor(modelItem => item.Linea.Planes.Empresa.Nombre)</td>              
+                    <td scope="col">@Html.DisplayFor(modelItem => item.EstadoEquipo.Estado)</td>
+                    <td>
+                        <a onclick="editarEquipo('@item.Id')" title="Editar equipo" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i></a>
+                        <a onclick="DetalleEquipo('@item.Id')" title="Detalle equipo" class="btn btn-success btn-xs"><i class="fa fa-eye"></i></a>
+                        <a onclick="EliminarEquipo('@item.Id')"                        
+                               confirm="Este registro ya no podra visualizarse"
+                               confirm-icon="Danger"               
+                               title="Eliminar equipo" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i>
+                        </a>
+                        @*<a asp-area="Preinscripcion" asp-controller="Turno" asp-action="DetallesTurno" asp-route-id="@item.Id" class="btn btn-warning btn-xs"><i class="fa fa-user-plus"></i></a>*@
+                    </td>
+                </tr>
             }
         </tbody>
     </table>

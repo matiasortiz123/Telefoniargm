@@ -1,0 +1,49 @@
+﻿@using Commons.Models;
+@model Page<modulo_documentacion.Areas.Admin.Models.Basicas.SituacionFamiliar>
+<box-header title="Lista de Datos">
+    <box-search update-div="TablaSituacionFamiliar">
+        <div class="input-group input-group-sm pull-right" style="max-width: 300px;">
+            <a onclick="nuevaSituacionLaboral()" class="btn btn-info btn-sm">
+                <i class="fa fa-plus"><span class="hidden-xs"> Nuevo</span></i>
+            </a>
+        </div>
+    </box-search>
+</box-header>
+<box-body table="true">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Descripcion
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items.OrderBy(x => x.Descripcion))
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descripcion)
+                    </td>
+                    <td>
+                        <a onclick="editaSituacionFamiliar(@item.Id)" title="Editar" class="btn btn-primary btn-xs"><i class="fa fa-file-text-o"></i></a>
+                        <!--<a onclick="Eliminar('@item.Id')" title="Eliminar" class="btn btn-info btn-xs btn-danger"><i class="fa fa-trash"></i></a>-->
+                        <a asp-action="Delete"
+                           asp-route-id="@item.Id"
+                           title="Eliminar"
+                           confirm="Este registro ya no podra visualizarse"
+                           confirm-icon="Danger"
+                           class="btn btn-danger btn-xs">
+                            <i class="fa fa-trash"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</box-body>
+<box-footer page-update-div="TablaSituacionFamiliar"></box-footer>
+<modal title="Edicion de Situacion Familiar" function="editaSituacionFamiliar" load-url="/Admin/SituacionFamiliar/_Edit/" size="Medium"></modal>
+<modal title="Nueva Situacion Familiar" function="nuevaSituacionLaboral" load-url="/Admin/SituacionFamiliar/_Create/" size="Medium"></modal>
+<!--<modal title="Eliminar Situacion Familiar" function="Eliminar" load-url="/Admin/SituacionFamiliar/_Delete/" size="Medium"></modal>-->

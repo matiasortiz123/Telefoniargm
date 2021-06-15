@@ -1,0 +1,143 @@
+﻿@model modulo_documentacion.Areas.Albacea.Models.Albacea
+@{
+    ViewData["Title"] = "ALBACEA - Designar Albacea";
+}
+<partial name="/Areas/Albacea/Views/Albacea/_Navegacion.cshtml" model="@Model.Id" />
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">A quien desea designar como su ALBACEA</h3>
+                @if (@Model.DniAlbacea == null)
+                { 
+                    <div class="box-tools pull-right">
+                        <a onclick="nuevoAlbacea(@Model.Id)" class="btn btn-info btn-sm">
+                            <i class="fa fa-plus"><span class="hidden-xs txt-boton-grilla"> Agregar</span></i>
+                        </a>
+                    </div>
+                }
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                Grado
+                            </th>
+                            <th>
+                                Dni
+                            </th>
+                            <th>
+                                Nombre y Apellido
+                            </th>
+                            <th>
+                                Unidad
+                            </th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    @if (@Model.DniAlbacea != null)
+                    {
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.GradoAlbacea)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DniAlbacea)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.DatosAlbacea)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @Model.UnidadAlbacea)
+                                </td>
+                                <td>
+                                    <a onclick="editarAlbacea(@Model.Id)" title="Editar" class="btn btn-primary btn-xs"><i class="fa fa-file-text-o"></i></a>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="5" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+<modal title="Nuevo Albacea" function="nuevoAlbacea" load-url="/Albacea/Albacea/_Crear/" size="Medium"></modal>
+<modal title="Editar Albacea" function="editarAlbacea" load-url="/Albacea/Albacea/_Editar/" size="Medium"></modal>
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <box color="Primary" class="box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Cualquier otro dato y/o indicación que desee formular</h3>
+                <div class="box-tools pull-right">
+                    <a onclick="nuevoComentario(@Model.Id)" class="btn btn-info btn-sm">
+                        <i class="fa fa-plus"><span class="hidden-xs txt-boton-grilla"> Agregar</span></i>
+                    </a>
+                </div>
+            </div>
+            <box-body table="true">
+                <table class="table">
+                    <thead>
+                    </thead>
+                    @if (@Model.Comentario.Count != 0)
+                    {
+                        <tbody>
+                            @foreach (var item in Model.Comentario)
+                            {
+                                <tr>
+                                    <td style="text-align:left">
+                                        @Html.DisplayFor(modelItem => item.Descripcion)
+                                    </td>
+                                    <td style="text-align:right;padding-right:12.4%;">
+                                        <a onclick="EditarComentario(@item.Id)" title="Editar" class="btn btn-primary btn-xs"><i class="fa fa-file-text-o"></i></a>
+                                        <a asp-controller="Comentario"
+                                           asp-action="DeleteComentario"
+                                           asp-route-id="@item.Id"
+                                           title="Eliminar"
+                                           confirm="Este registro ya no podra visualizarse"
+                                           confirm-icon="Danger"
+                                           class="btn btn-danger btn-xs">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                    else
+                    {
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-danger" colspan="2" style="text-align:center">
+                                    NO SE ENCONTRARON REGISTROS
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                    
+
+                </table>
+            </box-body>
+        </box>
+    </div>
+</div>
+<modal title="Nuevo Comentario" function="nuevoComentario" load-url="/Albacea/Comentario/_CrearComentario/" size="Medium"></modal>
+<modal title="Editar Comentario" function="EditarComentario" load-url="/Albacea/Comentario/_EditarComentario/" size="Medium"></modal>

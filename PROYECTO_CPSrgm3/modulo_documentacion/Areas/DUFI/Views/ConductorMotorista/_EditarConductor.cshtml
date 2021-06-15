@@ -1,0 +1,35 @@
+﻿@model modulo_documentacion.Areas.DUFI.Models.ConductorMotorista
+
+    <form class="form-horizontal" method="post" asp-action="_EditarConductor" asp-controller="ConductorMotorista">
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label>Licencia de Conducir</label>
+                        <select asp-for="LicenciaConducir" class="form-control">
+                            <option selected hidden value="">Seleccione</option>
+                            <option value="1">Si</option>
+                            <option value="0">NO</option>
+                        </select>
+                        <span asp-validation-for="LicenciaConducir" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label>Fecha Última Renovación</label>
+                        <input type="date" asp-for="FechaUltimaRenovacion" class="form-control" />
+                        <span asp-validation-for="FechaUltimaRenovacion" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label>Fecha de Vencimiento</label>
+                        <input type="date" asp-for="FechaVencimiento" class="form-control" />
+                        <span asp-validation-for="FechaVencimiento" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" name="DufiId" value="@ViewBag.DufiId" />
+            <div class="box-footer">
+                <a asp-action="Index/@ViewBag.DufiId" class="btn btn-danger">Cancelar</a>
+                <button type="submit" class="btn btn-info pull-right">Agregar</button>
+            </div>
+        </div>
+    </form>
+

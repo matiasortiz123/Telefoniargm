@@ -41,8 +41,8 @@
                         <td scope="col">@Html.DisplayFor(modelItem => item.Gama)</td>
                         <td scope="col">@Html.DisplayFor(modelItem => item.Condicion)</td>
                         <td scope="col">@Html.DisplayFor(modelItem => item.Marca.Descripcion)</td>
-                        <td scope="col">@Html.DisplayFor(modelItem => item.Modelo.Descripcion)</td>
-                        <td scope="col">@Html.DisplayFor(modelItem => item.Empresa.Nombre)</td>
+                        @*<td scope="col">@Html.DisplayFor(modelItem => item.Modelo.Descripcion)</td>*@
+                        @*<td scope="col">@Html.DisplayFor(modelItem => item.Empresa.Nombre)</td>*@
                         <td scope="col">@Html.DisplayFor(modelItem => item.EstadoEquipo.Estado)</td>
                         <td>
                             <a onclick="DesasignarEquipo('@item.Id')" title="Desasignar equipo" class="btn btn-success btn-sm"><i class="fa fa-users"></i></a>

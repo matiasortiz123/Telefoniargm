@@ -11,11 +11,11 @@ namespace modulo_documentacion.Areas.Admin.Models.Basicas
         public int Id { get; set; }
 
         [Required(ErrorMessage = "El nombre es obligatorio")]
-        [StringLength(50, ErrorMessage = "El {0} debe ser al menos {2} y maximo {1} caracteres", MinimumLength = 3)]
+        [StringLength(50, ErrorMessage = "El {0} debe ser al menos {2} y maximo {1} caracteres")]
         public string Nombre { get; set; }
 
         [Required(ErrorMessage = "El Contacto es obligatorio")]
-        [StringLength(50, ErrorMessage = "El {0} debe ser al menos {2} y maximo {1} caracteres", MinimumLength = 3)]
+        [StringLength(50, ErrorMessage = "El {0} debe ser al menos {2} y maximo {1} caracteres")]
         public string Contacto { get; set; }
 
         [Required(ErrorMessage = "La observacion es obligatoria")]

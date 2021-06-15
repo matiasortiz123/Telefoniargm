@@ -1,0 +1,20 @@
+﻿@model modulo_documentacion.Areas.Admin.Models.Basicas.TipoDocumento
+    <form class="form-horizontal" method="post" asp-action="_Edit" asp-controller="TipoDocumento">
+        <div class="box-body">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Descripcion" class="control-label"></label>
+                <input asp-for="Descripcion" class="form-control" />
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <a asp-action="Index" class="btn btn-default">Cancelar</a>
+                &nbsp;
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </div>
+    </form>
+
+
+

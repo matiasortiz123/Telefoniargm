@@ -1,0 +1,250 @@
+﻿@model modulo_documentacion.Areas.DDJJ.Models.Vivienda
+@{
+    ViewData["Title"] = "DECLARACION JURADA - VIVIENDA";
+}
+
+
+
+<form id="formDomicilioVivienda" method="post" asp-action="_EditarVivienda" asp-controller="DeclaracionJurada">
+   
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <b> Vivienda Propia</b>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <label for="ViviendaPropia" class="control-label">Posee vivienda propia</label><br />
+                        <input type="radio" value="true" name="Vivienda.ViviendaPropia" asp-for="@Model.ViviendaPropia" id="ViviendaPropiaSi">  <b>Si</b>
+                        <input type="radio" value="false" name="Vivienda.ViviendaPropia" asp-for="@Model.ViviendaPropia" id="ViviendaPropiaNo"> <b>No</b>
+                    </div>
+                </div>
+
+                <!-- SI POSEE VIVIENDA PROPIA-->
+                <div class="Si_Posee_vivienda" style="display:none">
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <input class="Input_Si_Posee" type="checkbox" value="true" name="Vivienda.ConstruyeVivienda" asp-for="@Model.ConstruyeVivienda">
+                            <label for="Construye" class="control-label">Construye vivienda</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="FechaConstruye" style="display:none">
+                            <div class="form-group col-md-3">
+                                <label for="FechaConstruye" class="control-label">Fecha estimada finalización</label>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <input id="FechaConstruye" type="date" class="form-control" name="Vivienda.FechaConstruye" asp-for="@Model.FechaConstruye">
+                            </div>
+                            <!--
+                            <div class="form-group col-md-3">
+                                <label for="GuarnicionConstruye" class="control-label">Proximo a que Guarnición</label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <select id="GuarnicionConstruye" asp-items="@ViewBag.Guarniciones" name="Vivienda.GuarnicionConstruyeID" asp-for="@Model.GuarnicionConstruyeID" class="form-control local"></select>
+                            </div>
+                            -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="ViviendaOcupaPropia" class="control-label">Ocupa su vivienda</label><br />
+                            <input class="Input_Si_Posee" type="radio" value="true" name="Vivienda.OcupaPropia" asp-for="@Model.OcupaPropia" id="ViviendaOcupaPropiaSi"> <b>Si</b>
+                            <input class="Input_Si_Posee" type="radio" value="false" name="Vivienda.OcupaPropia" asp-for="@Model.OcupaPropia" id="ViviendaOcupaPropiaNo"> <b>No</b>
+
+                        </div>
+                    </div>
+
+                    <!--SI OCUPA VIVIENDA-->
+                    <div class="Si_Vivienda_Ocupa_Propia" style="display:none">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <input class="Input_Si_Posee" type="checkbox" value="true" id="Satisface" name="Vivienda.Satisface" asp-for="@Model.Satisface">
+                                <label for="Satisface" class="control-label">Sastiface sus necesidades de vivienda</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <input class="Input_Si_Posee" type="checkbox" value="true" id="PoseeCreditoVivienda" name="Vivienda.PoseeCreditoVivienda" asp-for="@Model.PoseeCreditoVivienda">
+                                <label for="PoseeCreditoVivienda" class="control-label">Posee credito de vivienda</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- NO POSEE VIVIENDA PROPIA-->
+
+                <div class="No_Posee_Vivienda" style="display:none">
+                    <div class="row vivchk" id="viv_alojaUnidad">
+                        <div class="form-group col-md-6">
+                            <input class="Input_No_Posee" data-row="viv_alojaUnidad" type="checkbox" value="true" name="Vivienda.AlojaUnidad" asp-for="@Model.AlojaUnidad">
+                            <label for="AlojaUnidad" class="control-label">Se aloja en la unidad</label>
+                        </div>
+
+                        <div class="selectUnidad" style="display:none">
+                            <div class="form-group col-md-2">
+                                <label for="AlojaUnidad" class="control-label">En que  Unidad</label>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <select id="SelectUnidad" asp-items="@ViewBag.Unidad" placeholder="Seleccione una unidad" name="Vivienda.AlojamientoUnidadID" asp-for="@Model.AlojamientoUnidadID" class="form-control local"></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row vivchk" id="viv_estado">
+                        <div class="form-group col-md-4">
+                            <input class="Input_No_Posee" data-row="viv_estado" type="checkbox" value="true" name="Vivienda.OcupaViviendaEstado" asp-for="@Model.OcupaViviendaEstado">
+                            <label for="Alquila" class="control-label">Ocupa vivienda del Estado</label>
+                        </div>
+                        <div class="TiempoOcupaVivienda" style="display:none">
+                            <div class="form-group col-md-3">
+                                <label for="TiempoOcupaVivienda" class="control-label">Hace cuanto tiempo (en años)</label>
+                            </div>
+                            <div class="form-group col-md-1">
+                                <input id="TiempoOcupaVivienda" type="text" class="form-control" name="Vivienda.TiempoOcupaVivienda" asp-for="@Model.TiempoOcupaVivienda">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row vivchk" id="viv_alquila">
+                        <div class="form-group col-md-3">
+                            <input class="Input_No_Posee" data-row="viv_alquila" type="checkbox" value="true" name="Vivienda.Alquila" asp-for="@Model.Alquila">
+                            <label for="Alquila" class="control-label">Alquila vivienda</label>
+                        </div>
+                        <div class="Alquila" style="display:none">
+                            <div class="form-group col-md-1">
+                                <label for="AlquilaDesde" class="control-label">Desde</label>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <input type="date" class="form-control" name="Vivienda.AlquilaDesde" asp-for="@Model.AlquilaDesde"> @*.ToString("yyyy-MM-dd")*@
+                            </div>
+                            <div class="form-group col-md-1">
+                                <label for="AlquilaHasta" class="col-md-2 control-label">Hasta</label>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <input type="date" class="form-control" name="Vivienda.AlquilaHasta" asp-for="@Model.AlquilaHasta"> @*.ToString("yyyy-MM-dd")*@
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+        <div class="panel panel-info" id="guarnicion_cercana" style="display:none">
+            <div class="panel-heading">
+                <b>Indique la guarnición donde se encuentra su vivienda (en su defecto indique la más cercana</b>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <label for="guarnicion_vivienda_proxima1" class="control-label">Guarnición</label>
+                        <select asp-items="@ViewBag.Guarniciones" name="Vivienda.GuarnicionViviendaProxima1ID" asp-for="@Model.GuarnicionViviendaProxima1ID" class="form-control local"></select>
+                    </div>
+                    @*<div class="form-group col-md-3">
+                        <label for="guarnicion_vivienda_proxima1" class="control-label">Guarnición</label>
+                        <select asp-items="@ViewBag.Guarniciones" name="Vivienda.GuarnicionViviendaProxima2ID" asp-for="@Model.GuarnicionViviendaProxima2ID" class="form-control local"></select>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="guarnicion_vivienda_proxima1" class="control-label">Guarnición</label>
+                        <select asp-items="@ViewBag.Guarniciones" name="@Model.GuarnicionViviendaProxima3ID" asp-for="@Model.GuarnicionViviendaProxima2ID" class="form-control local"></select>
+                    </div>*@
+                    @*<select-ajax title="Elija las guarniciones"
+                                     class="form-control"
+                                     id="select2"
+                                     data-ajax--url="@Url.Action("GetGuarniciones", "DeclaracionJurada")"
+                                     color="Info"
+                                     menu-size="50"
+                                     multiple-max-options="2"
+                                     class-btn="btn-flat"
+                                     text-no-results="Oh no! No encontraste nada!"
+                                     text-initialized="Ejem... Estamos esperando que escribas algo..."
+                                     text-placeholder="Acá es donde tenés que escribir... duh!"
+                                     route-name="q">
+                        </select-ajax>*@
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <b>En que otra guarnición soluciona por propio medios su situación de vivienda</b>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label for="GuarnicionSolucionaID" class="control-label">Guarnición</label>
+                        <select asp-items="@ViewBag.Guarniciones" name="Vivienda.GuarnicionSolucionaID" asp-for="@Model.GuarnicionSolucionaID" class="form-control local"></select>
+                    </div>
+                    <div class="form-group col-md-8">
+                        <label for="SituacionEconomica" class="control-label">Situación economica que desea resaltar</label>
+                        <input type="text" class="form-control" name="Vivienda.SituacionEconomica" asp-for="@Model.SituacionEconomica">
+                    </div>
+                </div>
+                <input type="hidden" name="Vivienda.DeclaracionJuradaID" value="@ViewBag.DJId">
+                <input type="hidden" name="Vivienda.ID" value="@Model.ID">
+                <br /><br />
+            </div>
+        </div>
+        <div class="box-footer">
+            <a data-dismiss="modal" class="btn btn-danger">Cancelar</a>
+            <button type="submit" class="btn btn-info pull-right">Guardar</button>
+        </div>
+</form>
+<link rel="stylesheet" href="~/css/select2.min.css" type="text/css" />
+<script src="~/js/Documentacion.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+        function mostrar(idchecked,objamostrar) {
+            if ($(idchecked).is(':checked')) 
+                $(objamostrar).show();
+        }
+
+        $('.Input_No_Posee').click(function () { if ( !$(this).is(':checked') ) $('.vivchk').show(); });
+
+        mostrar('#ViviendaPropiaSi', '.Si_Posee_vivienda');
+
+        mostrar('#ViviendaPropiaSi', '#guarnicion_cercana');
+
+        mostrar('#ViviendaPropiaNo', '.No_Posee_Vivienda');
+
+        mostrar('#ViviendaOcupaPropiaSi', '.Si_Vivienda_Ocupa_Propia');
+
+        mostrar('#ViviendaOcupaPropiaNo', '.No_Posee_Vivienda');
+
+        mostrar('#ConstruyeVivienda', '.FechaConstruye');
+
+        mostrar('#OcupaViviendaEstado', '.TiempoOcupaVivienda');
+
+        mostrar('#Alquila', '.Alquila');
+
+        mostrar('#AlojaUnidad', '.selectUnidad');
+
+        if ($('#AlojaUnidad').is(':checked')) 
+            $('#OcupaViviendaEstado').hide();
+            $('#Alquila').hide();
+        if ($('#OcupaViviendaEstado').is(':checked')) 
+            $('#Alquila').hide();
+            $('#AlojaUnidad').hide();
+        if ($('#Alquila').is(':checked')) 
+            $('#AlojaUnidad').hide();
+            $('#OcupaViviendaEstado').hide();
+        //if ($('#ViviendaPropiaSi').is(':checked'))
+        //    $('.No_Posee_Vivienda').hide();
+
+        $('.Input_No_Posee').each(function (i, e) {
+            if ($(e).is(':checked')==false) {
+                $('#'+$(e).data('row')).css('display','none');
+            }
+            console.log($(e).is(':checked'));
+            console.log($(e).data('row'));
+        });
+    });
+</script>
+
+
+
+
+

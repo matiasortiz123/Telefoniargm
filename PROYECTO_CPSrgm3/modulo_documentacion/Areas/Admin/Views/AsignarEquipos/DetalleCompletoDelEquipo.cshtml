@@ -6,7 +6,7 @@
 
 <div class="box box-info">
     <div class="box-body">
-        <div class="container">
+        <div class="container-fluid">
 
             <div class="row">
                 <div class="col-md-8"><strong><i class="fa fa-book margin-r-5"></i>Datos de la persona</strong></div>
@@ -94,17 +94,16 @@
                             <span>Marca<a class="pull-right">@Model.Equipo.Marca.Descripcion</a></span><br>
                         </div>
                         <div class="col-md-12">
-                            <span>Modelo <a class="pull-right">@Model.Equipo.Modelo.Descripcion</a></span>
+                            <span>Modelo <a class="pull-right">@Model.Equipo.Marca.Modelo.Descripcion</a></span>
                         </div>
                         <div class="col-md-12">
-                            <span>Empresa <a class="pull-right">@Model.Equipo.Empresa.Nombre</a></span>
+                            <span>Empresa <a class="pull-right">@Model.Equipo.Linea.Planes.Empresa.Nombre</a></span>
                         </div>
-
                         <div class="col-md-12">
                             <span>Linea <a class="pull-right">@Model.Equipo.Linea.Numero</a></span>
                         </div>
                         <div class="col-md-12">
-                            <span>Plan <a class="pull-right">@Model.Equipo.Planes.Descripcion</a></span>
+                            <span>Plan <a class="pull-right">@Model.Equipo.Linea.Planes.Descripcion</a></span>
                         </div>
                     </div>
                     <p></p>

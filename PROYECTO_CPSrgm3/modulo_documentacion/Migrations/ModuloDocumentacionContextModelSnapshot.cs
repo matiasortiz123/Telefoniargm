@@ -195,6 +195,152 @@ namespace modulo_documentacion.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.AptitudEspecial", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Codigo");
+
+                    b.Property<string>("Descripcion");
+
+                    b.Property<int?>("TipoCapacitacionId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TipoCapacitacionId");
+
+                    b.ToTable("AptitudEspecial");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Bitacora", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descripcion");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired();
+
+                    b.Property<DateTime>("FechaHora");
+
+                    b.Property<int>("TipoBitacora");
+
+                    b.Property<string>("UsuarioId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioId");
+
+                    b.ToTable("Bitacora");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Bitacora");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Contacto", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired();
+
+                    b.Property<string>("Email");
+
+                    b.Property<string>("NumeroTel");
+
+                    b.Property<string>("PrefijoTel");
+
+                    b.Property<int>("TipoContactoID");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("TipoContactoID");
+
+                    b.ToTable("Contacto");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Contacto");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.CursoEspecial", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Codigo");
+
+                    b.Property<string>("Descripcion");
+
+                    b.Property<string>("Valor");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CursoEspecial");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Domicilio", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Altura")
+                        .HasMaxLength(5);
+
+                    b.Property<string>("Busquedamapa");
+
+                    b.Property<string>("Calle")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("CodigoPostal")
+                        .HasMaxLength(8);
+
+                    b.Property<string>("Departamento")
+                        .HasMaxLength(4);
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired();
+
+                    b.Property<string>("Latitud");
+
+                    b.Property<int?>("LocalidadId");
+
+                    b.Property<string>("LocalidadStr");
+
+                    b.Property<string>("Longitud");
+
+                    b.Property<string>("Manzana")
+                        .HasMaxLength(10);
+
+                    b.Property<string>("Piso")
+                        .HasMaxLength(2);
+
+                    b.Property<int?>("ProvinciaId");
+
+                    b.Property<string>("ProvinciaStr");
+
+                    b.Property<string>("Sector")
+                        .HasMaxLength(10);
+
+                    b.Property<string>("Torre")
+                        .HasMaxLength(10);
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("LocalidadId");
+
+                    b.HasIndex("ProvinciaId");
+
+                    b.ToTable("Domicilio");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Domicilio");
+                });
+
             modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Empresa", b =>
                 {
                     b.Property<int>("Id")
@@ -232,8 +378,6 @@ namespace modulo_documentacion.Migrations
 
                     b.Property<bool>("Editable");
 
-                    b.Property<int>("EmpresaId");
-
                     b.Property<int>("EstadoEquipoId");
 
                     b.Property<string>("Gama")
@@ -245,13 +389,7 @@ namespace modulo_documentacion.Migrations
 
                     b.Property<int>("MarcaId");
 
-                    b.Property<int>("ModeloId");
-
-                    b.Property<int>("PlanesId");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("EmpresaId");
 
                     b.HasIndex("EstadoEquipoId");
 
@@ -259,11 +397,23 @@ namespace modulo_documentacion.Migrations
 
                     b.HasIndex("MarcaId");
 
-                    b.HasIndex("ModeloId");
-
-                    b.HasIndex("PlanesId");
-
                     b.ToTable("Equipo");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Escolaridad", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired();
+
+                    b.Property<string>("Tipo");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Escolaridad");
                 });
 
             modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Estado", b =>
@@ -276,9 +426,32 @@ namespace modulo_documentacion.Migrations
 
                     b.Property<string>("Descripcion");
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired();
+
                     b.HasKey("Id");
 
                     b.ToTable("Estado");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Estado");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.EstadoCivil", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired();
+
+                    b.Property<int?>("SituacionFamiliarId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SituacionFamiliarId");
+
+                    b.ToTable("EstadoCivil");
                 });
 
             modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.EstadoEquipo", b =>
@@ -294,6 +467,90 @@ namespace modulo_documentacion.Migrations
                     b.ToTable("EstadoEquipo");
                 });
 
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Fuerza", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Codigo");
+
+                    b.Property<string>("Nombre");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Fuerza");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Genero", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Genero");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Grado", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Abreviatura");
+
+                    b.Property<string>("AbreviaturaGenerica");
+
+                    b.Property<int>("Codigo");
+
+                    b.Property<int>("FuerzaID");
+
+                    b.Property<string>("Nombre");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FuerzaID");
+
+                    b.ToTable("Grado");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Guarnicion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Codigo");
+
+                    b.Property<string>("Descripcion");
+
+                    b.Property<int?>("TipoZona");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Guarnicion");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Idioma", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Codigo");
+
+                    b.Property<string>("Descripcion");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Idioma");
+                });
+
             modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Linea", b =>
                 {
                     b.Property<int>("Id")
@@ -303,9 +560,36 @@ namespace modulo_documentacion.Migrations
                     b.Property<string>("Numero")
                         .IsRequired();
 
+                    b.Property<int>("PlanesId");
+
                     b.HasKey("Id");
 
+                    b.HasIndex("PlanesId");
+
                     b.ToTable("Linea");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Localidad", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descripcion");
+
+                    b.Property<int>("IdDepartamento");
+
+                    b.Property<int>("IdProvincia");
+
+                    b.Property<string>("Latitud");
+
+                    b.Property<string>("Longitud");
+
+                    b.Property<string>("ProvinciaNombre");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Localidad");
                 });
 
             modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Marca", b =>
@@ -317,7 +601,11 @@ namespace modulo_documentacion.Migrations
                     b.Property<string>("Descripcion")
                         .IsRequired();
 
+                    b.Property<int>("ModeloId");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("ModeloId");
 
                     b.ToTable("Marca");
                 });
@@ -334,6 +622,71 @@ namespace modulo_documentacion.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Modelo");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Pais", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descripcion");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Pais");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Parentesco", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Parentesco");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Persona", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Apellido")
+                        .IsRequired();
+
+                    b.Property<string>("Cuil");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired();
+
+                    b.Property<DateTime?>("FechaNacimiento");
+
+                    b.Property<string>("Foto");
+
+                    b.Property<int>("GeneroID");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired();
+
+                    b.Property<int?>("NroDocumento");
+
+                    b.Property<int>("TipoDocumentoID");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("GeneroID");
+
+                    b.HasIndex("TipoDocumentoID");
+
+                    b.ToTable("Persona");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Persona");
                 });
 
             modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.PersonaEquipos", b =>
@@ -363,79 +716,6 @@ namespace modulo_documentacion.Migrations
                     b.ToTable("PersonaEquipos");
                 });
 
-            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.PersonalMilitar", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Apellido");
-
-                    b.Property<string>("Arma");
-
-                    b.Property<string>("ArmaAbreviatura");
-
-                    b.Property<int?>("ArmaId");
-
-                    b.Property<int>("Dni");
-
-                    b.Property<bool>("EsAuxiliarPersonal");
-
-                    b.Property<bool>("EsAuxiliarUnidad");
-
-                    b.Property<bool>("EsJefePersonal");
-
-                    b.Property<bool>("EsJefeUnidad");
-
-                    b.Property<DateTime>("FechaNacim");
-
-                    b.Property<string>("FraccionGrado");
-
-                    b.Property<string>("Grado");
-
-                    b.Property<string>("GradoAbreviatura");
-
-                    b.Property<int>("GradoId");
-
-                    b.Property<int>("GradoPeso");
-
-                    b.Property<string>("Nombre");
-
-                    b.Property<int>("NroDocumento");
-
-                    b.Property<int?>("OrdenMerito");
-
-                    b.Property<string>("Sexo");
-
-                    b.Property<string>("SituacionRevista");
-
-                    b.Property<string>("UnidadAbreviatura");
-
-                    b.Property<string>("UnidadComisionAbreviatura");
-
-                    b.Property<string>("UnidadComisionDescripcion");
-
-                    b.Property<int?>("UnidadComisionId");
-
-                    b.Property<string>("UnidadDescripcion");
-
-                    b.Property<int>("UnidadId");
-
-                    b.Property<string>("UnidadInstSupAbreviatura");
-
-                    b.Property<string>("UnidadInstSupDescripcion");
-
-                    b.Property<int?>("UnidadInstSupId");
-
-                    b.Property<string>("Uuid");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UnidadId");
-
-                    b.ToTable("PersonalMilitar");
-                });
-
             modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Planes", b =>
                 {
                     b.Property<int>("Id")
@@ -445,12 +725,35 @@ namespace modulo_documentacion.Migrations
                     b.Property<string>("Descripcion")
                         .IsRequired();
 
+                    b.Property<int>("EmpresaId");
+
                     b.Property<string>("NombrePlan")
                         .IsRequired();
 
                     b.HasKey("Id");
 
+                    b.HasIndex("EmpresaId");
+
                     b.ToTable("Planes");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Provincia", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descripcion");
+
+                    b.Property<string>("DescripcionCompleta");
+
+                    b.Property<string>("Latitud");
+
+                    b.Property<string>("Longitud");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Provincia");
                 });
 
             modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.RolesPersonas", b =>
@@ -467,6 +770,115 @@ namespace modulo_documentacion.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("RolesPersonas");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.SituacionFamiliar", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descripcion");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SituacionFamiliar");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.SituacionLaboral", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SituacionLaboral");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.TipoCapacitacion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descripcion");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TipoCapacitacion");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.TipoContacto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descripcion");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TipoContacto");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.TipoDocumento", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TipoDocumento");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.TipoDocumentoAdjunto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TipoDocumentoAdjunto");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.TipoExpediente", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descripcion");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TipoExpediente");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.TipoRegistroConductor", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Codigo");
+
+                    b.Property<string>("Descripcion");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TipoRegistroConductor");
                 });
 
             modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Unidad", b =>
@@ -488,6 +900,8 @@ namespace modulo_documentacion.Migrations
                     b.Property<int?>("UnidadSuperiorId");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("GuarnicionId");
 
                     b.HasIndex("UnidadSuperiorId");
 
@@ -549,6 +963,763 @@ namespace modulo_documentacion.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("modulo_documentacion.Areas.Albacea.Models.Albacea", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("DatosAlbacea");
+
+                    b.Property<int?>("DniAlbacea");
+
+                    b.Property<int>("EstadoId");
+
+                    b.Property<DateTime>("FechaCreacion");
+
+                    b.Property<string>("GradoAlbacea");
+
+                    b.Property<string>("UnidadAlbacea");
+
+                    b.Property<string>("UsuarioId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EstadoId");
+
+                    b.HasIndex("UsuarioId");
+
+                    b.ToTable("Albacea");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Albacea.Models.Comentario", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("AlbaceaId");
+
+                    b.Property<string>("Descripcion");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AlbaceaId");
+
+                    b.ToTable("Comentario");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Albacea.Models.PersonaAlbacea", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AbreviaturaUnidad");
+
+                    b.Property<string>("Apellido");
+
+                    b.Property<string>("Grado");
+
+                    b.Property<string>("Nombre");
+
+                    b.Property<string>("Unidad");
+
+                    b.Property<int>("dni");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PersonaAlbacea");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Albacea.Models.PersonaAviso", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("AlbaceaId");
+
+                    b.Property<string>("Apellido");
+
+                    b.Property<string>("Dni");
+
+                    b.Property<string>("Email");
+
+                    b.Property<string>("Nombre");
+
+                    b.Property<string>("Telefono");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AlbaceaId");
+
+                    b.ToTable("PersonaAviso");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Albacea.Models.Seguro", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("AlbaceaId");
+
+                    b.Property<string>("Email");
+
+                    b.Property<string>("Entidad");
+
+                    b.Property<string>("NroPoliza");
+
+                    b.Property<string>("Telefono");
+
+                    b.Property<string>("Tipo");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AlbaceaId");
+
+                    b.ToTable("Seguro");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DDJJ.Models.CausaJudicialDDJJ", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Caratula");
+
+                    b.Property<int>("DeclaracionJuradaID");
+
+                    b.Property<string>("Expediente");
+
+                    b.Property<string>("Juzgado");
+
+                    b.Property<string>("SituacionJudicial");
+
+                    b.Property<int>("TipoExpedienteID");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DeclaracionJuradaID");
+
+                    b.HasIndex("TipoExpedienteID");
+
+                    b.ToTable("CausaJudicialDDJJ");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DDJJ.Models.DeclaracionJurada", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("EstadoCivilID");
+
+                    b.Property<int>("EstadoID");
+
+                    b.Property<DateTime?>("FechaCasamiento");
+
+                    b.Property<DateTime>("FechaCreacion");
+
+                    b.Property<string>("ObservacionActual");
+
+                    b.Property<string>("OtraSituacionFamiliar");
+
+                    b.Property<int?>("SituacionFamiliarID");
+
+                    b.Property<string>("UsuarioId");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("EstadoCivilID");
+
+                    b.HasIndex("EstadoID");
+
+                    b.HasIndex("SituacionFamiliarID");
+
+                    b.HasIndex("UsuarioId");
+
+                    b.ToTable("DeclaracionJurada");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DDJJ.Models.Documentacion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<byte[]>("Adjunto");
+
+                    b.Property<int>("DeclaracionJuradaID");
+
+                    b.Property<int>("Fojas");
+
+                    b.Property<string>("Observaciones");
+
+                    b.Property<string>("Tipo");
+
+                    b.Property<int>("TipoDocumentoAdjuntoID");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DeclaracionJuradaID");
+
+                    b.HasIndex("TipoDocumentoAdjuntoID");
+
+                    b.ToTable("Documentacion");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DDJJ.Models.EstudioDDJJ", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("DeclaracionJuradaID");
+
+                    b.Property<string>("Descripcion");
+
+                    b.Property<int>("EscolaridadID");
+
+                    b.Property<bool>("Finalizado");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DeclaracionJuradaID");
+
+                    b.HasIndex("EscolaridadID");
+
+                    b.ToTable("EstudioDDJJ");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DDJJ.Models.Vivienda", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("AlojaUnidad");
+
+                    b.Property<int?>("AlojamientoUnidadID");
+
+                    b.Property<bool>("Alquila");
+
+                    b.Property<DateTime?>("AlquilaDesde");
+
+                    b.Property<DateTime?>("AlquilaHasta");
+
+                    b.Property<bool>("ConstruyeVivienda");
+
+                    b.Property<int>("DeclaracionJuradaID");
+
+                    b.Property<DateTime?>("FechaConstruye");
+
+                    b.Property<int?>("GuarnicionConstruyeID");
+
+                    b.Property<int?>("GuarnicionSolucionaID");
+
+                    b.Property<int?>("GuarnicionViviendaProxima1ID");
+
+                    b.Property<int?>("GuarnicionViviendaProxima2ID");
+
+                    b.Property<int?>("GuarnicionViviendaProxima3ID");
+
+                    b.Property<bool>("OcupaPropia");
+
+                    b.Property<bool>("OcupaViviendaEstado");
+
+                    b.Property<bool>("PoseeCreditoVivienda");
+
+                    b.Property<bool>("Satisface");
+
+                    b.Property<string>("SituacionEconomica");
+
+                    b.Property<int?>("TiempoOcupaVivienda");
+
+                    b.Property<bool>("ViviendaPropia");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("AlojamientoUnidadID");
+
+                    b.HasIndex("DeclaracionJuradaID")
+                        .IsUnique();
+
+                    b.HasIndex("GuarnicionConstruyeID");
+
+                    b.HasIndex("GuarnicionSolucionaID");
+
+                    b.HasIndex("GuarnicionViviendaProxima1ID");
+
+                    b.HasIndex("GuarnicionViviendaProxima2ID");
+
+                    b.HasIndex("GuarnicionViviendaProxima3ID");
+
+                    b.ToTable("Vivienda");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DUFI.Models.AptEspDufi", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("AptEspId");
+
+                    b.Property<int>("DufiId");
+
+                    b.Property<DateTime?>("FechaHabilitacion");
+
+                    b.Property<int>("TipoCapacitacionId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DufiId");
+
+                    b.ToTable("AptEspDufi");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DUFI.Models.CargoActual", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CargoDeseado")
+                        .IsRequired()
+                        .HasMaxLength(50);
+
+                    b.Property<string>("CargoOcupa")
+                        .IsRequired()
+                        .HasMaxLength(50);
+
+                    b.Property<int>("DufiId");
+
+                    b.Property<int>("TiempoCargo");
+
+                    b.Property<int>("TiempoDestino");
+
+                    b.Property<int>("TiempoGuarnicion");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DufiId")
+                        .IsUnique();
+
+                    b.ToTable("CargoActual");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DUFI.Models.CargoDocenteProf", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descripcion");
+
+                    b.Property<int>("DufiId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DufiId");
+
+                    b.ToTable("CargoDocenteProf");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DUFI.Models.ConductorMotorista", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("DufiId");
+
+                    b.Property<DateTime>("FechaUltimaRenovacion");
+
+                    b.Property<DateTime>("FechaVencimiento");
+
+                    b.Property<byte>("LicenciaConducir");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DufiId")
+                        .IsUnique();
+
+                    b.ToTable("ConductorMotorista");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DUFI.Models.CursosEspDufi", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CursoEspecialId");
+
+                    b.Property<int>("DufiId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CursoEspecialId");
+
+                    b.HasIndex("DufiId");
+
+                    b.ToTable("CursosEspDufi");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DUFI.Models.DestinoFuturo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<byte>("DeseaCambioDestino");
+
+                    b.Property<byte>("DeseaCambioGuarnicion");
+
+                    b.Property<int>("DufiId");
+
+                    b.Property<string>("Fundamento");
+
+                    b.Property<int?>("GuarnicionId");
+
+                    b.Property<string>("OpinionFutura");
+
+                    b.Property<int?>("ParentescoId");
+
+                    b.Property<int>("VinculoAfectivo");
+
+                    b.Property<int>("VinculoParentesco");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DufiId")
+                        .IsUnique();
+
+                    b.HasIndex("GuarnicionId");
+
+                    b.HasIndex("ParentescoId");
+
+                    b.ToTable("DestinoFuturo");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DUFI.Models.Dufi", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<byte?>("DeseaOOMMP");
+
+                    b.Property<int>("EstadoId");
+
+                    b.Property<DateTime>("FechaCreacion");
+
+                    b.Property<DateTime>("FechaElevacionDGP");
+
+                    b.Property<DateTime>("FechaElevacionJefeElemento");
+
+                    b.Property<DateTime>("FechaElevacionJefePersonal");
+
+                    b.Property<string>("UsuarioId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EstadoId");
+
+                    b.HasIndex("UsuarioId");
+
+                    b.ToTable("Dufi");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DUFI.Models.ExpedienteCD", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<byte?>("ActualizoExpediente");
+
+                    b.Property<string>("CausaExpediente");
+
+                    b.Property<int>("DufiId");
+
+                    b.Property<string>("NroExpediente");
+
+                    b.Property<string>("NroExpedienteAct");
+
+                    b.Property<byte>("TieneExpediente");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DufiId");
+
+                    b.ToTable("ExpedienteCD");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DUFI.Models.GuarnicionFuturo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("DeseaGuarnicion1");
+
+                    b.Property<string>("DeseaGuarnicion2");
+
+                    b.Property<string>("DeseaGuarnicion3");
+
+                    b.Property<int>("DufiId");
+
+                    b.Property<int?>("GuarnicionId");
+
+                    b.Property<int>("PermanecerGuarnicion");
+
+                    b.Property<string>("UltimaZona");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DufiId")
+                        .IsUnique();
+
+                    b.HasIndex("GuarnicionId");
+
+                    b.ToTable("GuarnicionFuturo");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DUFI.Models.IdiomaDufi", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("DufiId");
+
+                    b.Property<DateTime>("FechaAcreditacion");
+
+                    b.Property<DateTime>("FechaVencimiento");
+
+                    b.Property<int?>("IdiomaId");
+
+                    b.Property<string>("IdiomaOtro");
+
+                    b.Property<string>("Nivel");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DufiId");
+
+                    b.ToTable("IdiomaDufi");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DUFI.Models.MisionComExt", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Cargo");
+
+                    b.Property<int>("DufiId");
+
+                    b.Property<DateTime>("FechaFin");
+
+                    b.Property<DateTime>("FechaInicio");
+
+                    b.Property<string>("Mision");
+
+                    b.Property<string>("Pais");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DufiId");
+
+                    b.ToTable("MisionComExt");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DUFI.Models.RegistroConductorDufi", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("DufiId");
+
+                    b.Property<string>("TipoRegistro");
+
+                    b.Property<int?>("TipoRegistroConductorId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DufiId");
+
+                    b.HasIndex("TipoRegistroConductorId");
+
+                    b.ToTable("RegistroConductorDufi");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DDJJ.Models.BitacoraDDJJ", b =>
+                {
+                    b.HasBaseType("modulo_documentacion.Areas.Admin.Models.Basicas.Bitacora");
+
+                    b.Property<int?>("DeclaracionJuradaID");
+
+                    b.Property<string>("TextoAdicional");
+
+                    b.HasIndex("DeclaracionJuradaID");
+
+                    b.HasDiscriminator().HasValue("BitacoraDDJJ");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DDJJ.Models.ContactoDDJJ", b =>
+                {
+                    b.HasBaseType("modulo_documentacion.Areas.Admin.Models.Basicas.Contacto");
+
+                    b.Property<int>("DeclaracionJuradaID");
+
+                    b.HasIndex("DeclaracionJuradaID");
+
+                    b.HasDiscriminator().HasValue("ContactoDDJJ");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DDJJ.Models.DomicilioDDJJ", b =>
+                {
+                    b.HasBaseType("modulo_documentacion.Areas.Admin.Models.Basicas.Domicilio");
+
+                    b.Property<int>("DeclaracionJuradaID");
+
+                    b.Property<string>("LocalidadExterior");
+
+                    b.Property<string>("NroIOSFA");
+
+                    b.Property<string>("Pais");
+
+                    b.Property<string>("ProvinciaExterior");
+
+                    b.Property<bool>("ViveExterior");
+
+                    b.HasIndex("DeclaracionJuradaID")
+                        .IsUnique()
+                        .HasFilter("[DeclaracionJuradaID] IS NOT NULL");
+
+                    b.HasDiscriminator().HasValue("DomicilioDDJJ");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DDJJ.Models.EstadoDDJJ", b =>
+                {
+                    b.HasBaseType("modulo_documentacion.Areas.Admin.Models.Basicas.Estado");
+
+                    b.Property<string>("NombreExtendido");
+
+                    b.HasDiscriminator().HasValue("EstadoDDJJ");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.PersonalMilitar", b =>
+                {
+                    b.HasBaseType("modulo_documentacion.Areas.Admin.Models.Basicas.Persona");
+
+                    b.Property<string>("Arma");
+
+                    b.Property<bool>("EsAuxiliarPersonal");
+
+                    b.Property<bool>("EsAuxiliarUnidad");
+
+                    b.Property<bool>("EsJefePersonal");
+
+                    b.Property<bool>("EsJefeUnidad");
+
+                    b.Property<string>("Grado");
+
+                    b.Property<int>("UnidadId");
+
+                    b.HasIndex("UnidadId");
+
+                    b.HasDiscriminator().HasValue("PersonalMilitar");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DDJJ.Models.Familiar", b =>
+                {
+                    b.HasBaseType("modulo_documentacion.Areas.Admin.Models.Basicas.Persona");
+
+                    b.Property<int?>("Antiguedad");
+
+                    b.Property<bool>("Convive");
+
+                    b.Property<int?>("DeclaracionJuradaID");
+
+                    b.Property<string>("Destino");
+
+                    b.Property<int>("DomicilioID");
+
+                    b.Property<string>("Empleador");
+
+                    b.Property<int>("EscolaridadID");
+
+                    b.Property<int>("EstadoCivilID");
+
+                    b.Property<DateTime?>("FechaDefuncion");
+
+                    b.Property<int>("FuerzaID");
+
+                    b.Property<int>("GradoID");
+
+                    b.Property<bool>("Impedido");
+
+                    b.Property<string>("Impedimiento");
+
+                    b.Property<int?>("LocalidadDefuncionID");
+
+                    b.Property<int?>("LocalidadEmpleadorID");
+
+                    b.Property<string>("NroIOSFA");
+
+                    b.Property<string>("OtraSituacion");
+
+                    b.Property<string>("Pais");
+
+                    b.Property<int>("ParentescoID");
+
+                    b.Property<int?>("ProvinciaDefuncionID");
+
+                    b.Property<int?>("ProvinciaEmpleadorID");
+
+                    b.Property<int>("SituacionLaboralID");
+
+                    b.Property<bool>("TieneIOSFA");
+
+                    b.Property<bool>("Vive");
+
+                    b.Property<bool>("ViveExtranjero");
+
+                    b.HasIndex("DeclaracionJuradaID");
+
+                    b.HasIndex("DomicilioID");
+
+                    b.HasIndex("EscolaridadID");
+
+                    b.HasIndex("EstadoCivilID");
+
+                    b.HasIndex("FuerzaID");
+
+                    b.HasIndex("GradoID");
+
+                    b.HasIndex("LocalidadDefuncionID");
+
+                    b.HasIndex("LocalidadEmpleadorID");
+
+                    b.HasIndex("ParentescoID");
+
+                    b.HasIndex("ProvinciaDefuncionID");
+
+                    b.HasIndex("ProvinciaEmpleadorID");
+
+                    b.HasIndex("SituacionLaboralID");
+
+                    b.HasDiscriminator().HasValue("Familiar");
+                });
+
             modelBuilder.Entity("Commons.Identity.CommonsRoleFunction", b =>
                 {
                     b.HasOne("Commons.Identity.CommonsFunction", "Function")
@@ -605,13 +1776,41 @@ namespace modulo_documentacion.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.AptitudEspecial", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.TipoCapacitacion", "TipoCapacitacion")
+                        .WithMany()
+                        .HasForeignKey("TipoCapacitacionId");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Bitacora", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Contacto", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.TipoContacto", "TipoContacto")
+                        .WithMany()
+                        .HasForeignKey("TipoContactoID")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Domicilio", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Localidad", "Localidad")
+                        .WithMany()
+                        .HasForeignKey("LocalidadId");
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Provincia", "Provincia")
+                        .WithMany()
+                        .HasForeignKey("ProvinciaId");
+                });
+
             modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Equipo", b =>
                 {
-                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Empresa", "Empresa")
-                        .WithMany()
-                        .HasForeignKey("EmpresaId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
                     b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.EstadoEquipo", "EstadoEquipo")
                         .WithMany()
                         .HasForeignKey("EstadoEquipoId")
@@ -626,15 +1825,49 @@ namespace modulo_documentacion.Migrations
                         .WithMany()
                         .HasForeignKey("MarcaId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
 
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.EstadoCivil", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.SituacionFamiliar", "SituacionFamiliar")
+                        .WithMany()
+                        .HasForeignKey("SituacionFamiliarId");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Grado", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Fuerza", "Fuerza")
+                        .WithMany()
+                        .HasForeignKey("FuerzaID")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Linea", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Planes", "Planes")
+                        .WithMany()
+                        .HasForeignKey("PlanesId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Marca", b =>
+                {
                     b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Modelo", "Modelo")
                         .WithMany()
                         .HasForeignKey("ModeloId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
 
-                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Planes", "Planes")
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Persona", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Genero", "Genero")
                         .WithMany()
-                        .HasForeignKey("PlanesId")
+                        .HasForeignKey("GeneroID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.TipoDocumento", "TipoDocumento")
+                        .WithMany()
+                        .HasForeignKey("TipoDocumentoID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -646,16 +1879,21 @@ namespace modulo_documentacion.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.PersonalMilitar", b =>
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Planes", b =>
                 {
-                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Unidad", "UnidadAsignada")
-                        .WithMany("Integrantes")
-                        .HasForeignKey("UnidadId")
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Empresa", "Empresa")
+                        .WithMany()
+                        .HasForeignKey("EmpresaId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.Unidad", b =>
                 {
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Guarnicion", "Guarnicion")
+                        .WithMany("Unidades")
+                        .HasForeignKey("GuarnicionId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
                     b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Unidad", "UnidadSuperior")
                         .WithMany()
                         .HasForeignKey("UnidadSuperiorId");
@@ -666,6 +1904,343 @@ namespace modulo_documentacion.Migrations
                     b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.PersonalMilitar", "Persona")
                         .WithMany()
                         .HasForeignKey("PersonaId");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Albacea.Models.Albacea", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Estado", "Estado")
+                        .WithMany()
+                        .HasForeignKey("EstadoId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Albacea.Models.Comentario", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.Albacea.Models.Albacea")
+                        .WithMany("Comentario")
+                        .HasForeignKey("AlbaceaId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Albacea.Models.PersonaAviso", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.Albacea.Models.Albacea")
+                        .WithMany("PersonaAviso")
+                        .HasForeignKey("AlbaceaId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Albacea.Models.Seguro", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.Albacea.Models.Albacea")
+                        .WithMany("Seguro")
+                        .HasForeignKey("AlbaceaId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DDJJ.Models.CausaJudicialDDJJ", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.DDJJ.Models.DeclaracionJurada", "DeclaracionJurada")
+                        .WithMany("CausasJudiciales")
+                        .HasForeignKey("DeclaracionJuradaID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.TipoExpediente", "TipoExpediente")
+                        .WithMany()
+                        .HasForeignKey("TipoExpedienteID")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DDJJ.Models.DeclaracionJurada", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.EstadoCivil", "EstadoCivil")
+                        .WithMany()
+                        .HasForeignKey("EstadoCivilID");
+
+                    b.HasOne("modulo_documentacion.Areas.DDJJ.Models.EstadoDDJJ", "Estado")
+                        .WithMany()
+                        .HasForeignKey("EstadoID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.SituacionFamiliar", "SituacionFamiliar")
+                        .WithMany()
+                        .HasForeignKey("SituacionFamiliarID");
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DDJJ.Models.Documentacion", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.DDJJ.Models.DeclaracionJurada", "DeclaracionJurada")
+                        .WithMany("Documentos")
+                        .HasForeignKey("DeclaracionJuradaID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.TipoDocumentoAdjunto", "TipoDocumentoAdjunto")
+                        .WithMany()
+                        .HasForeignKey("TipoDocumentoAdjuntoID")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DDJJ.Models.EstudioDDJJ", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.DDJJ.Models.DeclaracionJurada", "DeclaracionJurada")
+                        .WithMany("Estudios")
+                        .HasForeignKey("DeclaracionJuradaID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Escolaridad", "Escolaridad")
+                        .WithMany()
+                        .HasForeignKey("EscolaridadID")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DDJJ.Models.Vivienda", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Unidad", "AlojamientoUnidad")
+                        .WithMany()
+                        .HasForeignKey("AlojamientoUnidadID");
+
+                    b.HasOne("modulo_documentacion.Areas.DDJJ.Models.DeclaracionJurada", "DeclaracionJurada")
+                        .WithOne("Vivienda")
+                        .HasForeignKey("modulo_documentacion.Areas.DDJJ.Models.Vivienda", "DeclaracionJuradaID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Guarnicion", "GuarnicionConstruye")
+                        .WithMany()
+                        .HasForeignKey("GuarnicionConstruyeID");
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Guarnicion", "GuarnicionSoluciona")
+                        .WithMany()
+                        .HasForeignKey("GuarnicionSolucionaID");
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Guarnicion", "GuarnicionViviendaProxima1")
+                        .WithMany()
+                        .HasForeignKey("GuarnicionViviendaProxima1ID");
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Guarnicion", "GuarnicionViviendaProxima2")
+                        .WithMany()
+                        .HasForeignKey("GuarnicionViviendaProxima2ID");
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Guarnicion", "GuarnicionViviendaProxima3")
+                        .WithMany()
+                        .HasForeignKey("GuarnicionViviendaProxima3ID");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DUFI.Models.AptEspDufi", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.DUFI.Models.Dufi")
+                        .WithMany("AptEspDufi")
+                        .HasForeignKey("DufiId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DUFI.Models.CargoActual", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.DUFI.Models.Dufi")
+                        .WithOne("CargoActual")
+                        .HasForeignKey("modulo_documentacion.Areas.DUFI.Models.CargoActual", "DufiId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DUFI.Models.CargoDocenteProf", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.DUFI.Models.Dufi")
+                        .WithMany("CargoDocenteProf")
+                        .HasForeignKey("DufiId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DUFI.Models.ConductorMotorista", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.DUFI.Models.Dufi")
+                        .WithOne("ConductorMotorista")
+                        .HasForeignKey("modulo_documentacion.Areas.DUFI.Models.ConductorMotorista", "DufiId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DUFI.Models.CursosEspDufi", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.CursoEspecial", "CursoEspecial")
+                        .WithMany()
+                        .HasForeignKey("CursoEspecialId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("modulo_documentacion.Areas.DUFI.Models.Dufi")
+                        .WithMany("CursosEspDufi")
+                        .HasForeignKey("DufiId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DUFI.Models.DestinoFuturo", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.DUFI.Models.Dufi")
+                        .WithOne("DestinoFuturo")
+                        .HasForeignKey("modulo_documentacion.Areas.DUFI.Models.DestinoFuturo", "DufiId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Guarnicion", "Guarnicion")
+                        .WithMany()
+                        .HasForeignKey("GuarnicionId");
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Parentesco", "Parentesco")
+                        .WithMany()
+                        .HasForeignKey("ParentescoId");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DUFI.Models.Dufi", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Estado", "Estado")
+                        .WithMany()
+                        .HasForeignKey("EstadoId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DUFI.Models.ExpedienteCD", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.DUFI.Models.Dufi")
+                        .WithMany("ExpedienteCD")
+                        .HasForeignKey("DufiId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DUFI.Models.GuarnicionFuturo", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.DUFI.Models.Dufi")
+                        .WithOne("GuarnicionFuturo")
+                        .HasForeignKey("modulo_documentacion.Areas.DUFI.Models.GuarnicionFuturo", "DufiId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Guarnicion", "Guarnicion")
+                        .WithMany()
+                        .HasForeignKey("GuarnicionId");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DUFI.Models.IdiomaDufi", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.DUFI.Models.Dufi")
+                        .WithMany("IdiomaDufi")
+                        .HasForeignKey("DufiId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DUFI.Models.MisionComExt", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.DUFI.Models.Dufi")
+                        .WithMany("MisionComExt")
+                        .HasForeignKey("DufiId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DUFI.Models.RegistroConductorDufi", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.DUFI.Models.Dufi")
+                        .WithMany("RegistroConductorDufi")
+                        .HasForeignKey("DufiId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.TipoRegistroConductor", "TipoRegistroConductor")
+                        .WithMany()
+                        .HasForeignKey("TipoRegistroConductorId");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DDJJ.Models.BitacoraDDJJ", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.DDJJ.Models.DeclaracionJurada")
+                        .WithMany("Bitacoras")
+                        .HasForeignKey("DeclaracionJuradaID");
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DDJJ.Models.ContactoDDJJ", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.DDJJ.Models.DeclaracionJurada", "DeclaracionJurada")
+                        .WithMany("Contactos")
+                        .HasForeignKey("DeclaracionJuradaID")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DDJJ.Models.DomicilioDDJJ", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.DDJJ.Models.DeclaracionJurada", "DeclaracionJurada")
+                        .WithOne("Domicilio")
+                        .HasForeignKey("modulo_documentacion.Areas.DDJJ.Models.DomicilioDDJJ", "DeclaracionJuradaID")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.Admin.Models.Basicas.PersonalMilitar", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Unidad", "UnidadAsignada")
+                        .WithMany("Integrantes")
+                        .HasForeignKey("UnidadId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("modulo_documentacion.Areas.DDJJ.Models.Familiar", b =>
+                {
+                    b.HasOne("modulo_documentacion.Areas.DDJJ.Models.DeclaracionJurada", "DeclaracionJurada")
+                        .WithMany("Familiares")
+                        .HasForeignKey("DeclaracionJuradaID");
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Domicilio", "Domicilio")
+                        .WithMany()
+                        .HasForeignKey("DomicilioID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Escolaridad", "Escolaridad")
+                        .WithMany()
+                        .HasForeignKey("EscolaridadID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.EstadoCivil", "EstadoCivil")
+                        .WithMany()
+                        .HasForeignKey("EstadoCivilID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Fuerza", "Fuerza")
+                        .WithMany()
+                        .HasForeignKey("FuerzaID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Grado", "Grado")
+                        .WithMany()
+                        .HasForeignKey("GradoID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Localidad", "LocalidadDefuncion")
+                        .WithMany()
+                        .HasForeignKey("LocalidadDefuncionID");
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Localidad", "LocalidadEmpleador")
+                        .WithMany()
+                        .HasForeignKey("LocalidadEmpleadorID");
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Parentesco", "Parentesco")
+                        .WithMany()
+                        .HasForeignKey("ParentescoID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Provincia", "ProvinciaDefuncion")
+                        .WithMany()
+                        .HasForeignKey("ProvinciaDefuncionID");
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.Provincia", "ProvinciaEmpleador")
+                        .WithMany()
+                        .HasForeignKey("ProvinciaEmpleadorID");
+
+                    b.HasOne("modulo_documentacion.Areas.Admin.Models.Basicas.SituacionLaboral", "SituacionLaboral")
+                        .WithMany()
+                        .HasForeignKey("SituacionLaboralID")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

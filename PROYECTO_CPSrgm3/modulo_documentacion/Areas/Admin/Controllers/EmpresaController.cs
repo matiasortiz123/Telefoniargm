@@ -122,7 +122,7 @@ namespace modulo_documentacion.Areas.Admin.Controllers
         }
 
         //Http Get Delete
-        public IActionResult _Delete()
+        public IActionResult _Delete(int? id)
         {
    
             return PartialView();

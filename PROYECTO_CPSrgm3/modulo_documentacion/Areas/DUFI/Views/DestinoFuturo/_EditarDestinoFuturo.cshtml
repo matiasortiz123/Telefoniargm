@@ -1,0 +1,68 @@
+﻿@model modulo_documentacion.Areas.DUFI.Models.DestinoFuturo
+
+<form class="form-horizontal" method="post" asp-action="_EditarDestinoFuturo" asp-controller="DestinoFuturo">
+    <div class="panel-body">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Vinculo Afectivo</label>
+                    <select asp-items="@ViewBag.Guarniciones" asp-for="VinculoAfectivo" class="form-control"></select>
+                    <span asp-validation-for="VinculoAfectivo" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label>Vinculo Parentesco</label>
+                    <select asp-items="@ViewBag.Parentesco" asp-for="VinculoParentesco" class="form-control"></select>
+                    <span asp-validation-for="VinculoParentesco" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Desea Cambio Guarnicion</label>
+                    <select asp-for="DeseaCambioGuarnicion" class="form-control">
+                        <option selected hidden value="">Seleccione</option>
+                        <option value="1">Si</option>
+                        <option value="0">No</option>
+                    </select>
+                    <span asp-validation-for="DeseaCambioGuarnicion" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label>Desea Cambio Destino</label>
+                    <select asp-for="DeseaCambioDestino" class="form-control">
+                        <option selected hidden value="">Seleccione</option>
+                        <option value="1">Si</option>
+                        <option value="0">No</option>
+                    </select>
+                    <span asp-validation-for="DeseaCambioDestino" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-12">
+                    <label>Fundamento Sintético</label>
+                    <input asp-for="Fundamento" class="form-control" />
+                    <span asp-validation-for="Fundamento" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-12">
+                    <label>Opinión Sintética Sobre su Aspiración Profesional</label>
+                    <input asp-for="OpinionFutura" class="form-control" />
+                    <span asp-validation-for="OpinionFutura" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <input type="hidden" name="DufiId" value="@ViewBag.DufiId" />
+        <div class="box-footer">
+            <a asp-action="Index/@ViewBag.DufiId" class="btn btn-danger">Cancelar</a>
+            <button type="submit" class="btn btn-info pull-right">Agregar</button>
+        </div>
+    </div>
+</form>
+
+

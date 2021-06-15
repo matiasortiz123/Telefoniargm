@@ -1,0 +1,44 @@
+﻿@using Commons.Models;
+@model List<modulo_documentacion.Areas.DDJJ.ViewModels.ElevacionDDJJViewModel>
+
+<form method="post" id="form_domicilio" asp-action="_CrearDomicilio" asp-controller="DeclaracionJurada">
+    <box-header title="Estado de su ultima Declaracion Jurada">
+    </box-header>
+    <box-body table="true">
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Sel.</th>
+                    <th>Unidad</th>
+                    <th>Grado</th>
+                    <th>Titular</th>
+                    <th>Fecha</th>
+                    <th>Estado</th>
+                    <th>Motivo</th>
+                    <th>Descarga</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td><input type="checkbox" id="@item.Seleccionada" name="Seleccionada" /></td>
+                        <td>Unidad Nro 1 </td>
+                        <td>SM</td>
+                        <td>@Html.DisplayFor(modelItem => item.Titular)</td>
+                        <td>Fecha</td>
+                        <td>Estado</td>
+                        <td>Motivo</td>
+                        <td>Descarga</td>
+                        <td>
+                            @*<a asp-route-id="@item.ID" asp-action="DomicilioVivienda" title="Editar" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i></a>
+                                <a onclick="reporteDDJJ(@item.ID)" title="Ver" class="btn btn-success btn-xs"><i class="fa fa-file-text-o"></i></a>*@
+                        </td>
+                        <td class="hide">@item.DeclaracionJuradaID</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </box-body>
+</form>

@@ -67,7 +67,7 @@ namespace modulo_documentacion
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, UserService<Usuario> userService, ModuloDocumentacionContext context)
         {
-            var adminUserResult = context.Users.FirstOrDefault(x => x.UserName == "alanavarro");
+            var adminUserResult = context.Users.FirstOrDefault(x => x.UserName == "matiasnortiz");
 
             if (adminUserResult != null)
             {

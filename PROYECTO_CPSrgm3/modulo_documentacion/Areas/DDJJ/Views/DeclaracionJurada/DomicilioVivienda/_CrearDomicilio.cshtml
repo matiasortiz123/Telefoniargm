@@ -1,0 +1,256 @@
+﻿@model modulo_documentacion.Areas.DDJJ.Models.DomicilioDDJJ
+<div class="container-fluid">
+    <form method="post" id="form_domicilio" asp-action="_CrearDomicilio" asp-controller="DeclaracionJurada">
+        <div class="row">
+
+            @*<div class="form-group col-md-4 pull-right">
+                    <input type="checkbox" name="exterior" id="Domicilio_ViveExterior">
+                    <label class="control-label">Vivo en el exterior</label>
+                </div>*@
+
+
+        </div>
+        <div class="column row" id="mapa">
+            <div class="form-group col-md-12">
+                <label for="Direccion" class="control-label">Ingrese su Dirección</label>
+                <input maxlength="252" name="Domicilio.busquedamapa" id="cliente_mapa_id" onkeypress="initializeMultiInputs()" class="form-control local autocomplete" data-mapa="cliente_mapa" data-latitud="domicilio.latitud" data-longitud="domicilio.longitud" data-calle="Domicilio.Calle" data-altura="Domicilio.Altura"
+                       data-codigo-postal="Domicilio.CodigoPostal" data-pais="Domicilio.Pais" data-barrio="cliente_barrio" data-LocalidadExterior="LocalidadExterior" data-localidad="Domicilio.LocalidadExterior" data-provincia="Domicilio.ProvinciaExterior" data-ciudad="cliente_ciudad" placeholder="Ingrese la calle y altura" type="text">
+                <br>
+                <div class="cliente_mapa" style="display:none; width: 100%; height: 190px;"></div>
+            </div>
+        </div>
+        <div class="row">
+                <div class=" form-group col-md-5">
+                    <input type="checkbox" name="mapa_manual" id="mapa_manual" />
+                    <label class="control-label">No encuentro mi dirección en google Maps</label>
+                </div>
+        </div>
+        <div class="" id="div_calle" style="display:none">
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <label for="Calle" class="control-label">Calle</label>
+
+                    <input class="form-control local" id="Calle" placeholder="Piedras" type="text" name="Domicilio.Calle" required>
+                    @*@Html.ValidationMessageFor(m => m.Calle, null, new { @class = "text-danger" })*@
+
+
+                </div>
+            </div>
+            <div class="ui stacked blue segment">
+                <div class="field">
+
+                    <input type="hidden" id="latitud" name="domicilio.latitud" />
+                    <input type="hidden" id="longitud" name="domicilio.longitud" />
+                    <input type="hidden" name="cliente_cod_postal" />
+                    <input type="hidden" name="latitud" />
+                    <input type="hidden" name="longitud" />
+                    @*<input type="hidden" name="provinciaStr" />
+                        <input type="hidden" name="localidadStr" />*@
+                    <input type="hidden" name="cliente_pais" />
+                    <input type="hidden" name="cliente_barrio" />
+                    <input type="hidden" name="cliente_localidad" />
+                    <input type="hidden" name="cliente_ciudad" />
+
+
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label for="Altura" class="control-label ">Altura</label>
+                    <input type="text" id="Altura" class="form-control local" name="Domicilio.Altura" placeholder="Altura" required>
+                    @*@Html.ValidationMessageFor(m => m.Altura, null, new { @class = "text-danger" })*@
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="Piso" class="control-label">Piso</label>
+                    <input type="text" class="form-control local" name="Domicilio.Piso">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="Departamento" class="control-label">Dpto.</label>
+                    <input type="text" class="form-control local" name="Domicilio.Departamento">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label for="Torre" class="control-label">Torre</label>
+                    <input type="text" class="form-control local" name="Domicilio.Torre">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="Sector" class="control-label">Sector</label>
+                    <input type="text" class="form-control local" name="Domicilio.Sector">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="Manzana" class="control-label">Manzana</label>
+                    <input type="text" class="form-control local" name="Domicilio.Manzana">
+                </div>
+
+                @*<div class="form-group col-md-3" >
+                        <label for="NroIOSFA" class="control-label">Nro. IOSFA</label>
+                        <input type="text" class="form-control" name="Domicilio.NroIOSFA"> // hay que ver donde  se re ubica queda este campo
+                    </div>*@
+            </div>
+            <div class="row">
+                <div class="form-groupc col-md-4">
+                    <label for="CodigoPostal" class="control-label">Codigo Postal</label>
+                    <input type="text" class="form-control local" name="Domicilio.CodigoPostal" required>
+                    @*@Html.ValidationMessageFor(m => m.CodigoPostal, null, new { @class = "text-danger" })*@
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="selectLocal">
+
+                    <div class="form-group col-md-4" id="sLocal">
+                        <label for="Provincia" class="control-label">Provincia</label>
+
+                        <select searchable="false" id="provincia" asp-items="@ViewBag.Provincias" name="Domicilio.ProvinciaId" class="form-control local"> </select>
+                        <input type="hidden" class="form-control local" id="provinciadesc" name="Domicilio.Provincia" />
+                    </div>
+                    <div id="loc" class="form-group col-md-4">
+                        <label for="Localidad" class="control-label">Localidad</label>
+
+                        <select id="localidad" name="Domicilio.LocalidadId" class="form-control local"></select>
+                        <input type="hidden" class="form-control local" name="Domicilio.Localidad" id="localidaddesc">
+
+                    </div>
+
+                </div>
+
+                @*<div class="form-group">
+            <div class="row">
+                <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                    <label asp-for="CategoryName" class="control-label"></label>
+                    <select asp-for="CategoryID"
+                            class="form-control"
+                           ></select>
+                </div>
+            </div>
+        </div>*@
+                @*<div class="form-group">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                    <label class="control-label">SubCategoryName</label>
+                    <select class="form-control" id="SubCategoryID" name="SubCategoryID" asp-for="SubCategoryID"
+                            asp-items="@(new SelectList(string.Empty,"SubCategoryID", "SubCategoryName"))"></select>
+                </div>
+            </div>
+        </div>*@
+            </div>
+
+            <div class="row">
+                <div class="selectExterior" disabled style="display:none">
+                    <div class="form-group col-md-4">
+                        <label for="Provincia" class="control-label">Pais</label>
+                        @*<select asp-items="@ViewBag.Pais" name="Domicilio.PaisID" class="form-control local"></select>*@
+                        <input type="text" class="form-control" id="Pais" name="Domicilio.Pais">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="ProvinciaExterior" class="control-label">Provincia / Localidad</label>
+                        <input type="text" class="form-control" id="provinciaStr" name="Domicilio.ProvinciaExterior">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="LocalidadExterior" class="control-label">Ciudad / Estado</label>
+                        <input type="text" class="form-control" id="localidadStr" name="Domicilio.LocalidadExterior">
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" name="Domicilio.DeclaracionJuradaId" value="@ViewBag.DJId" />
+            <input type="hidden" name="DeclaracionJuradaID" value="@ViewBag.DJId">
+            <br /><br />
+        </div>
+        <div class="box-footer">
+            <a asp-action="Index" class="btn btn-danger">Cancelar</a>
+            <button type="submit" class="btn btn-info pull-right">Guardar</button>
+        </div>
+
+
+    </form>
+</div>
+<script src="~/js/jquery.validate.js" type="text/javascript">
+    $("#form_domicilio").validate({
+    });
+</script>
+<script src="~/js/Documentacion.js" type="text/javascript"></script>
+<script>
+    //$(document).ready(function () {
+    //    $('#div_calle').show();
+    //})
+
+    var vprovincias = @Html.Raw(Json.Serialize(ViewBag.Provincias));
+    $('#mapa_manual').click(function () {
+           if ($(this).is(':checked')) {
+               $(":input").each(function (index) {
+                   if ($(this).val() != "")
+                  $(this).removeAttr('readonly', 'readonly');
+               });
+               $('#mapa').hide();
+               $('#div_calle').show();
+               $('.selectExterior').hide();
+               $('.selectLocal').show();
+               // Vacía el dropdown provincia y lo llena con todas las provincias
+               $('button[data-id="provincia"]').find('span.filter-option').html("Seleccione");
+               $('#provincia').empty();
+               $('#sLocal').find('ul').empty();
+               $.each(vprovincias, function (index) {
+                   $('#sLocal').find('ul').append('<li data-original-index="' + index + '"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>' + this.Text + '</span>"><span class="text">' + this.Text + '</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>');
+                   $('#provincia').append('<option value="' + this.Value + '">' + this.Text + '</option>');
+               });
+               $('#provincia').val(0);
+               $('#localidad').val(0);
+               $('#localidad').empty()
+               $('#loc').find('ul').empty()
+               $('#loc').find('ul').append('<li data-original-index="0"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Seleccione</span>"><span class="text">Seleccione</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>');
+               $('#localidad').append("<option value='0'>Seleccione</option>");
+               $('button[data-id="localidad"]').find('span.filter-option').html("Seleccione");
+               $('button[data-id="localidad"]').addClass('disabled');
+               $("#Pais").val("Argentina");
+               $('#latitud').val('');
+               $('#longitud').val('');
+            }
+             else {
+               $('#mapa').show();
+               $('.cliente_mapa').find('input').val('');
+               //Vacia los input evitando los que van escondidos como DeclaracionJuradaId
+               $('#div_calle').find('input').each(function (index) {
+                   if ($(this).attr('type') != "hidden")
+                       $(this).val('');
+               });
+               $('#cliente_mapa_id').val('');
+               $('.cliente_mapa').hide();
+               $('#div_calle').hide();
+           }
+    });
+    $("#provincia").change(function () {
+        var provincia = "";
+        provincia += $("#provincia option:selected").val();
+        $.ajax({
+            url: "/DDJJ/DeclaracionJurada/SelectListJsonLocalidadesDependiente?=" + provincia,
+            type: "POST",
+            dataType: "JSON",
+            success: function (localidades) {
+                if ($("#provincia").val()!=null) {
+                    $("#localidad").prop('disabled',false)
+                    $('button[data-id="localidad"]').removeClass('disabled')
+                } else {
+                    $("#localidad").prop('disabled',true)
+                    $('button[data-id="localidad"]').addClass('disabled')
+                }
+                $('button[data-id="localidad"]').find('span.filter-option').html("Seleccione")
+                $('#localidad').val(0)
+                $('#localidad').empty()
+                $('#loc').find('ul').empty()
+                $('#loc').find('ul').append('<li data-original-index="0"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Seleccione</span>"><span class="text">Seleccione</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>');
+                $('#localidad').append("<option value='0'>Seleccione</option>");
+                $.each(localidades, function (localidades) {
+                    $('#localidad').append("<option value='" + this.Value + "'>" + this.Text + "</option>");
+                    $('#loc').find('ul').append('<li data-original-index="' + this.Value + '"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>' + this.Text + '</span>"><span class="text">' + this.Text + '</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>');
+                });
+                $('#localidad').selectpicker('refresh');
+            }
+
+        });
+    });
+</script>

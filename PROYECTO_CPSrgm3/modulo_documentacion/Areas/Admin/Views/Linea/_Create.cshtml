@@ -11,6 +11,11 @@
                 <span asp-validation-for="Numero" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Planes" class="control-label"></label>
+                <select asp-for="PlanesId" class="form-control" asp-items="@ViewBag.Planes"></select>
+                <span asp-validation-for="PlanesId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>

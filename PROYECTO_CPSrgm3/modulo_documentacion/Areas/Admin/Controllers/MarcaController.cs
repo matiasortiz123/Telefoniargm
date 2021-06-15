@@ -1,6 +1,8 @@
 ﻿using Commons.Controllers;
 using Commons.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using modulo_documentacion.Areas.Admin.Models.Basicas;
 using modulo_documentacion.Models;
 using System;
@@ -35,6 +37,7 @@ namespace modulo_documentacion.Areas.Admin.Controllers
 
             page.SelectPage("/Admin/Marca/_ListadoDeMarcas",
                 _context.Marca.Where(v => v.Descripcion.Contains(page.SearchText))
+                .Include(m => m.Modelo)
                 );
 
             //var LineasTelefonicas = _context.Linea.ToListAsync();
@@ -45,7 +48,8 @@ namespace modulo_documentacion.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult _Create()
         {
-
+            //Enviando listado de marcas;
+            ViewBag.Modelo = _context.Modelo.Select(i => new SelectListItem() { Text = i.Descripcion, Value = i.Id.ToString() });
             return PartialView();
         }
 
@@ -91,6 +95,7 @@ namespace modulo_documentacion.Areas.Admin.Controllers
                 return NotFound();
             }
             var marca = _context.Marca.Find(id);
+            ViewBag.Modelo = _context.Modelo.Select(i => new SelectListItem() { Text = i.Descripcion, Value = i.Id.ToString() });
             if (marca == null)
             {
                 return NotFound();
@@ -109,7 +114,8 @@ namespace modulo_documentacion.Areas.Admin.Controllers
             }
 
             //Obtener datos del equipo
-            var marca = await _context.Marca.FindAsync(id);
+            var marca = await _context.Marca.Include(m => m.Modelo).Where(t => t.Id == id).FirstOrDefaultAsync();
+            ViewBag.Modelo = _context.Modelo.Select(i => new SelectListItem() { Text = i.Descripcion, Value = i.Id.ToString() });
             if (marca == null)
             {
                 AddPageAlerts(PageAlertType.Error, "Se ha producido un error, no se ha encontrado la marca.");

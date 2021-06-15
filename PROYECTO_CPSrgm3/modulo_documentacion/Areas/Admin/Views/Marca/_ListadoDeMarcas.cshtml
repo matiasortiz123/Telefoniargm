@@ -15,6 +15,7 @@
         <thead>
             <tr>
                 <th>Marca</th>
+                <th>Modelo</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -25,6 +26,7 @@
                     {
                         <tr>
                             <td scope="col">@Html.DisplayFor(modelItem => item.Descripcion)</td>
+                            <td scope="col">Sin modelo</td>
                             <td>
                                 @*<a onclick="editarMarca('@item.Id')" title="Editar equipo" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i></a>*@
                                 @*<a onclick="DetalleMarca('@item.Id')" title="Detalle equipo" class="btn btn-success btn-xs"><i class="fa fa-eye"></i></a>*@
@@ -41,13 +43,12 @@
                     {
                         <tr>
                             <td scope="col">@Html.DisplayFor(modelItem => item.Descripcion)</td>
+                            <td scope="col">@Html.DisplayFor(modelItem => item.Modelo.Descripcion)</td>
                             <td>
                                 <a onclick="editarMarca('@item.Id')" title="Editar equipo" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i></a>
                                 <a onclick="DetalleMarca('@item.Id')" title="Detalle equipo" class="btn btn-success btn-xs"><i class="fa fa-eye"></i></a>
                                 <a onclick="EliminarMarca('@item.Id')"
-                                    confirm="Este registro ya no podra visualizarse"
-                                    confirm-icon="Danger"
-                                    title="Eliminar marca" class="btn btn-danger btn-xs">
+                                    class="btn btn-danger btn-xs">
                                     <i class="fa fa-trash"></i>
                                 </a>
                             </td>

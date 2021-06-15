@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
-using CommonsCps.Entities;
 
 namespace modulo_documentacion.Areas.Admin.Models.Basicas
 {
@@ -19,6 +18,5 @@ namespace modulo_documentacion.Areas.Admin.Models.Basicas
         public bool EsJefeUnidad { get; set; }
         public bool EsJefePersonal { get; set; }
         public string Grado { get; set; } //virtual Grado Grado
-        public int NroDocumento { get; internal set; }
     }
 }
